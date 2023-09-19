@@ -1,8 +1,6 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 h1 {
@@ -22,6 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height:  8.30vh;
+  width: 100vw;
   padding:  0.83vh;
   background-color: #24252A;
 }
@@ -45,4 +44,5 @@ header {
   display: inline-block;
   border-Left: 0.25vh solid #edf0f1;
   height: 2.2vh;
+  margin-bottom: -0.4vh;
 }
