@@ -44,11 +44,11 @@ class GPXRepository:
             ''')
 
             self.conn.execute('''
-                CREATE TABLE IF NOT EXISTS track (
+                CREATE TABLE IF NOT EXISTS point (
                     ptid INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-                    lat FLOAT, 
-                    lon FLOAT, 
-                    ele FLOAT, 
+                    lat REAL, 
+                    lon REAL, 
+                    ele REAL, 
                     dt DATETIME, 
                     tid INT,
                     FOREIGN KEY (tid) REFERENCES track(tid)  
