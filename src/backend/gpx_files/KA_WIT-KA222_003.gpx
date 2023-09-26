@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="byHand" version="1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<wpt lat="50.374372" lon="7.65923"> <time>1962-03-21T12:00:00Z</time><name>Immendorf</name><cmt>Immendorf</cmt><desc>Immendorf</desc><src></src><link>href=""><text>Immendorf</text></link></wpt>
+<wpt lat="50.343989" lon="7.591169"><time>1916-12-01T00:00Z</time>
+<name>Coblenz Mainstraße      </name> <src></src> </wpt>                
+<wpt lat="50.341322" lon="7.568597"> <time>1917-03-12T00:00Z</time><name>Karthause               </name> <src></src> </wpt>           
+<wpt lat="50.490747" lon="7.009893"> <time>1917-04-02T00:00Z</time><name>Ahrtal                  </name> <src></src> </wpt>
+<wpt lat="50.361470" lon="7.577805"> <time>1917-04-02T00:00Z</time><name>Steinstraße             </name> <src></src> </wpt>           
+<wpt lat="50.527627" lon="3.217171"> <time>1917-05-01T00:00Z</time><name>Genech                  </name> <src></src> </wpt>           
+<wpt lat="53.132439" lon="25.91960"> <time>1917-06-10T00:00Z</time><name>Muskewtschi                 </name> <src></src> </wpt>
+<wpt lat="49.351328" lon="23.50900"> <time>1917-06-30T0000Z</time><name>Schloß Drohobisch                  </name> <src></src> </wpt>
+<wpt lat="49.432498" lon="24.94573"> <time>1917-07-06T00:00Z</time><name>Dzitie LanyHöhe            </name> <src></src> </wpt>
+<wpt lat="49.095224" lon="26.19585"> <time>1917-08-01T11T00Z</time><name>Olzowze am Neup?        </name> <src></src> </wpt>
+<wpt lat="49.073111" lon="26.18252"> <time>1917-08-27T00:00Z</time><name>Husiatyn.                    </name> <src></src> </wpt>
+<wpt lat="49.373144" lon="4.973541"> <time>1918-01-15T00:00Z</time><name>Schloß Imecourt             </name> <src></src> </wpt>
+<wpt lat="49.234753" lon="5.253040"> <time>1918-02-27T00:00Z</time><name>Mort Homme                              </name> <src></src> </wpt>
+<wpt lat="49.225163" lon="5.207309"> <time>1918-02-27T00:00Z</time><name>Höhe 304                                </name> <src></src> </wpt>
+<wpt lat="49.261139" lon="5.293017"> <time>1918-03-10T00:00Z</time><name>Forges Bach                             </name> <src></src> </wpt>
+<wpt lat="49.229363" lon="5.200200"> <time>1918-03-13T00:00Z</time><name>Pta Lager hinter Höhe 304 / Mort Homme  </name> <src></src> </wpt>
+<wpt lat="50.627477" lon="2.569059"> <time>1918-05-04T00:00Z</time><name>St. Floris                              </name> <src></src> </wpt>
+<wpt lat="49.261139" lon="5.293017"> <time>1918-03-10T00:00Z</time><name>Forges Bach                             </name> <src></src> </wpt>
+<wpt lat="49.229363" lon="5.200200"> <time>1918-03-13T00:00Z</time><name>Pta Lager hinter Höhe 304 / Mort Homme  </name> <src></src> </wpt>
+<wpt lat="49.446045" lon="5.004943"> <time>1918-04-17T00:00Z</time><name>Fossé                                   </name> <src></src> </wpt>
+<wpt lat="50.636114" lon="2.706042"> <time>1918-05-24T00:00Z</time><name>La Gorgue                               </name> <src></src> </wpt>
+<wpt lat="50.636467" lon="2.587895"> <time>1918-05-06T00:00Z</time><name>Ferme La Hennerie                       </name> <src></src> </wpt>
+<wpt lat="51.805056" lon="8.752547"> <time>1918-07-18T01:00Z</time><name>Sennelager                              </name> <src></src> </wpt>
+<wpt lat="48.242731" lon="7.184351"> <time>1918-10-17T00:00Z</time><name>Markirch                                </name> <src></src> </wpt>
+
+
+
+
+<trk>
+<trkseg>
+<trkpt lat="50.367107" lon="7.591539"> <time>1917-04-23T04:30Z</time><name>Coblenz-Lützel.         </name> <src></src> </trkpt>           
+<trkpt lat="50.660292" lon="7.189705"> <time>1917-04-23T00:00Z</time><name>Mehlem                  </name> <src></src> </trkpt>           
+<trkpt lat="50.942964" lon="6.958854"> <time>1917-04-23T00:00Z</time><name>Cöln                    </name> <src></src> </trkpt>           
+<trkpt lat="50.765325" lon="6.085749"> <time>1917-04-23T00:00Z</time><name>Aachen                  </name> <src></src> </trkpt>           
+<trkpt lat="50.588456" lon="5.855418"> <time>1917-04-23T08:00Z</time><name>Vervier                 </name> <src></src> </trkpt>           
+<trkpt lat="50.624004" lon="5.567360"> <time>1917-04-23T00:00Z</time><name>Lüttich                 </name> <src></src> </trkpt>           
+<trkpt lat="50.469014" lon="4.862437"> <time>1917-04-23T00:00Z</time><name>Namur                   </name> <src></src> </trkpt>           
+<trkpt lat="50.404632" lon="4.439122"> <time>1917-04-23T00:00Z</time><name>Charleroi               </name> <src></src> </trkpt>           
+<trkpt lat="50.296822" lon="4.086839"> <time>1917-04-23T00:00Z</time><name>Jeumont                 </name> <src></src> </trkpt>           
+<trkpt lat="50.272218" lon="3.966016"> <time>1917-04-23T00:00Z</time><name>Maubeuge                </name> <src></src> </trkpt>           
+<trkpt lat="50.202954" lon="3.854759"> <time>1917-04-24T01:00Z</time><name>Aulnoge                 </name> <src></src> </trkpt>           
+<trkpt lat="50.202954" lon="3.854759"> <time>1917-04-24T11:00Z</time><name>Aulnoge                 </name> <src></src> </trkpt>           
+<trkpt lat="50.126839" lon="3.933125"> <time>1917-04-24T00:00Z</time><name>Avesnes                 </name> <src></src> </trkpt>
+<trkpt lat="49.746208" lon="3.767504"> <time>1917-04-25T00:00Z</time><name>Marle                   </name> <src></src> </trkpt>           
+<trkpt lat="49.572016" lon="3.621598"> <time>1917-04-26T04:00Z</time><name>Laon                    </name> <src></src> </trkpt>           
+<trkpt lat="50.041656" lon="3.447243"> <time>1917-04-27T00:00Z</time><name>Busigny                 </name> <src></src> </trkpt>
+<trkpt lat="50.176536" lon="3.243002"> <time>1917-04-27T00:00Z</time><name>Cambrai An              </name> <src></src> </trkpt>           
+<trkpt lat="50.176536" lon="3.243002"> <time>1917-04-27T00:00Z</time><name>Cambrai HZ              </name> <src></src> </trkpt>           
+<trkpt lat="50.278092" lon="3.331817"> <time>1917-04-27T00:00Z</time><name>Bouchain                </name> <src></src> </trkpt>           
+<trkpt lat="50.638634" lon="3.076097"> <time>1917-04-28T00:00Z</time><name>Lille                   </name> <src></src> </trkpt>           
+<trkpt lat="50.576674" lon="3.216428"> <time>1917-04-28T00:00Z</time><name>Cysoing                 </name> <src></src> </trkpt>           
+<trkpt lat="50.576286" lon="3.246377"> <time>1917-04-28T00:00Z</time><name>Bourghelles             </name> <src></src> </trkpt>           
+<trkpt lat="50.542927" lon="3.227169"> <time>1917-04-28T00:00Z</time><name>Cobrieux                </name> <src></src> </trkpt>           
+<trkpt lat="50.527627" lon="3.217171"> <time>1917-04-28T00:00Z</time><name>Genech                  </name> <src></src> </trkpt>           
+<trkpt lat="50.526801" lon="3.208658"> <time>1917-04-28T00:00Z</time><name>Genech Schloßteich      </name> <src></src> </trkpt>           
+</trkseg>
+<trkseg>
+<trkpt lat="50.521129" lon="3.216377"> <time>1917-05-06T00:00Z</time><name>Genech                  </name> <src></src> </trkpt>           
+<trkpt lat="50.533879" lon="3.173467"> <time>1917-05-08T08:30Z</time><name>Templeuve               </name> <src></src> </trkpt>           
+<trkpt lat="50.638634" lon="3.076097"> <time>1917-05-08T00:00Z</time><name>Lille                   </name> <src></src> </trkpt>           
+<trkpt lat="50.686869" lon="3.179704"> <time>1917-05-08T00:00Z</time><name>Roubaix                 </name> <src></src> </trkpt>           
+<trkpt lat="51.197404" lon="3.217057"> <time>1917-05-08T00:00Z</time><name>Brügge                  </name> <src></src> </trkpt>           
+<trkpt lat="51.197404" lon="3.217057"> <time>1917-05-09T03:00Z</time><name>Brügge                  </name> <src></src> </trkpt>           
+<trkpt lat="51.207540" lon="3.282515"> <time>1917-05-09T00:00Z</time><name>Male                    </name> <src></src> </trkpt>
+<trkpt lat="51.291732" lon="3.191644"> <time>1917-05-09T00:00Z</time><name>Lissewege               </name> <src></src> </trkpt>
+<trkpt lat="51.283285" lon="3.167110"> <time>                 </time><name>                        </name> <src></src> </trkpt>
+<trkpt lat="51.305396" lon="3.140911"> <time>		       </time><name>                        </name> <src></src> </trkpt>
+<trkpt lat="51.238434" lon="3.298978"> <time>1917-05-09T00:00Z</time><name>Damme                   </name> <src></src> </trkpt>
+<trkpt lat="51.272725" lon="3.200324"> <time>                 </time><name>                        </name> <src></src> </trkpt>
+<trkpt lat="51.272725" lon="3.200324"> <time>1917-05-09T00:00Z</time><name>Dodzeel                 </name> <src></src> </trkpt>
+<trkpt lat="51.291732" lon="3.191644"> <time>1917-05-09T00:00Z</time><name>Lissewege               </name> <src></src> </trkpt>
+<trkpt lat="51.320561" lon="3.186532"> <time>1917-05-09T00:00Z</time><name>Zeebrügge			    </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="51.261137" lon="3.318872"> <time>1917-05-12T00:00Z</time><name>Damme                   </name> <src></src> </trkpt>           
+<trkpt lat="51.273713" lon="3.224565"> <time>1917-05-12T00:00Z</time><name>Dudzeele                </name> <src></src> </trkpt>            
+<trkpt lat="51.296003" lon="3.190810"> <time>1917-05-12T00:00Z</time><name>Lissewege               </name> <src></src> </trkpt>           
+<trkpt lat="51.318706" lon="3.206920"> <time>1917-05-12T00:00Z</time><name>Zeebrügge               </name> <src></src> </trkpt>           
+<trkpt lat="51.311795" lon="3.131515"> <time>1917-05-12T00:00Z</time><name>Blankenberghe           </name> <src></src> </trkpt>           
+<trkpt lat="51.158071" lon="2.835710"> <time>1917-05-12T00:00Z</time><name>Middelkerke             </name> <src></src> </trkpt>           
+<trkpt lat="51.273713" lon="3.224565"> <time>1917-05-12T00:00Z</time><name>Dudzeele                </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="51.197404" lon="3.217057"> <time>1917-05-18T05:00Z</time><name>Brügge                  </name> <src></src> </trkpt>
+<trkpt lat="51.197404" lon="3.217057"> <time>1917-05-18T08:00Z</time><name>Brügge                  </name> <src></src> </trkpt>
+<trkpt lat="51.053015" lon="3.717913"> <time>1917-05-18T00:00Z</time><name>Gent                    </name> <src></src> </trkpt>
+<trkpt lat="51.029928" lon="3.712574"> <time>1917-05-18T00:00Z</time><name>St. Pierre              </name> <src></src> </trkpt>
+<trkpt lat="50.940246" lon="4.056063"> <time>1917-05-18T00:00Z</time><name>Aalst                   </name> <src></src> </trkpt>
+<trkpt lat="50.867143" lon="4.376578"> <time>1917-05-18T12:00Z</time><name>Brüssel (Schaebeek)     </name> <src></src> </trkpt>
+<trkpt lat="50.878240" lon="4.700965"> <time>1917-05-18T00:00Z</time><name>Löwen                   </name> <src></src> </trkpt>
+<trkpt lat="50.807697" lon="4.930236"> <time>1917-05-18T00:00Z</time><name>Tirnen                  </name> <src></src> </trkpt>
+<trkpt lat="50.630382" lon="5.581468"> <time>1917-05-18T06:30Z</time><name>Lüttich                 </name> <src></src> </trkpt>
+<trkpt lat="50.630382" lon="5.581468"> <time>1917-05-18T08:00Z</time><name>Lüttich                 </name> <src></src> </trkpt>
+<trkpt lat="50.735095" lon="6.005486"> <time>1917-05-18T00:00Z</time><name>Grenze                  </name> <src></src> </trkpt>
+<trkpt lat="50.782992" lon="6.065476"> <time>1917-05-19T02:00Z</time><name>Aachen                  </name> <src></src> </trkpt>
+<trkpt lat="51.196790" lon="6.446389"> <time>1917-05-19T00:00Z</time><name>Mönchen-Gladbach        </name> <src></src> </trkpt>
+<trkpt lat="51.210718" lon="6.688178"> <time>1917-05-19T06:00Z</time><name>Neuss  Rhein            </name> <src></src> </trkpt>
+<trkpt lat="51.208210" lon="6.729635"> <time>1917-05-19T07:00Z</time><name>Düsseldorf HBF          </name> <src></src> </trkpt>
+<trkpt lat="51.254674" lon="7.149473"> <time>1917-05-19T00:00Z</time><name>Elberfeld               </name> <src></src> </trkpt>
+<trkpt lat="51.371161" lon="7.460754"> <time>1917-05-19T00:00Z</time><name>Hagen                   </name> <src></src> </trkpt>
+<trkpt lat="51.505356" lon="7.620551"> <time>1917-05-19T00:00Z</time><name>Holzwickede             </name> <src></src> </trkpt>
+<trkpt lat="51.538237" lon="7.695272"> <time>1917-05-19T00:00Z</time><name>Unna                    </name> <src></src> </trkpt>
+<trkpt lat="51.661403" lon="7.800862"> <time>1917-05-19T00:00Z</time><name>Hamm                    </name> <src></src> </trkpt>
+<trkpt lat="51.912534" lon="8.392923"> <time>1917-05-19T00:00Z</time><name>Gütersloh               </name> <src></src> </trkpt>
+<trkpt lat="52.029293" lon="8.532620"> <time>1917-05-19T00:00Z</time><name>Bielefeld               </name> <src></src> </trkpt>
+<trkpt lat="52.244448" lon="8.919443"> <time>1917-05-19T00:00Z</time><name>Weser (Pta Westfalica)  </name> <src></src> </trkpt>
+<trkpt lat="52.288914" lon="8.933469"> <time>1917-05-20T05:00Z</time><name>Minden                  </name> <src></src> </trkpt>
+<trkpt lat="52.333180" lon="9.190775"> <time>1917-05-20T00:00Z</time><name>Schaumburg-Lippe        </name> <src></src> </trkpt>
+<trkpt lat="52.267542" lon="9.045419"> <time>1917-05-20T00:00Z</time><name>Bückeburg               </name> <src></src> </trkpt>
+<trkpt lat="52.333783" lon="9.192860"> <time>1917-05-20T00:00Z</time><name>Stadthagen              </name> <src></src> </trkpt>
+<trkpt lat="52.355106" lon="9.292462"> <time>1917-05-20T00:00Z</time><name>Linden                  </name> <src></src> </trkpt>
+<trkpt lat="52.378651" lon="9.738500"> <time>1917-05-20T00:00Z</time><name>Hannover                </name> <src></src> </trkpt>
+<trkpt lat="52.379354" lon="9.953672"> <time>1917-05-20T08:00Z</time><name>Lehrte                  </name> <src></src> </trkpt>
+<trkpt lat="52.439045" lon="10.97959"> <time>1917-05-20T12:30Z</time><name>Oebisfeld               </name> <src></src> </trkpt>
+<trkpt lat="52.596985" lon="12.00284"> <time>1917-05-20T04:00Z</time><name>Elbe                    </name> <src></src> </trkpt>
+<trkpt lat="52.549463" lon="13.39450"> <time>1917-05-20T00:00Z</time><name>Berlin (Nordring)       </name> <src></src> </trkpt>
+<trkpt lat="52.546776" lon="13.02324"> <time>1917-05-20T00:00Z</time><name>Dallgow-Döberitz        </name> <src></src> </trkpt>
+<trkpt lat="52.535123" lon="13.19331"> <time>1917-05-20T00:00Z</time><name>Spandau                 </name> <src></src> </trkpt>
+<trkpt lat="52.536864" lon="13.15293"> <time>1917-05-20T00:00Z</time><name>Staaken                 </name> <src></src> </trkpt>
+<trkpt lat="52.544349" lon="13.28566"> <time>1917-05-20T00:00Z</time><name>Jungfernheide           </name> <src></src> </trkpt>
+<trkpt lat="52.548869" lon="13.39150"> <time>1917-05-20T00:00Z</time><name>Gesundbrunnen           </name> <src></src> </trkpt>
+<trkpt lat="52.539395" lon="13.44126"> <time>1917-05-20T00:00Z</time><name>Weihsensee              </name> <src></src> </trkpt>
+<trkpt lat="52.508673" lon="13.49381"> <time>1917-05-20T00:00Z</time><name>Friedrichsfelde         </name> <src></src> </trkpt>
+<trkpt lat="52.525060" lon="13.73970"> <time>1917-05-20T10:00Z</time><name>Fredersdorf             </name> <src></src> </trkpt>
+<trkpt lat="52.579416" lon="14.62636"> <time>1917-05-20T00:00Z</time><name>Oder                    </name> <src></src> </trkpt>
+<trkpt lat="52.594278" lon="14.65764"> <time>1917-05-20T00:00Z</time><name>Küstrin                 </name> <src></src> </trkpt>
+<trkpt lat="52.726640" lon="15.22117"> <time>1917-05-20T04:00Z</time><name>Landsberg               </name> <src></src> </trkpt>
+<trkpt lat="52.728574" lon="15.35181"> <time>1917-05-20T00:00Z</time><name>Warthe                  </name> <src></src> </trkpt>
+<trkpt lat="52.877661" lon="16.02051"> <time>1917-05-20T07:00Z</time><name>Kreuz                   </name> <src></src> </trkpt>
+<trkpt lat="53.142887" lon="16.74453"> <time>1917-05-20T00:00Z</time><name>Schneidemühl            </name> <src></src> </trkpt>
+<trkpt lat="53.143000" lon="17.60840"> <time>1917-05-20T02:00Z</time><name>Nakel                   </name> <src></src> </trkpt>
+<trkpt lat="53.132261" lon="17.98099"> <time>1917-05-20T00:00Z</time><name>Bromberg                </name> <src></src> </trkpt>
+<trkpt lat="53.490771" lon="18.45584"> <time>1917-05-20T00:00Z</time><name>Laskowitz               </name> <src></src> </trkpt>
+<trkpt lat="53.483913" lon="18.73982"> <time>1917-05-20T06:00Z</time><name>Weichsel                </name> <src></src> </trkpt>
+<trkpt lat="53.482077" lon="18.76029"> <time>1917-05-20T00:00Z</time><name>Graudenz                </name> <src></src> </trkpt>
+<trkpt lat="53.393740" lon="19.16302"> <time>1917-05-20T00:00Z</time><name>Goßlershausen           </name> <src></src> </trkpt>
+<trkpt lat="53.264645" lon="19.40988"> <time>1917-05-20T00:00Z</time><name>Strahsburg              </name> <src></src> </trkpt>
+<trkpt lat="53.246788" lon="20.16351"> <time>1917-05-20T00:00Z</time><name>Soldau                  </name> <src></src> </trkpt>
+<trkpt lat="53.146164" lon="20.33910"> <time>1917-05-21T03:45Z</time><name>Grenze Ostpreußen Rußland</name><src></src> </trkpt>
+<trkpt lat="53.123599" lon="20.35272"> <time>1917-05-22T03:45Z</time><name>Mlawa                   </name> <src></src> </trkpt>
+<trkpt lat="52.442516" lon="20.70141"> <time>1917-05-21T09:00Z</time><name>Nowo Georgiewsk            </name> <src></src> </trkpt>
+<trkpt lat="52.257322" lon="21.07959"> <time>1917-05-21T00:00Z</time><name>Praga                      </name> <src></src> </trkpt>
+<trkpt lat="52.156259" lon="22.28156"> <time>1917-05-22T00:00Z</time><name>Siedle                     </name> <src></src> </trkpt>
+<trkpt lat="52.020571" lon="23.13625"> <time>1917-05-22T08:00Z</time><name>Biala                      </name> <src></src> </trkpt>
+<trkpt lat="52.105177" lon="23.69204"> <time>1917-05-22T12:00Z</time><name>Brest Litowsk              </name> <src></src> </trkpt>
+<trkpt lat="52.470684" lon="24.52389"> <time>1917-05-22T00:00Z</time><name>Linowa                     </name> <src></src> </trkpt>
+<trkpt lat="53.141057" lon="26.02833"> <time>1917-05-22T08:00Z</time><name>Baranowitschi              </name> <src></src> </trkpt>
+<trkpt lat="53.141208" lon="25.89943"> <time>1917-05-22T00:00Z</time><name>Nova Mysz                  </name> <src></src> </trkpt>
+<trkpt lat="53.132439" lon="25.91960"> <time>1917-05-22T00:00Z</time><name>Muskewtschi                </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="53.132439" lon="25.91960"> <time>1917-06-12T08:00Z</time><name>Muskewtschi               </name> <src></src> </trkpt>
+<trkpt lat="53.131501" lon="25.80385"> <time>1917-06-12T00:00Z</time><name>Sewjruki                  </name> <src></src> </trkpt>
+<trkpt lat="53.116204" lon="25.82084"> <time>1917-06-12T00:00Z</time><name>Sewjruki                  </name> <src></src> </trkpt>
+<trkpt lat="53.116013" lon="25.91931"> <time>1917-06-12T00:00Z</time><name>Borowzy                   </name> <src></src> </trkpt>
+<trkpt lat="53.141057" lon="26.02833"> <time>1917-06-12T00:00Z</time><name>Baranowitschi             </name> <src></src> </trkpt>
+<trkpt lat="52.470684" lon="24.52389"> <time>1917-06-12T00:00Z</time><name>Linowa                    </name> <src></src> </trkpt>
+<trkpt lat="52.105177" lon="23.69204"> <time>1917-06-12T06:00Z</time><name>Brest                     </name> <src></src> </trkpt>
+<trkpt lat="51.141745" lon="23.49865"> <time>1917-06-12T12:00Z</time><name>Chelm                     </name> <src></src> </trkpt>
+<trkpt lat="50.720092" lon="23.12130"> <time>1917-06-13T00:00Z</time><name>Zawada                    </name> <src></src> </trkpt>
+<trkpt lat="50.229244" lon="23.63715"> <time>1917-06-13T02:00Z</time><name>Grenze                    </name> <src></src> </trkpt>
+<trkpt lat="50.294770" lon="23.60756"> <time>1917-06-13T00:00Z</time><name>Rawa Ruska                </name> <src></src> </trkpt>
+<trkpt lat="49.863870" lon="23.94022"> <time>1917-06-13T08:00Z</time><name>Lemberg                   </name> <src></src> </trkpt>
+<trkpt lat="49.516368" lon="23.21402"> <time>1917-06-14T08:00Z</time><name>Sambor                    </name> <src></src> </trkpt>
+<trkpt lat="49.436845" lon="23.57767"> <time>1917-06-14T10:00Z</time><name>Dobrowlany                </name> <src></src> </trkpt>
+<trkpt lat="49.446226" lon="23.62060"> <time>1917-06-14T00:00Z</time><name>Rolow                     </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.436845" lon="23.57767"> <time>1917-07-02T06:00Z</time><name>Dobrowlany               </name> <src></src> </trkpt>
+<trkpt lat="49.272442" lon="23.85397"> <time>1917-07-02T12:00Z</time><name>Stryi                    </name> <src></src> </trkpt>
+<trkpt lat="49.429922" lon="24.08879"> <time>1917-07-02T06:00Z</time><name>Dnjstr?                  </name> <src></src> </trkpt>
+<trkpt lat="49.404946" lon="24.30940"> <time>1917-07-02T12:00Z</time><name>Chodorow                 </name> <src></src> </trkpt>
+<trkpt lat="49.384878" lon="24.77900"> <time>1917-07-02T00:00Z</time><name>Podwisocky               </name> <src></src> </trkpt>
+<trkpt lat="49.423896" lon="24.80853"> <time>1917-07-02T00:00Z</time><name>Kuryany                  </name> <src></src> </trkpt>
+<trkpt lat="49.411103" lon="24.85977"> <time>1917-07-02T00:00Z</time><name>Nadorozniow              </name> <src></src> </trkpt>
+<trkpt lat="49.432498" lon="24.94573"> <time>1917-07-06T00:00Z</time><name>Dzitie LanyHöhe          </name> <src></src> </trkpt>
+<trkpt lat="49.432498" lon="24.94573"> <time>1917-07-06T00:00Z</time><name>Dzitie LanyHöhe          </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.440330" lon="24.93706"> <time>1917-07-21T05T00Z</time><name>Brzezany                  </name> <src></src> </trkpt>
+<trkpt lat="49.488987" lon="24.92162"> <time>1917-07-21T05T30Z</time><name>Lapsi                     </name> <src></src> </trkpt>
+<trkpt lat="49.422696" lon="24.92841"> <time>1917-07-22T01T00Z</time><name>Waldlager                 </name> <src></src> </trkpt>
+<trkpt lat="49.269434" lon="25.13603"> <time>1917-07-22T08T00Z</time><name>Korupatniki               </name> <src></src> </trkpt>
+<trkpt lat="49.269434" lon="25.13603"> <time>1917-07-23T06T00Z</time><name>Korupatniki               </name> <src></src> </trkpt>
+<trkpt lat="49.430906" lon="25.15537"> <time>1917-07-23T00T00Z</time><name>Kozowa                    </name> <src></src> </trkpt>
+<trkpt lat="49.237221" lon="25.48953"> <time>1917-07-25T04T30Z</time><name>Chimielowka               </name> <src></src> </trkpt>
+<trkpt lat="49.217755" lon="25.56765"> <time>1917-07-26T05T30Z</time><name>Romanowka                 </name> <src></src> </trkpt>
+<trkpt lat="49.217755" lon="25.56765"> <time>1917-07-27T00T00Z</time><name>Mogielnica                </name> <src></src> </trkpt>
+<trkpt lat="49.164527" lon="25.70639"> <time>1917-07-27T00T00Z</time><name>Budzanow am Steth        </name> <src></src> </trkpt>            
+<trkpt lat="49.189470" lon="25.77709"> <time>1917-07-27T11T30Z</time><name>Kobylowloki               </name> <src></src> </trkpt>
+<trkpt lat="49.148805" lon="25.85421"> <time>1917-07-28T11T30Z</time><name>Suchoslaw                 </name> <src></src> </trkpt>
+<trkpt lat="49.104031" lon="25.91022"> <time>1917-07-28T00T00Z</time><name>Kopopcynce                </name> <src></src> </trkpt>
+<trkpt lat="49.098738" lon="26.01343"> <time>1917-07-28T00T00Z</time><name>Kroculec                  </name> <src></src> </trkpt>
+<trkpt lat="49.092594" lon="26.07391"> <time>1917-07-28T00T00Z</time><name>Kasylkowce                </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-07-30T00T00Z</time><name>Czabarowka                </name> <src></src> </trkpt>
+<trkpt lat="49.095224" lon="26.19585"> <time>1917-08-01T11T00Z</time><name>Olzowze am Neup?.         </name> <src></src> </trkpt>
+<trkpt lat="49.096797" lon="26.20349"> <time>1917-08-01T12T00Z</time><name>Olzowce Brücke            </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.088423" lon="26.19589"> <time>1917-08-05T00:00Z</time><name>Anhöhe rechts von Okowzik    </name> <src></src> </trkpt>
+<trkpt lat="49.073111" lon="26.18252"> <time>1917-08-27T00:00Z</time><name>Husiatyn.                    </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-09-04T00:00Z</time><name>Czabarowka                   </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-09-25T00:00Z</time><name>Aufstellung in Czabarowka    </name> <src></src> </trkpt>
+<trkpt lat="49.064046" lon="26.18861"> <time>1917-09-27T00:00Z</time><name>Stellung rechts von Husiatyn </name> <src></src> </trkpt>
+<trkpt lat="49.073219" lon="26.20001"> <time>1917-10-15T00:00Z</time><name>Husiatyn Nord                </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-10-29T00:00Z</time><name>Czabarowka                   </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-11-06T00:00Z</time><name>Czabarowka                   </name> <src></src> </trkpt>
+<trkpt lat="49.073111" lon="26.18252"> <time>1917-11-22T00:00Z</time><name>Husiatyn                     </name> <src></src> </trkpt>
+<trkpt lat="49.035935" lon="26.21658"> <time>1917-12-01T00:00Z</time><name>Bednariowka                  </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.010425" lon="26.16627"> <time>1917-12-07T18:00Z</time><name>Siderow                      </name> <src></src> </trkpt>
+<trkpt lat="49.042803" lon="26.16294"> <time>1917-12-07T06:00Z</time><name>Suchodol                     </name> <src></src> </trkpt>
+<trkpt lat="49.082668" lon="26.13165"> <time>1917-12-08T00:00Z</time><name>Chabarowka                   </name> <src></src> </trkpt>
+<trkpt lat="49.093176" lon="26.07228"> <time>1917-12-08T00:00Z</time><name>Wasylkowce                   </name> <src></src> </trkpt>
+<trkpt lat="49.099181" lon="26.01544"> <time>1917-12-08T00:00Z</time><name>Kromlec                      </name> <src></src> </trkpt>
+<trkpt lat="49.104852" lon="25.91295"> <time>1917-12-14T00:00Z</time><name>Kopocynce                    </name> <src></src> </trkpt>
+<trkpt lat="49.142745" lon="25.84322"> <time>1917-12-14T00:00Z</time><name>Iablonow                     </name> <src></src> </trkpt>
+<trkpt lat="49.155448" lon="25.85074"> <time>1917-12-14T00:00Z</time><name>Suchostaw                    </name> <src></src> </trkpt>
+<trkpt lat="49.155448" lon="25.85075"> <time>1917-12-14T00:00Z</time><name>Kabulowsloki                 </name> <src></src> </trkpt>
+<trkpt lat="49.193062" lon="25.74854"> <time>1917-12-14T00:00Z</time><name>Minista                      </name> <src></src> </trkpt>
+<trkpt lat="49.193062" lon="25.74854"> <time>1917-12-20T00:00Z</time><name>Budzanow                     </name> <src></src> </trkpt>
+<trkpt lat="49.170688" lon="25.56574"> <time>1917-12-20T00:00Z</time><name>Leskowacz                    </name> <src></src> </trkpt>
+<trkpt lat="49.218598" lon="25.56671"> <time>1917-12-20T00:00Z</time><name>Romanowka                    </name> <src></src> </trkpt>
+<trkpt lat="49.237306" lon="25.49194"> <time>1917-12-21T00:00Z</time><name>Chmilowka                    </name> <src></src> </trkpt>
+<trkpt lat="49.281352" lon="25.37396"> <time>1917-12-21T00:00Z</time><name>Bukanow                      </name> <src></src> </trkpt>
+<trkpt lat="49.364918" lon="25.37880"> <time>1917-12-23T00:00Z</time><name>Denesowka                    </name> <src></src> </trkpt>
+<trkpt lat="49.449688" lon="25.35490"> <time>1917-12-23T00:00Z</time><name>Kupcynce                     </name> <src></src> </trkpt>
+<trkpt lat="49.484865" lon="25.43291"> <time>1917-12-24T00:00Z</time><name>Codaczykow                   </name> <src></src> </trkpt>
+<trkpt lat="49.530419" lon="25.44908"> <time>1917-12-24T00:00Z</time><name>Saboici                      </name> <src></src> </trkpt>
+<trkpt lat="49.568868" lon="25.59086"> <time>1917-12-28T07:00Z</time><name>Tarnopol                     </name> <src></src> </trkpt>
+<trkpt lat="49.769070" lon="24.10974"> <time>1917-12-29T12:00Z</time><name>vor Lemberg                  </name> <src></src> </trkpt>
+<trkpt lat="52.112575" lon="23.74188"> <time>1917-12-30T08:00Z</time><name>Brest Litowsk                </name> <src></src> </trkpt>
+<trkpt lat="52.223392" lon="20.97501"> <time>1917-12-30T10:00Z</time><name>Warschau                     </name> <src></src> </trkpt>
+<trkpt lat="51.727762" lon="19.56985"> <time>1917-12-31T00:00Z</time><name>Lodz                         </name> <src></src> </trkpt>
+<trkpt lat="51.739327" lon="18.06107"> <time>1917-12-31T02:00Z</time><name>Kalisch                      </name> <src></src> </trkpt>
+<trkpt lat="51.739327" lon="18.06107"> <time>1917-12-31T10:00Z</time><name>Kalisch                      </name> <src></src> </trkpt>
+<trkpt lat="51.704090" lon="17.98043"> <time>1918-01-01T00:00Z</time><name>Skalmacyce                   </name> <src></src> </trkpt>
+<trkpt lat="51.650614" lon="17.80508"> <time>1918-01-01T00:00Z</time><name>Ostrowo                      </name> <src></src> </trkpt>
+<trkpt lat="51.852824" lon="16.56617"> <time>1918-01-01T00:00Z</time><name>Lissa                        </name> <src></src> </trkpt>
+<trkpt lat="51.670837" lon="16.06787"> <time>1918-01-01T00:00Z</time><name>Glogau                       </name> <src></src> </trkpt>
+<trkpt lat="51.751028" lon="14.31993"> <time>1918-01-01T00:00Z</time><name>Cottbus                      </name> <src></src> </trkpt>
+<trkpt lat="51.542239" lon="12.94626"> <time>1918-01-01T00:00Z</time><name>Torgau                       </name> <src></src> </trkpt>
+<trkpt lat="51.350442" lon="12.38861"> <time>1918-01-01T00:00Z</time><name>Leipzig Elbe                 </name> <src></src> </trkpt>
+<trkpt lat="50.991612" lon="11.32656"> <time>1918-01-02T00:00Z</time><name>Weimar                       </name> <src></src> </trkpt>
+<trkpt lat="50.975676" lon="11.06077"> <time>1918-01-02T00:00Z</time><name>Erfurt                       </name> <src></src> </trkpt>
+<trkpt lat="50.938912" lon="10.70778"> <time>1918-01-02T00:00Z</time><name>Gotha                        </name> <src></src> </trkpt>
+<trkpt lat="50.942043" lon="10.44691"> <time>1918-01-02T00:00Z</time><name>Thüringer Wald               </name> <src></src> </trkpt>
+<trkpt lat="50.972751" lon="10.34024"> <time>1918-01-02T00:00Z</time><name>Wartburg                     </name> <src></src> </trkpt>
+<trkpt lat="50.978912" lon="10.30702"> <time>1918-01-02T00:00Z</time><name>Eisenach                     </name> <src></src> </trkpt>
+<trkpt lat="50.964168" lon="9.800299"> <time>1918-01-02T10:00Z</time><name>Bebra                        </name> <src></src> </trkpt>
+<trkpt lat="50.542934" lon="9.689781"> <time>1918-01-02T00:00Z</time><name>Fulda                        </name> <src></src> </trkpt>
+<trkpt lat="50.118291" lon="8.933122"> <time>1918-01-02T06:00Z</time><name>Hanau                        </name> <src></src> </trkpt>
+<trkpt lat="50.104312" lon="8.792043"> <time>1918-01-02T00:00Z</time><name>Offenbach                    </name> <src></src> </trkpt>
+<trkpt lat="50.098540" lon="8.685621"> <time>1918-01-02T00:00Z</time><name>Sachsenhausen.               </name> <src></src> </trkpt>
+<trkpt lat="50.010942" lon="8.247503"> <time>1918-01-03T00:00Z</time><name>Mainz                        </name> <src></src> </trkpt>
+<trkpt lat="49.847879" lon="7.875920"> <time>1918-01-03T02:00Z</time><name>Kreuznach                    </name> <src></src> </trkpt>
+<trkpt lat="49.248191" lon="7.002425"> <time>1918-01-03T07:00Z</time><name>Saarbrücken                  </name> <src></src> </trkpt>
+<trkpt lat="49.247461" lon="6.851480"> <time>1918-01-03T00:00Z</time><name>Volkingen                    </name> <src></src> </trkpt>
+<trkpt lat="49.291200" lon="6.523920"> <time>1918-01-03T00:00Z</time><name>Busendorf                    </name> <src></src> </trkpt>
+<trkpt lat="49.353278" lon="6.169442"> <time>1918-01-03T00:00Z</time><name>Diedenhoven                  </name> <src></src> </trkpt>
+<trkpt lat="49.336134" lon="6.083489"> <time>1918-01-03T00:00Z</time><name>Fentsch                      </name> <src></src> </trkpt>
+<trkpt lat="49.508529" lon="5.764098"> <time>1918-01-03T00:00Z</time><name>Longwy                       </name> <src></src> </trkpt>
+<trkpt lat="49.523459" lon="5.375074"> <time>1918-01-03T00:00Z</time><name>Montmédy                     </name> <src></src> </trkpt>
+<trkpt lat="49.628902" lon="5.167619"> <time>1918-01-03T01:00Z</time><name>Carignan                     </name> <src></src> </trkpt>
+<trkpt lat="49.695360" lon="4.928566"> <time>1918-01-03T00:00Z</time><name>Sedan                        </name> <src></src> </trkpt>
+<trkpt lat="49.370869" lon="4.894168"> <time>1918-01-03T02:30Z</time><name>Beffu                        </name> <src></src> </trkpt>
+<trkpt lat="49.373144" lon="4.973541"> <time>1918-01-04T04:00Z</time><name>Schloß Imécourt              </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.373144" lon="4.973541"> <time>1918-01-15T00:00Z</time><name>Schloß Imecourt              </name> <src></src> </trkpt>
+<trkpt lat="49.354565" lon="5.010573"> <time>1918-01-26T00:00Z</time><name>Landres                      </name> <src></src> </trkpt>
+<trkpt lat="49.353539" lon="5.089628"> <time>1918-01-26T00:00Z</time><name>Bantheville                  </name> <src></src> </trkpt>
+<trkpt lat="49.335788" lon="5.117648"> <time>1918-01-26T00:00Z</time><name>Cunel                        </name> <src></src> </trkpt>
+<trkpt lat="49.229363" lon="5.200200"> <time>1918-01-26T00:00Z</time><name>Posta Lager                  </name> <src></src> </trkpt>
+</trkseg> 
+<trkseg>
+<trkpt lat="49.335547" lon="5.181374"> <time>1918-02-12T04:03Z</time><name>Brieulles                   </name> <src></src> </trkpt> 
+<trkpt lat="49.385630" lon="5.183135"> <time>1918-02-12T00:00Z</time><name>Dun                         </name> <src></src> </trkpt>
+<trkpt lat="49.492187" lon="5.186445"> <time>1918-02-12T00:00Z</time><name>Stenay                      </name> <src></src> </trkpt>
+<trkpt lat="49.695360" lon="4.928566"> <time>1918-02-12T00:00Z</time><name>Sedan                       </name> <src></src> </trkpt>
+<trkpt lat="49.762675" lon="4.719134"> <time>1918-02-12T08:15Z</time><name>Charleville                 </name> <src></src> </trkpt>
+<trkpt lat="50.469267" lon="4.863514"> <time>1918-02-12T00:00Z</time><name>Namur                       </name> <src></src> </trkpt>
+<trkpt lat="50.623271" lon="5.568044"> <time>1918-02-12T00:00Z</time><name>Lüttich.                    </name> <src></src> </trkpt>
+<trkpt lat="50.784574" lon="6.062884"> <time>1918-02-13T00:00Z</time><name>Aachen                      </name> <src></src> </trkpt>
+<trkpt lat="50.943336" lon="6.958849"> <time>1918-02-13T08:00Z</time><name>Cöln                        </name> <src></src> </trkpt>
+<trkpt lat="50.379285" lon="7.586724"> <time>1918-02-13T00:00Z</time><name>Coblenz                     </name> <src></src> </trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="50.379285" lon="7.586724"> <time>1918-02-26T07:08Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+<trkpt lat="49.110129" lon="6.180441"> <time>1918-02-26T00:00Z</time><name>Metz                                 </name> <src></src> </trkpt>
+<trkpt lat="49.469226" lon="5.959804"> <time>1918-02-26T00:00Z</time><name>Audun                                </name> <src></src> </trkpt>
+<trkpt lat="49.695360" lon="4.928566"> <time>1918-02-26T08:00Z</time><name>Sedan                                </name> <src></src> </trkpt>
+<trkpt lat="49.695360" lon="4.928566"> <time>1918-02-27T06:20Z</time><name>Sedan                                </name> <src></src> </trkpt>
+<trkpt lat="49.385630" lon="5.183135"> <time>1918-02-27T09:00Z</time><name>Dun                                  </name> <src></src> </trkpt>
+<trkpt lat="49.229363" lon="5.200200"> <time>1918-02-27T00:00Z</time><name>Pta Lager                            </name> <src></src> </trkpt>
+<trkpt lat="49.299022" lon="5.139298"> <time>1918-02-27T00:00Z</time><name>Naulillois                           </name> <src></src> </trkpt>
+<trkpt lat="49.273048" lon="5.137577"> <time>1918-02-27T00:00Z</time><name>Montfaucon                           </name> <src></src> </trkpt>
+<trkpt lat="49.267774" lon="5.177129"> <time>1918-02-27T00:00Z</time><name>Cuisy                                </name> <src></src> </trkpt>
+<trkpt lat="49.234753" lon="5.253040"> <time>1918-02-27T00:00Z</time><name>Mort Homme                           </name> <src></src> </trkpt>
+<trkpt lat="49.225163" lon="5.207309"> <time>1918-02-27T00:00Z</time><name>Höhe 304                             </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="49.273048" lon="5.137577"> <time>1918-03-16T06:00Z</time><name>Monfaucon                            </name> <src></src> </trkpt>
+<trkpt lat="49.263301" lon="5.210013"> <time>1918-03-17T06:00Z</time><name>Cuisy-Wald                           </name> <src></src> </trkpt>
+<trkpt lat="49.274935" lon="5.443550"> <time>1918-03-17T11:00Z</time><name>Preußenweg                           </name> <src></src> </trkpt>
+<trkpt lat="49.229363" lon="5.200200"> <time>1918-04-15T00:00Z</time><name>Pta Lager                            </name> <src></src> </trkpt>
+<trkpt lat="49.355295" lon="5.090972"> <time>1918-04-17T00:00Z</time><name>Bantheville                          </name> <src></src> </trkpt>
+<trkpt lat="49.389638" lon="5.037899"> <time>1918-04-17T00:00Z</time><name>Remonville                           </name> <src></src> </trkpt>
+<trkpt lat="49.396121" lon="5.006503"> <time>1918-04-17T00:00Z</time><name>Bayonville                           </name> <src></src> </trkpt>
+<trkpt lat="49.446045" lon="5.004943"> <time>1918-04-17T00:00Z</time><name>Fossé                                </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="49.446045" lon="5.004943"> <time>1918-04-24T00:00Z</time><name>Fossé                                </name> <src></src> </trkpt>
+<trkpt lat="49.425857" lon="4.955370"> <time>1918-04-24T00:00Z</time><name>Bucancy                              </name> <src></src> </trkpt>
+<trkpt lat="50.108331" lon="3.082568"> <time>1918-04-24T06:45Z</time><name>Havricourt                           </name> <src></src> </trkpt>
+<trkpt lat="49.489695" lon="5.183713"> <time>1918-04-24T00:00Z</time><name>Stenay                               </name> <src></src> </trkpt>
+<trkpt lat="49.768082" lon="4.726408"> <time>1918-04-24T10:00Z</time><name>Charleville                          </name> <src></src> </trkpt>
+<trkpt lat="50.136813" lon="4.822482"> <time>1918-04-24T02:00Z</time><name>Givet                                </name> <src></src> </trkpt>
+<trkpt lat="50.469276" lon="4.864877"> <time>1918-04-24T00:00Z</time><name>Namur                                </name> <src></src> </trkpt>
+<trkpt lat="50.426140" lon="4.390873"> <time>1918-04-24T08:00Z</time><name>Charleroi                            </name> <src></src> </trkpt>
+<trkpt lat="50.622535" lon="3.139088"> <time>1918-04-25T08:00Z</time><name>Ascq                                 </name> <src></src> </trkpt>
+<trkpt lat="50.590955" lon="3.113342"> <time>1918-04-25T00:00Z</time><name>Lesquin                              </name> <src></src> </trkpt>
+<trkpt lat="50.604900" lon="3.078985"> <time>1918-04-25T00:00Z</time><name>Ronchin                              </name> <src></src> </trkpt>
+<trkpt lat="50.614849" lon="3.016766"> <time>1918-04-25T00:00Z</time><name>Loos                                 </name> <src></src> </trkpt>
+<trkpt lat="50.610981" lon="2.987151"> <time>1918-04-25T00:00Z</time><name>Haubourdin                           </name> <src></src> </trkpt>
+<trkpt lat="50.605213" lon="2.916016"> <time>1918-04-25T02:00Z</time><name>Ligny                                </name> <src></src> </trkpt>
+<trkpt lat="50.607408" lon="2.912708"> <time>1918-04-29T00:00Z</time><name>Beaucamp                             </name> <src></src> </trkpt>
+<trkpt lat="50.627957" lon="2.771383"> <time>1918-04-29T00:00Z</time><name>Laventie                             </name> <src></src> </trkpt>
+<trkpt lat="50.636114" lon="2.706042"> <time>1918-05-01T00:00Z</time><name>La Gorgue                            </name> <src></src> </trkpt>
+<trkpt lat="50.615900" lon="2.684098"> <time>1918-05-01T00:00Z</time><name>Lestrem                              </name> <src></src> </trkpt>
+<trkpt lat="50.642454" lon="2.638402"> <time>1918-05-04T00:00Z</time><name>Merville                             </name> <src></src> </trkpt>
+<trkpt lat="50.622263" lon="2.615398"> <time>1918-05-04T00:00Z</time><name>Calonne                              </name> <src></src> </trkpt>
+<trkpt lat="50.630895" lon="2.566336"> <time>1918-05-04T00:00Z</time><name>Lys                                  </name> <src></src> </trkpt>
+<trkpt lat="50.636467" lon="2.587895"> <time>1918-05-04T00:00Z</time><name>Ferme La Hennerie                    </name> <src></src> </trkpt>
+<trkpt lat="50.627477" lon="2.569059"> <time>1918-05-04T00:00Z</time><name>St. Floris                           </name> <src></src> </trkpt>
+<trkpt lat="50.625580" lon="2.628503"> <time>1918-05-04T00:00Z</time><name>Straße Calonne-Merville              </name> <src></src> </trkpt>
+<trkpt lat="50.636467" lon="2.587895"> <time>1918-05-05T00:00Z</time><name>Ferme La Hennerie.                   </name> <src></src> </trkpt>
+<trkpt lat="50.636467" lon="2.587895"> <time>1918-05-06T00:00Z</time><name>Ferme La Hennerie                    </name> <src></src> </trkpt>
+<trkpt lat="50.636467" lon="2.587895"> <time>1918-05-09T00:00Z</time><name>La Hennerie                          </name> <src></src> </trkpt>
+<trkpt lat="50.636467" lon="2.587895"> <time>1918-05-10T09:00Z</time><name>La Hennerie                          </name> <src></src> </trkpt>
+<trkpt lat="50.632404" lon="2.625596"> <time>1918-05-11T00:00Z</time><name>Gutshof Régnier                      </name> <src></src> </trkpt>
+<trkpt lat="50.636114" lon="2.706042"> <time>1918-05-20T10:00Z</time><name>La Gorgue                            </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="50.645495" lon="2.719606"> <time>1918-05-27T00:00Z</time><name>Estaires                             </name> <src></src> </trkpt>
+<trkpt lat="50.627957" lon="2.771383"> <time>1918-05-28T00:00Z</time><name>Laventie                             </name> <src></src> </trkpt>
+<trkpt lat="50.627957" lon="2.771383"> <time>1918-05-29T00:00Z</time><name>Laventie                             </name> <src></src> </trkpt>
+<trkpt lat="50.637787" lon="2.828180"> <time>1918-05-29T00:00Z</time><name>Fleurbaix                            </name> <src></src> </trkpt>
+<trkpt lat="50.617376" lon="2.878466"> <time>1918-05-29T00:00Z</time><name>Le Maisnil                           </name> <src></src> </trkpt>
+<trkpt lat="50.605213" lon="2.916016"> <time>1918-05-29T00:00Z</time><name>Ligny                                </name> <src></src> </trkpt>
+<trkpt lat="50.610981" lon="2.987151"> <time>1918-05-29T00:00Z</time><name>Haubourdin                           </name> <src></src> </trkpt>
+<trkpt lat="50.628993" lon="3.057116"> <time>1918-05-29T00:00Z</time><name>Lille                                </name> <src></src> </trkpt>
+<trkpt lat="50.628993" lon="3.057116"> <time>1918-05-30T10:00Z</time><name>Lille                                </name> <src></src> </trkpt>
+<trkpt lat="50.612034" lon="3.399928"> <time>1918-05-31T00:00Z</time><name>Tournai                              </name> <src></src> </trkpt>
+<trkpt lat="50.886581" lon="4.400913"> <time>1918-05-31T00:00Z</time><name>Brüssel                              </name> <src></src> </trkpt>
+<trkpt lat="50.644889" lon="5.615477"> <time>1918-05-31T04:00Z</time><name>Lüttich                              </name> <src></src> </trkpt>
+<trkpt lat="50.659579" lon="5.978379"> <time>1918-05-31T00:00Z</time><name>Herbestal                            </name> <src></src> </trkpt>
+<trkpt lat="50.942383" lon="6.959270"> <time>1918-05-31T06:00Z</time><name>Cöln                                 </name> <src></src> </trkpt>
+<trkpt lat="49.765052" lon="6.666909"> <time>1918-06-01T00:00Z</time><name>Trier                                </name> <src></src> </trkpt>
+<trkpt lat="49.240782" lon="6.990734"> <time>1918-06-01T00:00Z</time><name>Saarbrücken                          </name> <src></src> </trkpt>
+<trkpt lat="49.103867" lon="7.070620"> <time>1918-06-01T00:00Z</time><name>Saargmünd                            </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-06-01T07:00Z</time><name>Hagenau                              </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-06-03T00:00Z</time><name>Haguenau                             </name> <src></src> </trkpt>
+<trkpt lat="49.028574" lon="7.956607"> <time>1918-06-03T00:00Z</time><name>Weißenburg                           </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-06-03T00:00Z</time><name>Neustadt                             </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-06-04T11:00Z</time><name>Münster a. N.                        </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-06-04T04:30Z</time><name>Münster a. N.                        </name> <src></src> </trkpt>
+<trkpt lat="50.001693" lon="7.884908"> <time>1918-06-04T00:00Z</time><name>Rüdesheim                            </name> <src></src> </trkpt>
+<trkpt lat="50.364525" lon="7.613791"> <time>1918-06-04T00:00Z</time><name>Ehrenbreitstein                      </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="50.350475" lon="7.588391"> <time>1918-06-12T06:55Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+<trkpt lat="49.765564" lon="6.668968"> <time>1918-06-12T00:00Z</time><name>Trier                                </name> <src></src> </trkpt>
+<trkpt lat="49.240782" lon="6.990734"> <time>1918-06-12T00:00Z</time><name>Saarbrücken                          </name> <src></src> </trkpt>
+<trkpt lat="49.103867" lon="7.070620"> <time>1918-06-12T00:00Z</time><name>Saargmünd                            </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-06-12T00:00Z</time><name>Hagenau                              </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-06-13T00:00Z</time><name>Hagenau                              </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-06-13T00:00Z</time><name>Neustadt                             </name> <src></src> </trkpt>
+<trkpt lat="49.475547" lon="8.431109"> <time>1918-06-13T00:00Z</time><name>Ludwgshafen                          </name> <src></src> </trkpt>
+<trkpt lat="50.005722" lon="8.253608"> <time>1918-06-13T11:00Z</time><name>Mainz                                </name> <src></src> </trkpt>
+<trkpt lat="48.800033" lon="9.223483"> <time>1918-06-13T00:00Z</time><name>Cansziest? Canstadt?                 </name> <src></src> </trkpt>
+<trkpt lat="50.098076" lon="8.641403"> <time>1918-06-14T06:00Z</time><name>Frankfurt                            </name> <src></src> </trkpt>
+<trkpt lat="50.098076" lon="8.641403"> <time>1918-06-14T10:30Z</time><name>Frankfurt,                           </name> <src></src> </trkpt>
+<trkpt lat="50.819090" lon="8.775649"> <time>1918-06-14T10:36Z</time><name>Marburg                              </name> <src></src> </trkpt>
+<trkpt lat="51.327095" lon="9.465591"> <time>1918-06-14T04:00Z</time><name>Cassel                               </name> <src></src> </trkpt>
+<trkpt lat="51.327095" lon="9.465591"> <time>1918-06-15T05:00Z</time><name>Cassel                               </name> <src></src> </trkpt>
+<trkpt lat="51.766279" lon="8.944698"> <time>1918-06-15T00:00Z</time><name>Altenbeken                           </name> <src></src> </trkpt>
+<trkpt lat="51.730403" lon="8.756329"> <time>1918-06-15T08:00Z</time><name>Paderborn                            </name> <src></src> </trkpt>
+<trkpt lat="51.805056" lon="8.752547"> <time>1918-06-15T00:00Z</time><name>Sennelager                           </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="51.370838" lon="7.459707"> <time>1918-08-06T00:00Z</time><name>Hagen                                </name> <src></src> </trkpt>
+<trkpt lat="50.942383" lon="6.959270"> <time>1918-08-06T00:00Z</time><name>Cöln                                 </name> <src></src> </trkpt>
+<trkpt lat="50.350475" lon="7.588391"> <time>1918-08-08T00:00Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="51.805056" lon="8.752547"> <time>1918-09-13T05:45Z</time><name>Sennelager                           </name> <src></src> </trkpt>
+<trkpt lat="51.766549" lon="8.947333"> <time>1918-09-13T00:00Z</time><name>Altenbeken                           </name> <src></src> </trkpt>
+<trkpt lat="51.492910" lon="9.163996"> <time>1918-09-13T00:00Z</time><name>Warburg                              </name> <src></src> </trkpt>
+<trkpt lat="50.819090" lon="8.775649"> <time>1918-09-13T00:00Z</time><name>Marburg                              </name> <src></src> </trkpt>
+<trkpt lat="50.098076" lon="8.641403"> <time>1918-09-14T00:00Z</time><name>Frankfurt                            </name> <src></src> </trkpt>
+<trkpt lat="50.005722" lon="8.253608"> <time>1918-09-14T10:00Z</time><name>Mainz                                </name> <src></src> </trkpt>
+<trkpt lat="49.639977" lon="8.357961"> <time>1918-09-14T00:00Z</time><name>Worms                                </name> <src></src> </trkpt>
+<trkpt lat="49.477558" lon="8.433178"> <time>1918-09-14T00:00Z</time><name>Ludwigshafen                         </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-09-14T00:00Z</time><name>Neustadt                             </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-09-14T13:00Z</time><name>Hagenau                              </name> <src></src> </trkpt>
+<trkpt lat="48.823163" lon="9.210650"> <time>1918-09-18T00:00Z</time><name>Neustadt                             </name> <src></src> </trkpt>
+<trkpt lat="49.480273" lon="8.469545"> <time>1918-09-18T00:00Z</time><name>Mannheim                             </name> <src></src> </trkpt>
+<trkpt lat="50.098076" lon="8.641403"> <time>1918-09-18T00:00Z</time><name>Frankfurt                            </name> <src></src> </trkpt>
+<trkpt lat="50.070239" lon="8.243785"> <time>1918-09-18T00:00Z</time><name>Wiesbaden                            </name> <src></src> </trkpt>
+<trkpt lat="50.350475" lon="7.588391"> <time>1918-09-18T00:00Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+<trkpt lat="50.350475" lon="7.588391"> <time>1918-09-29T00:00Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+<trkpt lat="50.005722" lon="8.253608"> <time>1918-09-29T00:00Z</time><name>Mainz                                </name> <src></src> </trkpt>
+<trkpt lat="50.098076" lon="8.641403"> <time>1918-09-29T00:00Z</time><name>Frankfurt                            </name> <src></src> </trkpt>
+<trkpt lat="49.403187" lon="8.676570"> <time>1918-09-30T00:00Z</time><name>Heidelberg                           </name> <src></src> </trkpt>
+<trkpt lat="48.767552" lon="8.210764"> <time>1918-09-30T12:00Z</time><name>Baden                                </name> <src></src> </trkpt>
+<trkpt lat="48.542658" lon="7.972144"> <time>1918-09-30T16:00Z</time><name>Appenweier 			    		  </name> <src></src> </trkpt>	
+<trkpt lat="48.584925" lon="7.732918"> <time>1918-09-30T00:00Z</time><name>Straßburg                            </name> <src></src> </trkpt>
+<trkpt lat="48.814102" lon="7.781757"> <time>1918-09-30T00:00Z</time><name>Hagenau                              </name> <src></src> </trkpt>
+<trkpt lat="48.584925" lon="7.732918"> <time>1918-10-01T00:00Z</time><name>Straßburg                            </name> <src></src> </trkpt>
+<trkpt lat="48.737020" lon="7.050566"> <time>1918-10-02T00:00Z</time><name>Saarebourg 					  </name> <src></src> </trkpt>	
+<trkpt lat="48.242731" lon="7.184351"> <time>1918-10-17T00:00Z</time><name>Markirch                             </name> <src></src> </trkpt>
+<trkpt lat="48.745039" lon="7.365025"> <time>1918-10-21T00:00Z</time><name>Zabern                               </name> <src></src> </trkpt>
+<trkpt lat="48.724788" lon="7.338434"> <time>1918-10-21T00:00Z</time><name>Hofbarr                              </name> <src></src> </trkpt>
+<trkpt lat="48.766445" lon="7.259661"> <time>1918-10-21T00:00Z</time><name>Pfalzburg                            </name> <src></src> </trkpt>
+<trkpt lat="48.584925" lon="7.732918"> <time>1918-11-02T00:00Z</time><name>Straßburg                            </name> <src></src> </trkpt>
+<trkpt lat="48.737020" lon="7.050566"> <time>1918-11-10T00:00Z</time><name>Saarebourg                           </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="49.240782" lon="6.990734"> <time>1918-11-10T00:00Z</time><name>Saarbrücken                          </name> <src></src> </trkpt>
+<trkpt lat="48.737020" lon="7.050566"> <time>1918-11-10T00:00Z</time><name>Saarebourg                           </name> <src></src> </trkpt>
+<trkpt lat="48.737020" lon="7.050566"> <time>1918-11-11T00:00Z</time><name>Saarebourg                           </name> <src></src> </trkpt>
+<trkpt lat="49.103867" lon="7.070620"> <time>1918-11-11T00:00Z</time><name>Saargmünd                            </name> <src></src> </trkpt>
+<trkpt lat="49.240782" lon="6.990734"> <time>1918-11-11T00:00Z</time><name>Saarbrücken                          </name> <src></src> </trkpt>
+<trkpt lat="49.969912" lon="7.909729"> <time>1918-11-11T00:00Z</time><name>Bingen                               </name> <src></src> </trkpt>
+<trkpt lat="50.350475" lon="7.588391"> <time>1918-11-12T03:00Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+<trkpt lat="52.269773" lon="8.073281"> <time>1918-12-20T00:00Z</time><name>Osnabrück                            </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="52.269773" lon="8.073281"> <time>1918-12-20T00:00Z</time><name>Osnabrück                            </name> <src></src> </trkpt>
+<trkpt lat="52.269773" lon="8.073281"> <time>1918-12-23T00:00Z</time><name>Osnabrück                            </name> <src></src> </trkpt>
+</trkseg>                                                                                                       
+<trkseg>                                                                                                        
+<trkpt lat="52.266629" lon="7.444532"> <time>1919-02-10T00:00Z</time><name>Rheine                               </name> <src></src> </trkpt>
+<trkpt lat="51.948659" lon="7.634139"> <time>1919-02-10T00:00Z</time><name>Münster                              </name> <src></src> </trkpt>
+<trkpt lat="51.660694" lon="7.800585"> <time>1919-02-10T00:00Z</time><name>Hamm                                 </name> <src></src> </trkpt>
+<trkpt lat="51.259260" lon="7.172016"> <time>1919-02-10T00:00Z</time><name>Barmen                               </name> <src></src> </trkpt>
+<trkpt lat="51.190065" lon="7.252744"> <time>1919-02-10T00:00Z</time><name>Lennep                               </name> <src></src> </trkpt>
+<trkpt lat="50.879245" lon="7.620868"> <time>1919-02-13T00:00Z</time><name>Waldbröhl                            </name> <src></src> </trkpt>
+<trkpt lat="50.661182" lon="7.875730"> <time>1919-02-13T00:00Z</time><name>Westerwald                           </name> <src></src> </trkpt>
+<trkpt lat="50.782905" lon="7.739849"> <time>1919-02-13T00:00Z</time><name>Wissen                               </name> <src></src> </trkpt>
+<trkpt lat="50.684458" lon="7.638497"> <time>1919-02-13T00:00Z</time><name>Altenkirchen                         </name> <src></src> </trkpt>
+<trkpt lat="50.599193" lon="7.610079"> <time>1919-02-13T00:00Z</time><name>Puderbach                            </name> <src></src> </trkpt>
+<trkpt lat="50.436743" lon="7.571284"> <time>1919-02-13T00:00Z</time><name>Sayn                                 </name> <src></src> </trkpt>
+<trkpt lat="50.350475" lon="7.588391"> <time>1919-02-13T00:00Z</time><name>Coblenz                              </name> <src></src> </trkpt>
+</trkseg>
+
+
+
+
+
+
+
+
+
+
+
+</trk>
+
+
+
+
+</gpx>

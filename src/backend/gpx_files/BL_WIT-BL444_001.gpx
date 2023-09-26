@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="byHand" version="1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ 
+<trk>
+<trkseg>
+<trkpt lat="51.047809" lon="8.009289"><time>1916-11-16T08:00:00Z</time><name>Welschen Ennest</name></trkpt>
+<trkpt lat="50.883725" lon="8.021016"><time>1916-11-16T12:00:00Z</time><name>Siegen</name></trkpt>
+<trkpt lat="49.992981" lon="8.247078"><time>1916-11-16T18:00:00Z</time><name>Mainz</name></trkpt>
+<trkpt lat="49.878044" lon="8.651856"><time>1917-02-12T12:00:00Z</time><name>Darmstadt</name></trkpt>
+<trkpt lat="49.992981" lon="8.247078"><time>1917-02-17T12:00:00Z</time><name>Mainz</name></trkpt>
+<trkpt lat="51.047809" lon="8.009289"><time>1917-04-01T08:00:00Z</time><name>Welschen Ennest</name></trkpt>
+<trkpt lat="49.992981" lon="8.247078"><time>1917-04-22T18:00:00Z</time><name>Mainz</name></trkpt>
+<trkpt lat="49.965687" lon="7.885167"><time>1917-05-16T07:00:00Z</time><name>Bingerbrück</name></trkpt>
+<trkpt lat="50.357728" lon="7.591450"><time>1917-05-16T08:00:00Z</time><name>Koblenz</name></trkpt>
+<trkpt lat="50.661486" lon="7.195174"><time>1917-05-16T09:00:00Z</time><name>Mehlem</name></trkpt>
+<trkpt lat="50.746449" lon="7.095005"><time>1917-05-16T10:00:00Z</time><name>Bonn</name></trkpt>
+<trkpt lat="50.745146" lon="6.986893"><time>1917-05-16T11:00:00Z</time><name>Halt südlich von Köln</name></trkpt>
+<trkpt lat="50.772945" lon="6.084263"><time>1917-05-16T12:00:00Z</time><name>Aachen</name></trkpt>
+<trkpt lat="50.666872" lon="5.980476"><time>1917-05-16T13:00:00Z</time><name>Herbesthal</name></trkpt>
+<trkpt lat="50.633784" lon="5.578205"><time>1917-05-16T14:00:00Z</time><name>Lüttich</name></trkpt>
+<trkpt lat="50.465809" lon="4.864780"><time>1917-05-16T15:00:00Z</time><name>Namur</name></trkpt>
+<trkpt lat="50.410706" lon="4.443180"><time>1917-05-16T16:00:00Z</time><name>Charleroi</name></trkpt>
+<trkpt lat="50.280235" lon="3.967412"><time>1917-05-16T17:00:00Z</time><name>Maubeuge</name></trkpt>
+<trkpt lat="49.973968" lon="3.916257"><time>1917-05-18T10:00:00Z</time><name>La Capelle</name></trkpt>
+<trkpt lat="50.015240" lon="3.783314"><time>1917-05-18T14:00:00Z</time><name>Le Nouvion-en-Thiérache</name></trkpt>
+<trkpt lat="49.938516" lon="3.582891"><time>1917-05-22T10:00:00Z</time><name>Le Grand Verly</name></trkpt>
+<trkpt lat="49.884902" lon="3.430086"><time>1917-05-22T11:00:00Z</time><name>Fontaine-Notre-Dame</name></trkpt>
+<trkpt lat="49.838868" lon="3.251850"><time>1917-05-22T12:00:00Z</time><name>Front bei St. Quentin</name></trkpt>
+<trkpt lat="49.849717" lon="3.365541"><time>1917-05-22T13:00:00Z</time><name>Homblières</name></trkpt>
+<trkpt lat="49.884017" lon="3.549168"><time>1917-05-28T00:00:00Z</time><name>Macquigny</name></trkpt>
+<trkpt lat="49.901925" lon="3.398572"><time>1917-06-19T10:00:00Z</time><name>Fonsommes</name></trkpt>
+<trkpt lat="49.899610" lon="3.371060"><time>1917-06-19T12:00:00Z</time><name>Essigny-Le-Petit</name></trkpt>
+<trkpt lat="49.850381" lon="3.402603"><time>1917-06-27T12:00:00Z</time><name>Marcy</name></trkpt>
+<trkpt lat="49.849717" lon="3.365541"><time>1917-06-28T12:00:00Z</time><name>Homblières</name></trkpt>
+<trkpt lat="49.841525" lon="3.487747"><time>1917-07-14T00:00:00Z</time><name>Origny-Sainte-Benoite</name></trkpt>
+<trkpt lat="49.853923" lon="3.482271"><time>1917-07-15T10:00:00Z</time><name>Neuvillette</name></trkpt>
+<trkpt lat="49.984786" lon="3.746922"><time>1917-07-15T12:00:00Z</time><name>Esquéhèries</name></trkpt>
+<trkpt lat="49.976728" lon="3.683138"><time>1917-07-16T12:00:00Z</time><name>Dorengt</name></trkpt>
+<trkpt lat="49.957736" lon="3.769312"><time>1917-07-17T12:00:00Z</time><name>Leschelle</name></trkpt>
+<trkpt lat="50.016564" lon="3.785957"><time>1917-08-05T08:00:00Z</time><name>Le Nouvion-en-Thiérache</name></trkpt>
+<trkpt lat="49.897509" lon="3.625093"><time>1917-08-05T12:00:00Z</time><name>Guise</name></trkpt>
+<trkpt lat="49.841525" lon="3.487747"><time>1917-08-05T16:00:00Z</time><name>Origny</name></trkpt>
+<trkpt lat="49.849717" lon="3.365541"><time>1917-08-06T12:00:00Z</time><name>Homblières</name></trkpt>
+<trkpt lat="49.817607" lon="3.249790"><time>1917-08-06T14:00:00Z</time><name>südwestlich St. Quentin</name></trkpt>
+<trkpt lat="49.850381" lon="3.402603"><time>1917-08-18T00:00:00Z</time><name>Marcy</name></trkpt>
+<trkpt lat="49.868972" lon="3.498356"><time>1917-09-20T10:00:00Z</time><name>Bernot</name></trkpt>
+<trkpt lat="49.876882" lon="3.521705"><time>1917-09-20T12:00:00Z</time><name>Hauteville</name></trkpt>
+<trkpt lat="49.897509" lon="3.625093"><time>1917-09-21T08:00:00Z</time><name>Guise</name></trkpt>
+<trkpt lat="50.014137" lon="3.597971"><time>1917-09-21T09:00:00Z</time><name>Wassigny</name></trkpt>
+<trkpt lat="50.174260" lon="3.236795"><time>1917-09-21T10:00:00Z</time><name>Cambrai</name></trkpt>
+<trkpt lat="50.603288" lon="3.389076"><time>1917-09-21T11:00:00Z</time><name>Tournai</name></trkpt>
+<trkpt lat="50.801595" lon="3.111671"><time>1917-09-21T12:00:00Z</time><name>Ort bei Menin, Menen</name></trkpt>
+<trkpt lat="50.801595" lon="3.117165"><time>1917-09-21T13:00:00Z</time><name>Menen</name></trkpt>
+<trkpt lat="50.809840" lon="3.074696"><time>1917-09-21T14:00:00Z</time><name>Geluwe</name></trkpt>
+<trkpt lat="50.781629" lon="3.127962"><time>1917-09-21T15:00:00Z</time><name>Halluin</name></trkpt>
+<trkpt lat="50.809840" lon="3.074696"><time>1917-09-28T00:00:00Z</time><name>Geluwe</name></trkpt>
+</trkseg>
+</trk>
+<trk>
+<trkseg>
+<trkpt lat="50.809840" lon="3.074696"><time>1917-09-28T00:00:00Z</time><name>Geluwe</name></trkpt>
+<trkpt lat="50.736021" lon="2.736866"><time>1917-10-05T00:00:00Z</time><name>Bailleul</name></trkpt>
+<trkpt lat="50.105607" lon="1.836039"><time>1917-10-07T00:00:00Z</time><name>Abbéville</name></trkpt>
+<trkpt lat="50.177118" lon="3.240488"><time>1917-10-17T10:00:00Z</time><name>Candas</name></trkpt>
+<trkpt lat="50.117276" lon="2.229486"><time>1917-10-17T12:00:00Z</time><name>Fienvillers</name></trkpt>
+<trkpt lat="50.130263" lon="2.165285"><time>1918-03-25T08:00:00Z</time><name>Bernaville</name></trkpt>
+<trkpt lat="50.148306" lon="2.053013"><time>1918-03-25T09:00:00Z</time><name>Cramont</name></trkpt>
+<trkpt lat="50.105607" lon="1.836039"><time>1918-03-25T10:00:00Z</time><name>Abbéville</name></trkpt>
+<trkpt lat="49.442682" lon="1.098530"><time>1918-03-28T11:00:00Z</time><name>Rouen</name></trkpt>
+<trkpt lat="49.365383" lon="0.083719"><time>1918-04-01T00:00:00Z</time><name>Trouville</name></trkpt>
+<trkpt lat="49.442682" lon="1.098530"><time>1918-04-25T00:00:00Z</time><name>Rouen</name></trkpt>
+<trkpt lat="49.144436" lon="0.227863"><time>1918-04-25T00:00:00Z</time><name>Lisieux</name></trkpt>
+<trkpt lat="49.089157" lon="0.597279"><time>1918-04-25T08:00:00Z</time><name>Bernay</name></trkpt>
+<trkpt lat="48.891810" lon="2.460526"><time>1918-04-25T09:00:00Z</time><name>Noysy le Sec</name></trkpt>
+<trkpt lat="48.906367" lon="2.481683"><time>1918-04-25T10:00:00Z</time><name>Bondy</name></trkpt>
+<trkpt lat="48.966921" lon="2.701899"><time>1918-04-25T14:00:00Z</time><name>Messy</name></trkpt>
+<trkpt lat="48.959933" lon="2.876942"><time>1918-04-25T11:00:00Z</time><name>Méaux</name></trkpt>
+<trkpt lat="48.959482" lon="2.943546"><time>1918-04-25T12:00:00Z</time><name>Trilport</name></trkpt>
+<trkpt lat="49.046420" lon="3.400166"><time>1918-04-25T13:00:00Z</time><name>Chateau Thierry</name></trkpt>
+<trkpt lat="49.043269" lon="3.954288"><time>1918-04-25T15:00:00Z</time><name>Epernay</name></trkpt>
+<trkpt lat="48.957228" lon="4.363529"><time>1918-04-26T08:00:00Z</time><name>Chalon sur Marne, en Champagne</name></trkpt>
+<trkpt lat="48.773388" lon="5.156605"><time>1918-04-26T12:00:00Z</time><name>Bar le Duc</name></trkpt>
+<trkpt lat="48.512340" lon="5.507019"><time>1918-04-26T14:00:00Z</time><name>Gondrecourt</name></trkpt>
+<trkpt lat="48.524478" lon="6.162962"><time>1918-04-26T16:00:00Z</time><name>Ceintrey</name></trkpt>
+<trkpt lat="48.486349" lon="6.088434"><time>1918-04-27T00:00:00Z</time><name>Vezelise bei Toul</name></trkpt>
+<trkpt lat="48.513420" lon="6.219927"><time>1918-04-30T10:00:00Z</time><name>Benney</name></trkpt>
+<trkpt lat="48.486349" lon="6.088434"><time>1918-04-30T12:00:00Z</time><name>Vezelise bei Toul</name></trkpt>
+<trkpt lat="48.486349" lon="6.088434"><time>1918-09-02T03:00:00Z</time><name>Vezelise bei Toul</name></trkpt>
+<trkpt lat="48.476563" lon="6.140533"><time>1918-09-02T06:00:00Z</time><name>Tantonville</name></trkpt>
+<trkpt lat="48.302152" lon="5.833689"><time>1918-09-02T07:00:00Z</time><name>Chatenois</name></trkpt>
+<trkpt lat="48.355679" lon="5.694497"><time>1918-09-02T08:00:00Z</time><name>Neufchateau</name></trkpt>
+<trkpt lat="48.246626" lon="5.296577"><time>1918-09-02T09:00:00Z</time><name>Andelot-Blancheville, Marne</name></trkpt>
+<trkpt lat="48.111472" lon="5.066536"><time>1918-09-02T10:00:00Z</time><name>Villiers le Sec</name></trkpt>
+<trkpt lat="48.081520" lon="4.977785"><time>1918-09-02T11:00:00Z</time><name>Bricon</name></trkpt>
+<trkpt lat="48.231305" lon="4.706903"><time>1918-09-02T12:00:00Z</time><name>Bar sur Aube</name></trkpt>
+<trkpt lat="49.262876" lon="2.473589"><time>1918-09-02T14:00:00Z</time><name>Creil</name></trkpt>
+<trkpt lat="49.257722" lon="2.435480"><time>1918-09-02T15:00:00Z</time><name>Montataire</name></trkpt>
+<trkpt lat="49.429733" lon="2.081806"><time>1918-09-02T21:00:00Z</time><name>Beauvais</name></trkpt>
+<trkpt lat="49.530111" lon="1.996924"><time>1918-09-02T22:00:00Z</time><name>St. Omer-en-Chaussée</name></trkpt>
+<trkpt lat="49.557734" lon="2.056452"><time>1918-09-02T16:00:00Z</time><name>Blicourt</name></trkpt>
+<trkpt lat="49.661850" lon="2.148316"><time>1918-09-02T17:00:00Z</time><name>Fontaine Bonneleau</name></trkpt>,
+<trkpt lat="49.697228" lon="1.339508"><time>1918-09-02T18:00:00Z</time><name>Croissy-sur-Celle</name></trkpt>
+<trkpt lat="49.861005" lon="2.240421"><time>1918-09-02T19:00:00Z</time><name>Saleux</name></trkpt>
+<trkpt lat="49.881473" lon="2.244275"><time>1918-09-02T20:00:00Z</time><name>Pont de Metz</name></trkpt>
+<trkpt lat="49.945918" lon="2.309824"><time>1918-09-02T00:00:00Z</time><name>Poulainville bei Amiens </name></trkpt>
+<trkpt lat="49.930008" lon="2.251373"><time>1918-10-12T08:00:00Z</time><name>Longprè bei Amiens</name></trkpt>
+<trkpt lat="49.916580" lon="2.249794"><time>1918-10-12T09:00:00Z</time><name>Montiers</name></trkpt>
+<trkpt lat="49.895851" lon="2.308648"><time>1918-10-12T10:00:00Z</time><name>Hauptbahnhof Amiens</name></trkpt>
+<trkpt lat="49.885787" lon="2.387758"><time>1918-10-12T11:00:00Z</time><name>La Motte-Brebiere</name></trkpt>
+<trkpt lat="49.981254" lon="2.653095"><time>1918-10-12T12:00:00Z</time><name>Mèaulte bei Albert</name></trkpt>
+<trkpt lat="49.939234" lon="2.717558"><time>1919-05-29T08:00:00Z</time><name>Troisy, nicht gefunden, bei Bray sur Somme</name></trkpt>
+<trkpt lat="49.930008" lon="2.943512"><time>1919-05-29T10:00:00Z</time><name>Péronne</name></trkpt>
+<trkpt lat="49.935864" lon="3.115800"><time>1919-05-29T12:00:00Z</time><name>Hervilly bei Roisel</name></trkpt>
+<trkpt lat="49.922521" lon="3.117754"><time>1919-09-21T08:00:00Z</time><name>Montingy Ferme, 2km südlich Hervilly</name></trkpt>
+<trkpt lat="49.935864" lon="3.115800"><time>1919-09-21T09:00:00Z</time><name>Hervilly bei Roisel</name></trkpt>
+<trkpt lat="49.947022" lon="3.097750"><time>1919-09-21T10:00:00Z</time><name>Roisel</name></trkpt>
+<trkpt lat="50.268277" lon="3.937775"><time>1919-09-21T11:00:00Z</time><name>Sainte Emilie</name></trkpt>
+<trkpt lat="50.007518" lon="3.128992"><time>1919-09-21T12:00:00Z</time><name>Épehy</name></trkpt>
+<trkpt lat="50.053391" lon="3.123499"><time>1919-09-22T08:00:00Z</time><name>Gouzeaucourt</name></trkpt>
+<trkpt lat="50.079176" lon="3.132374"><time>1919-09-22T10:00:00Z</time><name>Villers Plouich</name></trkpt>
+<trkpt lat="50.111552" lon="3.128649"><time>1919-09-22T12:00:00Z</time><name>Ribécourt-la-Tour</name></trkpt>
+<trkpt lat="50.138185" lon="3.183237"><time>1919-09-23T08:00:00Z</time><name>Noyelles-sur-Escaut</name></trkpt>
+<trkpt lat="50.166563" lon="3.158715"><time>1919-09-23T10:00:00Z</time><name>Fontaine-Notre-Dame</name></trkpt>
+<trkpt lat="50.192836" lon="3.176568"><time>1919-09-23T12:00:00Z</time><name>Sailly-Lez-Cambrai</name></trkpt>
+<trkpt lat="50.177118" lon="3.240488"><time>1919-09-24T08:00:00Z</time><name>Cambrai Bahnhof gare</name></trkpt>
+<trkpt lat="50.409830" lon="4.445240"><time>1919-09-24T10:00:00Z</time><name>Charleroi</name></trkpt>
+<trkpt lat="50.280235" lon="3.967412"><time>1919-09-24T12:00:00Z</time><name>Maubeuge</name></trkpt>
+<trkpt lat="50.465809" lon="4.864780"><time>1919-09-24T14:00:00Z</time><name>Namur</name></trkpt>
+<trkpt lat="50.666872" lon="5.980476"><time>1919-09-24T16:00:00Z</time><name>Herbesthal</name></trkpt>
+<trkpt lat="50.772945" lon="6.084263"><time>1919-09-26T08:00:00Z</time><name>Aachen</name></trkpt>
+<trkpt lat="50.802463" lon="6.480457"><time>1919-09-26T09:00:00Z</time><name>Düren</name></trkpt>
+<trkpt lat="51.232043" lon="6.753450"><time>1919-09-26T10:00:00Z</time><name>Oberkassel</name></trkpt>
+<trkpt lat="51.229248" lon="6.774239"><time>1919-09-26T11:00:00Z</time><name>Düsseldorf</name></trkpt>
+<trkpt lat="51.250097" lon="7.153078"><time>1919-09-26T12:00:00Z</time><name>Elberfeld</name></trkpt>
+<trkpt lat="51.347234" lon="7.423814"><time>1919-09-26T13:00:00Z</time><name>Hagen-Haspe</name></trkpt>
+<trkpt lat="51.712991" lon="8.740113"><time>1919-09-26T14:00:00Z</time><name>Paderborn</name></trkpt>
+<trkpt lat="51.570241" lon="8.107704"><time>1919-09-29T08:00:00Z</time><name>Soest</name></trkpt>
+<trkpt lat="51.367494" lon="7.465004"><time>1919-09-29T09:00:00Z</time><name>Hagen</name></trkpt>
+<trkpt lat="51.104384" lon="8.070625"><time>1919-09-29T10:00:00Z</time><name>Altenhundem</name></trkpt>
+<trkpt lat="51.083685" lon="8.091225"><time>1919-09-29T12:00:00Z</time><name>Kirchhundem</name></trkpt>
+<trkpt lat="51.084547" lon="8.087105"><time>1919-09-29T14:00:00Z</time><name>Hofolpe</name></trkpt>
+<trkpt lat="51.061843" lon="8.024691"><time>1919-09-29T18:00:00Z</time><name>Benolpe</name></trkpt>
+<trkpt lat="51.047809" lon="8.009289"><time>1919-09-29T20:00:00Z</time><name>Welschen Ennest</name></trkpt>
+</trkseg>
+</trk>
+</gpx>

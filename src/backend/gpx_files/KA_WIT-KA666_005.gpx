@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="byHand" version="1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+<wpt lat="50.374372" lon="7.65923"> <time>1962-03-21T12:00:00Z</time><name>Immendorf</name><cmt>Immendorf</cmt><desc>Immendorf</desc><src></src><link href=""><text>Immendorf</text></link></wpt>
+<wpt lat="50.43586" lon="7.825699"> <time>1962-03-21T12:00:00Z</time><name>Montabaur</name><cmt>Montabaur</cmt><desc>Montabaur</desc><src></src><link href=""><text>Montabaur</text></link></wpt>
+<wpt lat="50.005974" lon="8.574829"> <time>1962-03-21T12:00:00Z</time><name>Waldorf</name><cmt>Waldorf</cmt><desc>Waldorf</desc><src></src><link href=""><text>Waldorf</text></link></wpt>
+<wpt lat="47.999571" lon="7.842865"> <time>1962-03-21T12:00:00Z</time><name>Freiburg</name><cmt>Freiburg</cmt><desc>Freiburg</desc><src></src><link href=""><text>Freiburg</text></link></wpt>
+<wpt lat="47.55753" lon="7.592926"> <time>1962-03-21T12:00:00Z</time><name>Basel</name><cmt>Basel</cmt><desc>Basel</desc><src></src><link href=""><text>Basel</text></link></wpt>
+<wpt lat="47.362083" lon="7.3526"> <time>1962-03-21T12:00:00Z</time><name>Délémont</name><cmt>Délémont</cmt><desc>Délémont</desc><src></src><link href=""><text>Délémont</text></link></wpt>
+<wpt lat="46.777023" lon="6.640549"> <time>1962-03-22T12:00:00Z</time><name>Yverdon</name><cmt>Yverdon</cmt><desc>Yverdon</desc><src></src><link href=""><text>Yverdon</text></link></wpt>
+<wpt lat="46.520131" lon="6.630936"> <time>1962-03-22T12:00:00Z</time><name>Lausanne</name><cmt>Lausanne</cmt><desc>Lausanne</desc><src></src><link href=""><text>Lausanne</text></link></wpt>
+<wpt lat="45.762972" lon="4.835014"> <time>1962-03-23T12:00:00Z</time><name>Lyon</name><cmt>Lyon</cmt><desc>Lyon</desc><src></src><link href=""><text>Lyon</text></link></wpt>
+<wpt lat="43.94908" lon="4.804802"> <time>1962-03-23T12:00:00Z</time><name>Avignon</name><cmt>Avignon</cmt><desc>Avignon</desc><src></src><link href=""><text>Avignon</text></link></wpt>
+<wpt lat="44.933939" lon="4.893036"> <time>1962-03-23T12:00:00Z</time><name>Valence</name><cmt>Valence</cmt><desc>Valence</desc><src></src><link href=""><text>Valence</text></link></wpt>
+<wpt lat="44.292401" lon="3.334351"> <time>1962-03-24T12:00:00Z</time><name>Gorges du Tarn</name><cmt>Gorges du Tarn</cmt><desc>Gorges du Tarn</desc><src></src><link href=""><text>Gorges du Tarn</text></link></wpt>
+<wpt lat="44.261429" lon="4.64859"> <time>1962-03-24T12:00:00Z</time><name>Pont St. Esprit</name><cmt>Pont St. Esprit</cmt><desc>Pont St. Esprit</desc><src></src><link href=""><text>Pont St. Esprit</text></link></wpt>
+<wpt lat="44.324094" lon="3.594589"> <time>1962-03-24T12:00:00Z</time><name>Florac</name><cmt>Florac</cmt><desc>Florac</desc><src></src><link href=""><text>Florac</text></link></wpt>
+<wpt lat="43.972063" lon="2.989655"> <time>1962-03-26T12:00:00Z</time><name>Roquefort</name><cmt>Roquefort</cmt><desc>Roquefort</desc><src></src><link href=""><text>Roquefort</text></link></wpt>
+<wpt lat="43.604759" lon="1.445389"> <time>1962-03-26T12:00:00Z</time><name>Toulouse</name><cmt>Toulouse</cmt><desc>Toulouse</desc><src></src><link href=""><text>Toulouse</text></link></wpt>
+<wpt lat="42.963206" lon="1.605377"> <time>1962-03-27T12:00:00Z</time><name>Foix</name><cmt>Foix</cmt><desc>Foix</desc><src></src><link href=""><text>Foix</text></link></wpt>
+<wpt lat="42.717255" lon="1.838837"> <time>1962-03-27T12:00:00Z</time><name>Ax les Thermes</name><cmt>Ax les Thermes</cmt><desc>Ax les Thermes</desc><src></src><link href=""><text>Ax les Thermes</text></link></wpt>
+<wpt lat="42.556115" lon="1.579285"> <time>1962-03-27T12:00:00Z</time><name>Andorra</name><cmt>Andorra</cmt><desc>Andorra</desc><src></src><link href=""><text>Andorra</text></link></wpt>
+<wpt lat="42.387205" lon="1.459937"> <time>1962-03-27T12:00:00Z</time><name>Valira</name><cmt>Valira</cmt><desc>Valira</desc><src></src><link href=""><text>Valira</text></link></wpt>
+<wpt lat="42.359051" lon="1.457233"> <time>1962-03-27T12:00:00Z</time><name>Seo de Urgel</name><cmt>Seo de Urgel</cmt><desc>Seo de Urgel</desc><src></src><link href=""><text>Seo de Urgel</text></link></wpt>
+<wpt lat="42.43372" lon="1.928959"> <time>1962-03-27T12:00:00Z</time><name>Puygcerdà</name><cmt>Puygcerdà</cmt><desc>Puygcerdà</desc><src></src><link href=""><text>Puygcerdà</text></link></wpt>
+<wpt lat="42.199021" lon="2.191772"> <time>1962-03-27T12:00:00Z</time><name>Kloster von Ripoll</name><cmt>Kloster von Ripoll</cmt><desc>Kloster von Ripoll</desc><src></src><link href=""><text>Kloster von Ripoll</text></link></wpt>
+<wpt lat="42.266448" lon="2.960901"> <time>1962-03-27T12:00:00Z</time><name>Figueras</name><cmt>Figueras</cmt><desc>Figueras</desc><src></src><link href=""><text>Figueras</text></link></wpt>
+<wpt lat="42.293564" lon="3.263283"> <time>1962-03-28T12:00:00Z</time><name>Cadaques</name><cmt>Cadaques</cmt><desc>Cadaques</desc><src></src><link href=""><text>Cadaques</text></link></wpt>
+<wpt lat="42.425231" lon="3.160243"> <time>1962-03-28T12:00:00Z</time><name>Port Bou</name><cmt>Port Bou</cmt><desc>Port Bou</desc><src></src><link href=""><text>Port Bou</text></link></wpt>
+<wpt lat="42.440814" lon="3.164406"> <time>1962-03-28T12:00:00Z</time><name>Cerbere</name><cmt>Cerbere</cmt><desc>Cerbere</desc><src></src><link href=""><text>Cerbere</text></link></wpt>
+<wpt lat="42.306769" lon="3.013"> <time>1962-03-28T12:00:00Z</time><name>Perelada</name><cmt>Perelada</cmt><desc>Perelada</desc><src></src><link href=""><text>Perelada</text></link></wpt>
+<wpt lat="42.266448" lon="2.960901"> <time>1962-03-28T12:00:00Z</time><name>Figueras</name><cmt>Figueras</cmt><desc>Figueras</desc><src></src><link href=""><text>Figueras</text></link></wpt>
+<wpt lat="42.462473" lon="2.864599"> <time>1962-03-28T12:00:00Z</time><name>Le Perthus</name><cmt>Le Perthus</cmt><desc>Le Perthus</desc><src></src><link href=""><text>Le Perthus</text></link></wpt>
+<wpt lat="42.697829" lon="2.895584"> <time>1962-03-28T12:00:00Z</time><name>Perpignan</name><cmt>Perpignan</cmt><desc>Perpignan</desc><src></src><link href=""><text>Perpignan</text></link></wpt>
+<wpt lat="43.610477" lon="3.877144"> <time>1962-03-28T12:00:00Z</time><name>Montpellier</name><cmt>Montpellier</cmt><desc>Montpellier</desc><src></src><link href=""><text>Montpellier</text></link></wpt>
+<wpt lat="43.566462" lon="4.191284"> <time>1962-03-29T12:00:00Z</time><name>Aigues-Mortes</name><cmt>Aigues-Mortes</cmt><desc>Aigues-Mortes</desc><src></src><link href=""><text>Aigues-Mortes</text></link></wpt>
+<wpt lat="43.45242" lon="4.426804"> <time>1962-03-29T12:00:00Z</time><name>Saintes Maries de la Mer</name><cmt>Saintes Maries de la Mer</cmt><desc>Saintes Maries de la Mer</desc><src></src><link href=""><text>Saintes Maries de la Mer</text></link></wpt>
+<wpt lat="43.679791" lon="4.63623"> <time>1962-03-29T12:00:00Z</time><name>Arles</name><cmt>Arles</cmt><desc>Arles</desc><src></src><link href=""><text>Arles</text></link></wpt>
+<wpt lat="43.743941" lon="4.795704"> <time>1962-03-29T12:00:00Z</time><name>Les Baux</name><cmt>Les Baux</cmt><desc>Les Baux</desc><src></src><link href=""><text>Les Baux</text></link></wpt>
+<wpt lat="43.148593" lon="6.074753"> <time>1962-03-29T12:00:00Z</time><name>Crau</name><cmt>Crau</cmt><desc>Crau</desc><src></src><link href=""><text>Crau</text></link></wpt>
+<wpt lat="43.403551" lon="5.053024"> <time>1962-03-29T12:00:00Z</time><name>Martigues </name><cmt>Martigues </cmt><desc>Martigues </desc><src></src><link href=""><text>Martigues </text></link></wpt>
+<wpt lat="43.949327" lon="4.805489"> <time>1962-03-29T12:00:00Z</time><name>Avignon</name><cmt>Avignon</cmt><desc>Avignon</desc><src></src><link href=""><text>Avignon</text></link></wpt>
+<wpt lat="44.138363" lon="4.805832"> <time>1962-03-29T12:00:00Z</time><name>Orange</name><cmt>Orange</cmt><desc>Orange</desc><src></src><link href=""><text>Orange</text></link></wpt>
+<wpt lat="44.480585" lon="4.690819"> <time>1962-03-29T12:00:00Z</time><name>Viviers</name><cmt>Viviers</cmt><desc>Viviers</desc><src></src><link href=""><text>Viviers</text></link></wpt>
+<wpt lat="45.526555" lon="4.875183"> <time>1962-03-30T12:00:00Z</time><name>Vienne</name><cmt>Vienne</cmt><desc>Vienne</desc><src></src><link href=""><text>Vienne</text></link></wpt>
+<wpt lat="45.762972" lon="4.835014"> <time>1962-03-30T12:00:00Z</time><name>Lyon</name><cmt>Lyon</cmt><desc>Lyon</desc><src></src><link href=""><text>Lyon</text></link></wpt>
+<wpt lat="46.592844" lon="4.729614"> <time>1962-03-30T12:00:00Z</time><name>Bresse</name><cmt>Bresse</cmt><desc>Bresse</desc><src></src><link href=""><text>Bresse</text></link></wpt>
+<wpt lat="46.634351" lon="5.08667"> <time>1962-03-30T12:00:00Z</time><name> lons le Sauniyers</name><cmt> lons le Sauniyers</cmt><desc> lons le Sauniyers</desc><src></src><link href=""><text> lons le Sauniyers</text></link></wpt>
+<wpt lat="47.822722" lon="6.846027"> <time>1962-03-31T12:00:00Z</time><name>Bal lon d’Alsace</name><cmt>Bal lon d’Alsace</cmt><desc>Bal lon d’Alsace</desc><src></src><link href=""><text>Bal lon d’Alsace</text></link></wpt>
+<wpt lat="48.017946" lon="7.529926"> <time>1962-03-31T12:00:00Z</time><name>Neu Breisach</name><cmt>Neu Breisach</cmt><desc>Neu Breisach</desc><src></src><link href=""><text>Neu Breisach</text></link></wpt>
+<wpt lat="49.009051" lon="8.378448"> <time>1962-04-01T12:00:00Z</time><name>Karlsruhe </name><cmt>Karlsruhe </cmt><desc>Karlsruhe </desc><src></src><link href=""><text>Karlsruhe </text></link></wpt>
+<wpt lat="50.113533" lon="8.676453"> <time>1962-04-01T12:00:00Z</time><name>Frankfurt </name><cmt>Frankfurt </cmt><desc>Frankfurt </desc><src></src><link href=""><text>Frankfurt </text></link></wpt>
+<wpt lat="50.374372" lon="7.65923"> <time>1962-04-01T12:00:00Z</time><name>Immendorf</name><cmt>Immendorf</cmt><desc>Immendorf</desc><src></src><link href=""><text>Immendorf</text></link></wpt>
+
+</gpx>
+

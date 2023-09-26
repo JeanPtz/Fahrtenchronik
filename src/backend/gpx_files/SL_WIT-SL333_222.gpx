@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="byHand" version="1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ 
+<trk>
+<trkseg>
+<trkpt lat="50.675418" lon="6.762812"><time>1916-01-07T08:00:00Z</time><name>Euskirchen</name></trkpt>
+<trkpt lat="50.774880" lon="6.083135"><time>1916-10-01T08:00:00Z</time><name>Aachen</name></trkpt>
+<trkpt lat="50.774880" lon="6.083135"><time>1916-10-18T08:00:00Z</time><name>Aachen</name></trkpt>
+<trkpt lat="49.748608" lon="6.643452"><time>1916-11-29T08:00:00Z</time><name>Trier</name></trkpt>
+<trkpt lat="49.748608" lon="6.643452"><time>1916-12-09T08:00:00Z</time><name>Trier</name></trkpt>
+<trkpt lat="49.933071" lon="2.933352"><time>1916-12-09T08:00:00Z</time><name>Peronne</name></trkpt>
+<trkpt lat="50.087455" lon="2.879964"><time>1916-12-20T08:00:00Z</time><name>Riencourt</name></trkpt>
+<trkpt lat="50.108193" lon="2.973411"><time>1916-12-31T08:00:00Z</time><name>Schloss Velu</name></trkpt>
+<trkpt lat="50.108193" lon="2.973411"><time>1917-01-15T08:00:00Z</time><name>Velu</name></trkpt>
+<trkpt lat="50.074401" lon="2.881412"><time>1917-01-21T08:00:00Z</time><name>Beaulencourt</name></trkpt>
+<trkpt lat="50.089996" lon="2.932293"><time>1917-01-26T08:00:00Z</time><name>Haplincourt</name></trkpt>
+<trkpt lat="49.581823" lon="4.275670"><time>1917-02-08T08:00:00Z</time><name>Son</name></trkpt>
+<trkpt lat="49.508869" lon="4.365348"><time>1917-02-13T08:00:00Z</time><name>Rethel</name></trkpt>
+<trkpt lat="49.508796" lon="4.365478"><time>1917-02-14T08:00:00Z</time><name>Rethel</name></trkpt>
+<trkpt lat="49.554309" lon="4.376439"><time>1917-02-23T08:00:00Z</time><name>Sorbon</name></trkpt>
+<trkpt lat="49.554309" lon="4.376439"><time>1917-03-03T08:00:00Z</time><name>Sorbon</name></trkpt>
+<trkpt lat="49.304423" lon="4.286856"><time>1917-03-06T08:00:00Z</time><name>Selles</name></trkpt>
+<trkpt lat="49.190845" lon="4.291266"><time>1917-03-19T08:00:00Z</time><name>Champagne</name></trkpt>
+<trkpt lat="49.190845" lon="4.291266"><time>1917-03-28T08:00:00Z</time><name>Prosnes</name></trkpt>
+<trkpt lat="49.190845" lon="4.291266"><time>1917-04-17T08:00:00Z</time><name>Prosnes</name></trkpt>
+<trkpt lat="50.939076" lon="6.955306"><time>1916-10-09T08:00:00Z</time><name>Köln</name></trkpt>
+
+</trkseg>
+</trk>
+</gpx>                                           
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
