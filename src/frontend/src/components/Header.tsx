@@ -38,18 +38,19 @@ const Header = () => {
                 <nav>
                     <ul className="navLinks">
                         <li>
-                            <a onClick={handleNavigate}> Search </a>
+                            <a onClick={handleNavigate}> Suche </a>
                         </li>
                         <div />
                         <li>
-                            <a onClick={handleNavigate}> Pick </a>
+                            <a onClick={handleNavigate}> Auswahl </a>
                         </li>
                         <div />
                         <li>
-                            <a onClick={handleNavigate}> About </a>
+                            <a onClick={handleNavigate}> Hinzufügen </a>
                         </li>
                     </ul>
                 </nav>
+                <NavigationMenu/>
             </>
                 : <NavigationMenu />
             }

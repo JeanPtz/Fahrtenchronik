@@ -57,17 +57,20 @@ class GPXRepository:
 
     def create_routes(self, name, kfz, date):
         with self.conn:
-            # Check if the username already exists
+            # Check if the route already exists
             cursor = self.conn.execute('''
-                SELECT id
-                FROM users
-                WHERE name = ? 
-                AND kfz = ?    
-                AND date = ?
+            SELECT track.track_id
+            FROM person
+            INNER JOIN track ON person.person_id = track.person_id
+            INNER JOIN vehicle ON track.fahrzeug_id = vehicle.fahrzeug_id
+            INNER JOIN point ON track.track_id = point.track_id
+            WHERE person.name = ? 
+            AND vehicle.kennzeichen = ?    
+            AND point.date = ?
             ''', (name, kfz, date,))
-            existing_user = cursor.fetchone()
+            existing_route = cursor.fetchone()
 
-            if existing_user:
+            if existing_route:
                 raise ValueError("Route already exists")
 
             # Insert user into 'users' table and initialize score in 'scores' table
