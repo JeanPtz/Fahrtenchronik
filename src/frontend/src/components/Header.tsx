@@ -27,15 +27,15 @@ const Header = () => {
     return (
         <header>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <a href="https://github.com/JeanPtz" target="_blank" rel="norefferer" style={{ height: "6.64vh", paddingRight: "0.83vh" }}>
-                    <img src={logo} alt="logo" style={{ height: "6.64vh", width: "6.64vh", cursor: "pointer" }} />
+                <a href="https://github.com/JeanPtz" target="_blank" rel="norefferer" style={{ height: "6vh", paddingRight: "0.83vh" }}>
+                    <img src={logo} alt="logo" style={{ height: "6vh", width: "6vh", cursor: "pointer" }} />
                 </a>
                 <div className="verticalDivider" />
-                <h1 style={{ color: "#edf0f1", paddingLeft: "0.83vh", fontSize: " 3.53vh" }}>Fahrtenchronik</h1>
+                <h1>Fahrtenchronik</h1>
             </div>
-            {windowWidth > 700 ?
+            {windowWidth > 820 ?
             <>
-                <nav>
+                <nav className="navigation">
                     <ul className="navLinks">
                         <li>
                             <a onClick={handleNavigate}> Suche </a>
@@ -52,7 +52,8 @@ const Header = () => {
                 </nav>
                 <NavigationMenu/>
             </>
-                : <NavigationMenu />
+                : 
+                <NavigationMenu/>
             }
         </header>
     )

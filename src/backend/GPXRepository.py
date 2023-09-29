@@ -1,5 +1,4 @@
 import sqlite3
-from Routes import Routes
 
 class GPXRepository:
     def __init__(self, db_name):
@@ -10,50 +9,6 @@ class GPXRepository:
     def close(self):
         # Closes the database connection
         self.conn.close()
-
-    def _create_tables(self):
-        # Create 'routes' table if they don't exist
-        with self.conn:
-            self.conn.execute('''
-                CREATE TABLE IF NOT EXISTS person (
-                    person_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-                    nickname VARCHAR(10), 
-                    name VARCHAR(255), 
-                    surname VARCHAR(255), 
-                    email VARCHAR(255) 
-                )
-            ''')
-
-            self.conn.execute('''
-                CREATE TABLE IF NOT EXISTS vehicle (
-                    vehicle_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-                    license_plate VARCHAR(10), 
-                    chassis_nr VARCHAR(255) 
-                )
-            ''')
-
-            self.conn.execute('''
-                CREATE TABLE IF NOT EXISTS track (
-                    track_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                    file_name VARCHAR(255), 
-                    point_id INT, 
-                    vehicle_id INT, 
-                    FOREIGN KEY (person_id) REFERENCES person(person_id), 
-                    FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id) 
-                )
-            ''')
-
-            self.conn.execute('''
-                CREATE TABLE IF NOT EXISTS point (
-                    point_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-                    latitude REAL, 
-                    longitude REAL, 
-                    elevation REAL, 
-                    date DATETIME, 
-                    track_id INT,
-                    FOREIGN KEY (track_id) REFERENCES track(track_id)  
-                )
-            ''')
 
     def create_routes(self, name, kfz, date):
         with self.conn:
@@ -101,4 +56,4 @@ class GPXRepository:
 
     def get_routes(self, name, kfz, start_date, end_date):
         route_id = self._get_routes(name, kfz, start_date, end_date)
-        return Routes(self.conn, route_id, name, kfz, start_date, end_date)
+        return route_id

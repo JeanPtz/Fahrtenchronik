@@ -1,11 +1,16 @@
-* {
+html, body, #root {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 h1 {
-  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Helvetica, Arial, sans-serif;
   color: #edf0f1 ;
+  font-size: 3vh;
+  padding-left: 0.83vh;
 }
 
 li, a {
@@ -19,14 +24,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:  8.30vh;
-  padding:  0.83vh;
+  height:  6vh;
+  padding:  0.8vh;
   background-color: #24252A;
 }
 
 .verticalDivider {
   border-Left: 0.41vh solid white;
-  height: 5.19vh;
+  height: 5vh;
+}
+
+.navigation {
+  margin-right: 150px;
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    margin: 0; 
+  }
 }
 
 .navLinks li{

@@ -13,6 +13,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import AddIcon from '@mui/icons-material/Add';
+import Info from '@mui/icons-material/Info';
 
 
 
@@ -47,7 +48,7 @@ const NavigationMenu = () => {
         };
     }, []);
 
-    return (
+    return windowWidth < 820 ? (
         <>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Tooltip title="Menu">
@@ -62,30 +63,6 @@ const NavigationMenu = () => {
                     </IconButton>
                 </Tooltip>
             </Box>
-            { windowWidth > 700 ? 
-            <Menu
-                anchorEl={anchorEl}
-                id="menu"
-                open={open}
-                onClose={handleClose}
-                onClick={handleClose}
-                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-            >
-                <MenuItem onClick={handleAbout}>
-                    <ListItemIcon>
-                        <FormatListBulletedIcon />
-                    </ListItemIcon>
-                    Pick
-                </MenuItem>
-                <MenuItem onClick={handleAbout}>
-                    <ListItemIcon>
-                        <InfoIcon />
-                    </ListItemIcon>
-                    Über
-                </MenuItem>
-            </Menu>
-            :
             <Menu
                 anchorEl={anchorEl}
                 id="account-menu"
@@ -120,8 +97,11 @@ const NavigationMenu = () => {
                     About
                 </MenuItem>
             </Menu>
-            }
         </>
+    ) : (
+        <IconButton title="About" onClick={handleAbout}>
+            <Info sx={{ width: 32, height: 32, color: 'white' }} />
+        </IconButton>
     )
 }
 
