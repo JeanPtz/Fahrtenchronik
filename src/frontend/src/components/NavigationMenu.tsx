@@ -32,6 +32,18 @@ const NavigationMenu = () => {
         setAnchorEl(null);
     };
 
+    const handleSearch = () => {
+        navigate('/search')
+    }
+
+    const handleSelect = () => {
+        navigate('/select')
+    }
+
+    const handleAdd = () => {
+        navigate('/add')
+    }
+
     const handleAbout = () => {
         navigate('/about')
     }
@@ -72,19 +84,19 @@ const NavigationMenu = () => {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem onClick={handleAbout}>
+                <MenuItem onClick={handleSearch}>
                     <ListItemIcon>
                         <SearchIcon />
                     </ListItemIcon>
                     Suche
                 </MenuItem>
-                <MenuItem onClick={handleAbout}>
+                <MenuItem onClick={handleSelect}>
                     <ListItemIcon>
                         <FormatListBulletedIcon />
                     </ListItemIcon>
                     Auswahl
                 </MenuItem>
-                <MenuItem onClick={handleAbout}>
+                <MenuItem onClick={handleAdd}>
                     <ListItemIcon>
                         <AddIcon />
                     </ListItemIcon>

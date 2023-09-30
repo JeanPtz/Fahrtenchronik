@@ -1,7 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import SearchPage from './layout/SearchPage'
+import AboutPage from './layout/AboutPage'
+import SelectPage from './layout/SelectPage'
+import AddPage from './layout/AddPage'
+
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -11,9 +15,9 @@ function App() {
       <Routes>
         <Route path='*' element={<Navigate to="/search" />} />
         <Route path='search' element={<SearchPage/>}/>
-        <Route path='select' />
-        <Route path='add' />
-        <Route path='about' />
+        <Route path='select' element={<SelectPage/>}/>
+        <Route path='add' element={<AddPage/>}/>
+        <Route path='about' element={<AboutPage/>}/>
       </Routes>
     </>
   )

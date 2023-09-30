@@ -13,7 +13,7 @@ h1 {
   padding-left: 0.83vh;
 }
 
-li, a {
+header li, header a {
   font-family: system-ui, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 2vh;
@@ -27,6 +27,10 @@ header {
   height:  6vh;
   padding:  0.8vh;
   background-color: #24252A;
+}
+
+.divider {
+  border-top: 4px solid black;
 }
 
 .verticalDivider {

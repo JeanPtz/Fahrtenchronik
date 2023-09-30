@@ -20,14 +20,22 @@ const Header = () => {
         };
     }, []);
 
-    const handleNavigate = () => {
-        navigate("/")
+    const handleSearch = () => {
+        navigate('/search')
+    }
+
+    const handleSelect = () => {
+        navigate('/select')
+    }
+
+    const handleAdd = () => {
+        navigate('/add')
     }
 
     return (
         <header>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <a href="https://github.com/JeanPtz" target="_blank" rel="norefferer" style={{ height: "6vh", paddingRight: "0.83vh" }}>
+                <a href="https://github.com/JeanPtz" target="_blank" rel="noreferrer" style={{ height: "6vh", paddingRight: "0.83vh" }}>
                     <img src={logo} alt="logo" style={{ height: "6vh", width: "6vh", cursor: "pointer" }} />
                 </a>
                 <div className="verticalDivider" />
@@ -38,15 +46,15 @@ const Header = () => {
                 <nav className="navigation">
                     <ul className="navLinks">
                         <li>
-                            <a onClick={handleNavigate}> Suche </a>
+                            <a onClick={handleSearch}> Suche </a>
                         </li>
                         <div />
                         <li>
-                            <a onClick={handleNavigate}> Auswahl </a>
+                            <a onClick={handleSelect}> Auswahl </a>
                         </li>
                         <div />
                         <li>
-                            <a onClick={handleNavigate}> Hinzufügen </a>
+                            <a onClick={handleAdd}> Hinzufügen </a>
                         </li>
                     </ul>
                 </nav>
