@@ -60,7 +60,7 @@ const NavigationMenu = () => {
         };
     }, []);
 
-    return windowWidth < 820 ? (
+    return windowWidth < 1040 ? (
         <>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Tooltip title="Menu">

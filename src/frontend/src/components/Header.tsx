@@ -41,7 +41,7 @@ const Header = () => {
                 <div className="verticalDivider" />
                 <h1>Fahrtenchronik</h1>
             </div>
-            {windowWidth > 820 ?
+            {windowWidth > 1040 ?
             <>
                 <nav className="navigation">
                     <ul className="navLinks">
