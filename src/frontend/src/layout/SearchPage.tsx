@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material"
 import Map from "../components/Map"
 
 const SearchPage = () => {
@@ -8,6 +9,7 @@ const SearchPage = () => {
                 <Map/>
             </div>
             <div className="searchInputs" style={{flex: 1, backgroundColor: "gray"}}>
+                <TextField/>
             </div>
         </div>
     )

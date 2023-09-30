@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/JeanPtzLogo.png";
-import { useEffect, useState } from "react";
+import logo from "../assets/mainIcon.png";
 import NavigationMenu from "./NavigationMenu";
+import { useEffect, useState } from "react";
 
 const Header = () => {
 
