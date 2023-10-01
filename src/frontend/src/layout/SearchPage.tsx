@@ -5,25 +5,36 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from "react";
+import DataTable from "../components/DataTable";
 
 
 const SearchPage = () => {
-
-    const [selectedStartDate, setSelectedStartDate] = useState();
-    const [selectedEndDate, setSelectedEndDate] = useState();
     const [routeFound, setRouteFound] = useState(false)
+    const [selectedStartDate, setSelectedStartDate] = useState<null | Date>(null);
+    const [selectedEndDate, setSelectedEndDate] = useState<null | Date>(null);
+    const [error, setError] = useState<string | null>(null);
 
+    const handleDateChange = (date: Date | null, isStart: boolean) => {
+        if (isStart) {
+            setSelectedStartDate(date!!);
+            if (selectedEndDate && date && date > selectedEndDate) {
+                setError("Das „Von“-Datum darf nicht größer als das „Bis“-Datum sein");
+            } else {
+                setError(null);
+            }
+        } else {
+            setSelectedEndDate(date!!);
+            if (selectedStartDate && date && date < selectedStartDate) {
+                setError("Das „Bis“-Datum darf nicht kleiner als das „Von“-Datum sein");
+            } else {
+                setError(null);
+            }
+        }
+    };
+    
     const handleRouteSearch = () => {
         setRouteFound(!routeFound)
     }
-
-    const handleStartDateChange = () => {
-        setSelectedStartDate(selectedStartDate);
-    };
-
-    const handleEndDateChange = () => {
-        setSelectedEndDate(selectedEndDate);
-    };
 
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
@@ -31,41 +42,48 @@ const SearchPage = () => {
                 <Map />
             </Box>
             <Box className="searchInputs" sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5", justifyContent: "space-evenly" }}>
-                <Box sx={{ display: "flex", flex: 4, flexDirection: "column", justifyContent: "space-around", textAlign: "center", padding: "16px" }}>
+                <Box sx={{ display: "flex", flex: 4, flexDirection: "column", justifyContent: "space-around", alignItems: "center", textAlign: "center", padding: "16px" }}>
                     <Typography variant="h5">
                         Welche Route suchen Sie?
                     </Typography>
-                    <TextField label="Name" />
-                    <TextField label="Kennzeichen" />
+                    <TextField label="Name" sx={{width: "15.5vw", minWidth: "270px"}}/>
+                    <TextField label="Kennzeichen" sx={{width: "15.5vw", minWidth: "270px"}}/>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DatePicker label="Von" value={selectedStartDate} onChange={handleStartDateChange} format="DD-MM-YYYY" />
-                        <DatePicker label="Bis" value={selectedEndDate} onChange={handleEndDateChange} format="DD-MM-YYYY" />
-                    </LocalizationProvider>
-                    <Button variant="contained" onClick={handleRouteSearch}>
+                <DatePicker
+                    label="Von"
+                    value={selectedStartDate}
+                    onChange={(date) => handleDateChange(date, true)}
+                    format="DD.MM.YYYY"
+                    sx={{ width: "15.5vw", minWidth: "270px" }}
+                    slotProps={{
+                        textField: {
+                            helperText: error, 
+                        },
+                    }}
+                />
+                <DatePicker
+                    label="Bis"
+                    value={selectedEndDate}
+                    onChange={(date) => handleDateChange(date, false)}
+                    format="DD.MM.YYYY"
+                    slotProps={{
+                        textField: {
+                            helperText: error                        
+                        },
+                    }}
+                    sx={{ width: "15.5vw", minWidth: "270px" }}
+                />
+            </LocalizationProvider>
+                    <Button variant="contained" disabled={error != null} onClick={handleRouteSearch} sx={{minWidth: "7.8vw"}}>
                         Suche
                     </Button>
                 </Box>
-                <Divider sx={{ borderColor: "black" }} />
-                <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", padding: "0 16px" }}>
+                <Divider sx={{ borderColor: "black", opacity: 0.25}} />
+                <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
                     {routeFound ?
-                        <table border={1}>
-                            <tbody>
-                                <tr>
-                                    <td>Zurückgelegte Strecke</td>
-                                    <td>50km</td>
-                                </tr>
-                                <tr>
-                                    <td>Durchschnittsgeschwindigkeit</td>
-                                    <td>50km/h</td>
-                                </tr>
-                                <tr>
-                                    <td>Gesamtfahrtdauer</td>
-                                    <td>1:35h</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <DataTable/>
                         :
-                        <Typography sx={{textAlign: "center", fontWeight: "700"}}>
+                        <Typography sx={{textAlign: "center", fontWeight: "700", userSelect: "none"}}>
                             Keine Routendaten vorhanden
                         </Typography>
                     }

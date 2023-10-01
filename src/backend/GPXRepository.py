@@ -17,10 +17,10 @@ class GPXRepository:
             SELECT track.track_id
             FROM person
             INNER JOIN track ON person.person_id = track.person_id
-            INNER JOIN vehicle ON track.fahrzeug_id = vehicle.fahrzeug_id
+            INNER JOIN vehicle ON track.fahrzeug_id = vehicle.vehicle_id
             INNER JOIN point ON track.track_id = point.track_id
             WHERE person.name = ? 
-            AND vehicle.kennzeichen = ?    
+            AND vehicle.license_plate = ?    
             AND point.date = ?
             ''', (name, kfz, date,))
             existing_route = cursor.fetchone()
@@ -43,7 +43,7 @@ class GPXRepository:
                 SELECT id
                 FROM routes
                 WHERE name = ? 
-                AND kfz = ?    
+                AND license_plate = ?    
                 AND date >= ?
                 AND date <= ?                        
             ''', (name, kfz, start_date, end_date,))
