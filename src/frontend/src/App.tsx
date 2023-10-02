@@ -16,6 +16,7 @@ function App() {
         <Route path='*' element={<Navigate to="/search" />} />
         <Route path='search' element={<SearchPage/>}/>
         <Route path='select' element={<SelectPage/>}/>
+        <Route path='select/:license-plate' element={<SelectPage/>}/>
         <Route path='add' element={<AddPage/>}/>
         <Route path='about' element={<AboutPage/>}/>
       </Routes>

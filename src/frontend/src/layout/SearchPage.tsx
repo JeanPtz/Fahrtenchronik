@@ -1,40 +1,75 @@
 import Map from "../components/Map"
 
-import { Box, Button, Divider, TextField, Typography } from "@mui/material"
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { Box, Button, Divider, FormControl, FormHelperText, TextField, Typography } from "@mui/material";
+import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { DateTime } from 'luxon';
 import DataTable from "../components/DataTable";
+import { searchRoutes } from "../apis/SearchApi";
 
 
 const SearchPage = () => {
     const [routeFound, setRouteFound] = useState(false)
-    const [selectedStartDate, setSelectedStartDate] = useState<null | Date>(null);
-    const [selectedEndDate, setSelectedEndDate] = useState<null | Date>(null);
-    const [error, setError] = useState<string | null>(null);
+    const [driverName, setdriverName] = useState<string>("")
+    const [licensePlate, setlicensePlate] = useState<string>("")
+    const [selectedStartDate, setSelectedStartDate] = useState<null | DateTime>(null);
+    const [selectedEndDate, setSelectedEndDate] = useState<null | DateTime>(null);
+    const [startDate, setStartDate] = useState<string>("");
+    const [endDate, setEndDate] = useState<string>("");
+    const [fromErrorMessage, setFromErrorMessage] = useState<string | null>(null)
+    const [toErrorMessage, setToErrorMessage] = useState<string | null>(null)
+    const [error, setError] = useState(true);
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-    const handleDateChange = (date: Date | null, isStart: boolean) => {
-        if (isStart) {
-            setSelectedStartDate(date!!);
-            if (selectedEndDate && date && date > selectedEndDate) {
-                setError("Das „Von“-Datum darf nicht größer als das „Bis“-Datum sein");
-            } else {
-                setError(null);
-            }
-        } else {
-            setSelectedEndDate(date!!);
-            if (selectedStartDate && date && date < selectedStartDate) {
-                setError("Das „Bis“-Datum darf nicht kleiner als das „Von“-Datum sein");
-            } else {
-                setError(null);
-            }
-        }
-    };
-    
-    const handleRouteSearch = () => {
-        setRouteFound(!routeFound)
+    const getDriverName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setdriverName(event.target.value)
     }
+
+    const getLicensePlate = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setlicensePlate(event.target.value)
+    }
+
+    const handleDateChange = (date: DateTime | null, isFromDate: boolean) => {
+        if (isFromDate) {
+          setSelectedStartDate(date);
+          if (selectedEndDate && date && date > selectedEndDate) {
+            setFromErrorMessage("Das „Von“-Datum darf nicht größer als das „Bis“-Datum sein");
+            setError(true);
+          } else {
+            const zuluDate = date!!.toUTC().toISO({ format: 'extended' });
+            setStartDate(zuluDate!!)
+            setFromErrorMessage(null);
+            setToErrorMessage(null)
+            setError(false);
+          }
+        } else {
+          setSelectedEndDate(date);
+          if (selectedStartDate && date && date < selectedStartDate) {
+            setToErrorMessage("Das „Bis“-Datum darf nicht kleiner als das „Von“-Datum sein");
+            setError(true);
+          } else {
+            const zuluDate = date!!.toUTC().toISO({ format: 'extended' });
+            setEndDate(zuluDate!!)
+            setToErrorMessage(null);
+            setFromErrorMessage(null);
+            setError(false);
+          }
+        }
+      };
+
+    const handleRouteSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        setRouteFound(!routeFound)
+        console.log(startDate)
+        console.log(endDate)
+        //searchRoutes(driverName, licensePlate, startDate, endDate)
+    }
+
+    useEffect(() => {
+        setIsButtonDisabled(driverName === "" || licensePlate === "" || startDate === "" || endDate === "" || error === true)
+    })
 
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
@@ -46,44 +81,40 @@ const SearchPage = () => {
                     <Typography variant="h5">
                         Welche Route suchen Sie?
                     </Typography>
-                    <TextField label="Name" sx={{width: "15.5vw", minWidth: "270px"}}/>
-                    <TextField label="Kennzeichen" sx={{width: "15.5vw", minWidth: "270px"}}/>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                    label="Von"
-                    value={selectedStartDate}
-                    onChange={(date) => handleDateChange(date, true)}
-                    format="DD.MM.YYYY"
-                    sx={{ width: "15.5vw", minWidth: "270px" }}
-                    slotProps={{
-                        textField: {
-                            helperText: error, 
-                        },
-                    }}
-                />
-                <DatePicker
-                    label="Bis"
-                    value={selectedEndDate}
-                    onChange={(date) => handleDateChange(date, false)}
-                    format="DD.MM.YYYY"
-                    slotProps={{
-                        textField: {
-                            helperText: error                        
-                        },
-                    }}
-                    sx={{ width: "15.5vw", minWidth: "270px" }}
-                />
-            </LocalizationProvider>
-                    <Button variant="contained" disabled={error != null} onClick={handleRouteSearch} sx={{minWidth: "7.8vw"}}>
+                    <TextField label="Name" value={driverName} onChange={getDriverName} sx={{ width: "15.5vw", minWidth: "270px" }} />
+                    <TextField label="Kennzeichen" value={licensePlate} onChange={getLicensePlate} sx={{ width: "15.5vw", minWidth: "270px" }} />
+                    <LocalizationProvider dateAdapter={AdapterLuxon} adapterLocale="de-DE">
+                        <FormControl>
+                            <DatePicker
+                                label="Von"
+                                value={selectedStartDate}
+                                onChange={(date) => handleDateChange(date, true)}
+                                format="dd.MM.yyyy"
+                                sx={{ width: "15.5vw", minWidth: "270px" }}
+                            />
+                            <FormHelperText sx={{ color: "red", maxWidth: "270px" }}>{fromErrorMessage}</FormHelperText>
+                        </FormControl>
+                        <FormControl>
+                            <DatePicker
+                                label="Bis"
+                                value={selectedEndDate}
+                                onChange={(date) => handleDateChange(date, false)}
+                                format="dd.MM.yyyy"
+                                sx={{ width: "15.5vw", minWidth: "270px" }}
+                            />
+                            <FormHelperText sx={{ color: "red", maxWidth: "270px" }}>{toErrorMessage}</FormHelperText>
+                        </FormControl>
+                    </LocalizationProvider>
+                    <Button variant="contained" disabled={isButtonDisabled} onClick={handleRouteSearch} sx={{ minWidth: "7.8vw" }}>
                         Suche
                     </Button>
                 </Box>
-                <Divider sx={{ borderColor: "black", opacity: 0.25}} />
+                <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
                     {routeFound ?
-                        <DataTable/>
+                        <DataTable />
                         :
-                        <Typography sx={{textAlign: "center", fontWeight: "700", userSelect: "none"}}>
+                        <Typography sx={{ textAlign: "center", fontWeight: "700", userSelect: "none" }}>
                             Keine Routendaten vorhanden
                         </Typography>
                     }

@@ -1,15 +1,6 @@
 import { getBackendUrl } from "./BaseUrl"
 
-interface SearchPageProps {
-    name: string;
-    licensePlate: string;
-    startDate: string;
-    endDate: string;
-}
-
-export async function searchRoutes(event: React.MouseEvent<HTMLButtonElement>, props: SearchPageProps) {
-    event.preventDefault();
-    const { name, licensePlate, startDate, endDate } = props;
+export async function searchRoutes(name: string, licensePlate: string, startDate: string, endDate: string) {
 
     try {
         const response = await fetch(`${getBackendUrl()}/search`, {
