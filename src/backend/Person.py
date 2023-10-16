@@ -1,21 +1,6 @@
-import sqlite3
-
 class Person:
     def __init__(self, conn):
         self.conn = conn
-
-    def create_table(self):
-        cursor = self.conn.cursor()
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS person (
-                person_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                nickname TEXT, 
-                name TEXT, 
-                surname TEXT, 
-                email TEXT
-            )
-        ''')
-        cursor.close()
 
     def insert(self, nickname, name, surname, email):
         cursor = self.conn.cursor()

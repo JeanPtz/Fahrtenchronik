@@ -10,6 +10,50 @@ class GPXRepository:
         # Closes the database connection
         self.conn.close()
 
+    def _create_tables(self):
+        cursor = self.conn.cursor()
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS person (
+                person_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                nickname TEXT, 
+                name TEXT, 
+                surname TEXT, 
+                email TEXT
+            )
+        ''')
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS point (
+                point_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                latitude REAL, 
+                longitude REAL, 
+                elevation REAL, 
+                date DATETIME, 
+                track_id INTEGER,
+                FOREIGN KEY (track_id) REFERENCES track(track_id)  
+            )
+        ''')
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS track (
+                track_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                file_name TEXT, 
+                point_id INTEGER, 
+                vehicle_id INTEGER, 
+                FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id) 
+            )
+        ''')
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS vehicle (
+                vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                license_plate TEXT, 
+                chassis_nr TEXT
+            )
+        ''')
+        self.conn.commit()
+        cursor.close()
+
     def create_routes(self, name, kfz, date):
         with self.conn:
             # Check if the route already exists
@@ -33,8 +77,6 @@ class GPXRepository:
                 INSERT INTO users (id, name, kfz, date)
                 VALUES (?, ?, ?)
             ''', (name, kfz, date))
-
-        return Routes(self.conn, name)
     
     def _get_routes(self, name, kfz, start_date, end_date):
         # Get id for given username
