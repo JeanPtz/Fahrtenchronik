@@ -3,6 +3,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from GPXRepository import GPXRepository
+from GPXProcessor import GPXProcessor
 
 # Create a Flask application instance
 app = Flask(__name__)
@@ -29,4 +30,9 @@ if __name__ == '__main__':
         if not os.path.exists(db_dir):
             os.makedirs(db_dir)
     gpxRepository = GPXRepository(database)
+
+    folder_path = r"./src/backend/gpx_files/"
+    gpx_processor = GPXProcessor(database, folder_path)
+    gpx_processor.process_gpx_files()
+
     app.run(debug=True) # Run the Flask application
