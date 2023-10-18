@@ -24,7 +24,7 @@ def get_route():
     return requestedRoutes
 
 if __name__ == '__main__':
-    database = r"./database/fahrtenchronik.db"
+    database = r"./src/backend/database/fahrtenchronik.db"
     if not os.path.isfile(database): # If it doesn't exist, create the database directory if needed
         db_dir = os.path.dirname(database)
         if not os.path.exists(db_dir):
