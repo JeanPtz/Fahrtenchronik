@@ -7,7 +7,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useEffect, useState } from "react";
 import { DateTime } from 'luxon';
 import DataTable from "../components/DataTable";
-import { searchRoutes } from "../apis/SearchApi";
+import { searchRoutes } from "../apis/SearchRoutes";
 
 
 const SearchPage = () => {

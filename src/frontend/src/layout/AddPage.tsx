@@ -23,10 +23,8 @@ const AboutPage = () => {
         event.preventDefault();
 
         const file = event.dataTransfer.files[0] || null;
-        if (selectedFile?.name.toLowerCase().endsWith(".gpx"))
-            setSelectedFile(file);
-        else
-            setSelectedFile(null)
+        setSelectedFile(file);
+
     }, []);
 
     const handleChangeFile = () => {
@@ -35,9 +33,13 @@ const AboutPage = () => {
     };
 
     const handleFileUpload = async () => {
+        if (!selectedFile?.name.toLowerCase().endsWith(".gpx")) {
+            setMessage("Nur GPX Dateien sind zum hochladen geeignet");
+            return;
+        }
 
         const formData = new FormData();
-        formData.append("file", selectedFile!!);
+        formData.append("file", selectedFile);
 
         try {
             const response = await fetch("/upload", {
