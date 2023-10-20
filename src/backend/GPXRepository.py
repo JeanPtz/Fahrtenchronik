@@ -18,7 +18,6 @@ class GPXRepository:
                 nickname TEXT, 
                 name TEXT, 
                 surname TEXT, 
-                email TEXT
             )
         ''')
 
@@ -40,6 +39,7 @@ class GPXRepository:
                 file_name TEXT, 
                 point_id INTEGER, 
                 vehicle_id INTEGER, 
+                FOREIGN KEY (point_id) REFERENCES point(point_id),
                 FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id) 
             )
         ''')
@@ -48,9 +48,13 @@ class GPXRepository:
             CREATE TABLE IF NOT EXISTS vehicle (
                 vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT, 
                 license_plate TEXT, 
-                chassis_nr TEXT
             )
         ''')
+        self.conn.commit()
+
+        cursor.execute('''CREATE TABLE IF NOT EXISTS imported_files
+                        (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        file_name TEXT UNIQUE)''')
         self.conn.commit()
         cursor.close()
 
