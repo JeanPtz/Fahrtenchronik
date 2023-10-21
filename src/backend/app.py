@@ -31,8 +31,8 @@ if __name__ == '__main__':
             os.makedirs(db_dir)
     gpxRepository = GPXRepository(database)
 
-    folder_path = r"./src/backend/gpx_files/"
+    folder_path = r"./src/backend/test_files/"
     gpx_processor = GPXProcessor(database, folder_path)
-    gpx_processor.process_gpx_files()
+    gpx_processor.process_gpx_data()
 
     app.run(debug=True) # Run the Flask application

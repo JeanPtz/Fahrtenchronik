@@ -15,9 +15,11 @@ class GPXRepository:
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS person (
                 person_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                nickname TEXT, 
+                full_name TEXT, 
                 name TEXT, 
-                surname TEXT, 
+                surname TEXT,
+                vehicle_id INTEGER, 
+                FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id)
             )
         ''')
 
@@ -47,16 +49,10 @@ class GPXRepository:
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS vehicle (
                 vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                license_plate TEXT, 
+                license_plate TEXT UNIQUE
             )
         ''')
         self.conn.commit()
-
-        cursor.execute('''CREATE TABLE IF NOT EXISTS imported_files
-                        (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        file_name TEXT UNIQUE)''')
-        self.conn.commit()
-        cursor.close()
 
     def create_routes(self, name, kfz, date):
         with self.conn:
