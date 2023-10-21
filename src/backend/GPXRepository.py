@@ -4,25 +4,41 @@ class GPXRepository:
     def __init__(self, db_name):
         # Establish a connection to the SQLite database
         self.conn = sqlite3.connect(db_name, check_same_thread=False)
-        self._create_tables()
+        self.__create_tables()
 
     def close(self):
         # Closes the database connection
         self.conn.close()
 
-    def _create_tables(self):
+    def __create_tables(self):
         cursor = self.conn.cursor()
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS person (
                 person_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                full_name TEXT, 
+                full_name TEXT UNIQUE, 
                 name TEXT, 
-                surname TEXT,
-                vehicle_id INTEGER, 
-                FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id)
+                surname TEXT
             )
         ''')
 
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS vehicle (
+                vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                license_plate TEXT UNIQUE
+            )
+        ''')
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS track (
+                track_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                file_name TEXT, 
+                person_id INTEGER, 
+                vehicle_id INTEGER, 
+                FOREIGN KEY (person_id) REFERENCES person(person_id),
+                FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id) 
+            )
+        ''')
+        
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS point (
                 point_id INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -32,24 +48,6 @@ class GPXRepository:
                 date DATETIME, 
                 track_id INTEGER,
                 FOREIGN KEY (track_id) REFERENCES track(track_id)  
-            )
-        ''')
-
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS track (
-                track_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                file_name TEXT, 
-                point_id INTEGER, 
-                vehicle_id INTEGER, 
-                FOREIGN KEY (point_id) REFERENCES point(point_id),
-                FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id) 
-            )
-        ''')
-
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS vehicle (
-                vehicle_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                license_plate TEXT UNIQUE
             )
         ''')
         self.conn.commit()
