@@ -102,7 +102,7 @@ class GPXRepository:
             return "No selected file"
 
         if file and file.filename.endswith('.gpx'):
-            file.save(f"./src/backend/test_files/{file.filename}")
+            file.save(f"./src/backend/gpx_files/{file.filename}")
             print(f"File: {file.filename} successfully uploaded")
             return f"File: {file.filename} successfully uploaded"
         else:
