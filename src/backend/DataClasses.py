@@ -3,21 +3,28 @@ from dataclasses import dataclass
 
 @dataclass
 class Person:
-    full_name : str = ""
-    name : str = ""
-    sur_name : str = ""
+    person_id : int 
+    full_name : str
+    name : str
+    sur_name : str
 
 @dataclass
 class Vehicle:
-    license_plate : str = ""
+    vehicle_id : int 
+    license_plate : str 
 
 @dataclass
 class Track:
-    file_name : str = ""
+    track_id : int
+    file_name : str
+    person_id : int
+    vehicle_id : int
 
 @dataclass
 class Point:
-    latitude : float = 0
-    longitude : float = 0
-    elevation : float = 0
-    date : str = ""
+    point_id : int
+    latitude : float
+    longitude : float
+    elevation : float
+    date : str
+    track_id : int

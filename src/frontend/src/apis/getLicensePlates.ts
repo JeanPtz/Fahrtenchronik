@@ -1,6 +1,11 @@
 import { getBackendUrl } from "./BaseUrl"
 
-export async function getLicensePlate() {
+interface Vehicle{
+    id: number
+    license_plate: string
+}
+
+export async function getLicensePlate(): Promise<Vehicle[]> {
 
     try {
         const response = await fetch(`${getBackendUrl()}/license-plates`, {

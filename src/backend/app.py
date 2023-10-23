@@ -4,6 +4,8 @@ from flask_cors import CORS
 
 from GPXRepository import GPXRepository
 from GPXProcessor import GPXProcessor
+from VehicleRepository import VehicleRepository
+from TrackRepository import TrackRepository
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -12,7 +14,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def get_route():
     try:
         route_data = request.get_json()
-        requestedRoutes = gpxRepository.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
+        requestedRoutes = trackRepository.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
         return jsonify(requestedRoutes)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
@@ -20,7 +22,7 @@ def get_route():
 @app.route('/license-plates', methods=['GET'])
 def get_license_plates():
     try:
-        requestedLicensePlates = gpxRepository.get_license_plate()
+        requestedLicensePlates = vehicleRepository.get_license_plates()
         return jsonify(requestedLicensePlates)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
@@ -29,7 +31,7 @@ def get_license_plates():
 def get_routes_by_license_plate():
     try:
         license_plate = request.get_json()
-        requestedLicensePlates = gpxRepository.get_routes_by_license_plate(license_plate['licensePlate'])
+        requestedLicensePlates = trackRepository.get_routes_by_license_plate(license_plate['licensePlate'])
         return jsonify(requestedLicensePlates)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
@@ -53,6 +55,8 @@ if __name__ == '__main__':
         if not os.path.exists(db_dir):
             os.makedirs(db_dir)
     gpxRepository = GPXRepository(database)
+    vehicleRepository = VehicleRepository(database)
+    trackRepository = TrackRepository(database)
 
     folder_path = r"./src/backend/gpx_files/"
     gpx_processor = GPXProcessor(database, folder_path)
