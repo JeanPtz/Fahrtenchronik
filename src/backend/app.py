@@ -5,7 +5,6 @@ from flask_cors import CORS
 from GPXRepository import GPXRepository
 from GPXProcessor import GPXProcessor
 
-# Create a Flask application instance
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -46,8 +45,8 @@ if __name__ == '__main__':
             os.makedirs(db_dir)
     gpxRepository = GPXRepository(database)
 
-    folder_path = r"./src/backend/test_files/"
+    folder_path = r"./src/backend/gpx_files/"
     gpx_processor = GPXProcessor(database, folder_path)
     gpx_processor.process_gpx_data()
 
-    app.run(debug=True) # Run the Flask application
+    app.run(debug=True)

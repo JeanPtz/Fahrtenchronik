@@ -79,12 +79,15 @@ class GPXRepository:
         
     def __upload_gpx_file(self, file):
         if file.filename == '':
+            print("No selected file")
             return "No selected file"
 
         if file and file.filename.endswith('.gpx'):
             file.save(f"./src/backend/test_files/{file.filename}")
-            return "File uploaded successfully"
+            print(f"File: {file.filename} successfully uploaded")
+            return f"File: {file.filename} successfully uploaded"
         else:
+            print("Invalid file format. Please upload a GPX file.")
             return "Invalid file format. Please upload a GPX file."
 
     def get_routes(self, name, kfz, start_date, end_date):
