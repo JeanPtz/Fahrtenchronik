@@ -7,7 +7,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useEffect, useState } from "react";
 import { DateTime } from 'luxon';
 import DataTable from "../components/DataTable";
-import { searchRoutes } from "../apis/SearchRoutes";
+import { searchRoute } from "../apis/searchRoute";
 
 
 const SearchPage = () => {
@@ -33,38 +33,39 @@ const SearchPage = () => {
 
     const handleDateChange = (date: DateTime | null, isFromDate: boolean) => {
         if (isFromDate) {
-          setSelectedStartDate(date);
-          if (selectedEndDate && date && date > selectedEndDate) {
-            setFromErrorMessage("Das „Von“-Datum darf nicht größer als das „Bis“-Datum sein");
-            setError(true);
-          } else {
-            const zuluDate = date!!.toUTC().toISO({ format: 'extended' });
-            setStartDate(zuluDate!!)
-            setFromErrorMessage(null);
-            setToErrorMessage(null)
-            setError(false);
-          }
+            setSelectedStartDate(date);
+            if (selectedEndDate && date && date > selectedEndDate) {
+                setFromErrorMessage("Das „Von“-Datum darf nicht größer als das „Bis“-Datum sein");
+                setError(true);
+            } else {
+                const formattedDate = date?.toUTC().toISO({ includeOffset: false });
+                setStartDate(formattedDate!!);
+                setFromErrorMessage(null);
+                setToErrorMessage(null);
+                setError(false);
+            }
         } else {
-          setSelectedEndDate(date);
-          if (selectedStartDate && date && date < selectedStartDate) {
-            setToErrorMessage("Das „Bis“-Datum darf nicht kleiner als das „Von“-Datum sein");
-            setError(true);
-          } else {
-            const zuluDate = date!!.toUTC().toISO({ format: 'extended' });
-            setEndDate(zuluDate!!)
-            setToErrorMessage(null);
-            setFromErrorMessage(null);
-            setError(false);
-          }
+            setSelectedEndDate(date);
+            if (selectedStartDate && date && date < selectedStartDate) {
+                setToErrorMessage("Das „Bis“-Datum darf nicht kleiner als das „Von“-Datum sein");
+                setError(true);
+            } else {
+                const formattedDate = date?.toUTC().toISO({ includeOffset: false });
+                setEndDate(formattedDate!!);
+                setToErrorMessage(null);
+                setFromErrorMessage(null);
+                setError(false);
+            }
         }
-      };
+    };
+
 
     const handleRouteSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
-        setRouteFound(!routeFound)
-        console.log(startDate)
-        console.log(endDate)
-        //searchRoutes(driverName, licensePlate, startDate, endDate)
+        //setRouteFound(!routeFound)
+        searchRoute(driverName, licensePlate, startDate, endDate).then((data) => {
+            console.log(data);
+        });
     }
 
     useEffect(() => {
@@ -110,14 +111,9 @@ const SearchPage = () => {
                     </Button>
                 </Box>
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
-                <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                    {routeFound ?
-                        <DataTable />
-                        :
-                        <Typography sx={{ textAlign: "center", fontWeight: "700", userSelect: "none" }}>
-                            Keine Routendaten vorhanden
-                        </Typography>
-                    }
+                <Typography textAlign="left" fontWeight={700} sx={{margin: "8px 0 0 8px"}}>Fahrtinformationen:</Typography>
+                <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>                   
+                    <DataTable routeFound={routeFound} isDriverData={false}/>
                 </Box>
             </Box>
         </Box>

@@ -8,11 +8,11 @@ from GPXProcessor import GPXProcessor
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route('/get-route', methods=['GET'])
+@app.route('/search', methods=['POST'])
 def get_route():
     try:
         route_data = request.get_json()
-        requestedRoutes = gpxRepository.get_routes(route_data['name'], route_data['kfz'], route_data['start_date'], route_data['end_date'], )
+        requestedRoutes = gpxRepository.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
         return jsonify(requestedRoutes)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
@@ -21,6 +21,15 @@ def get_route():
 def get_license_plates():
     try:
         requestedLicensePlates = gpxRepository.get_license_plate()
+        return jsonify(requestedLicensePlates)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
+    
+@app.route('/license-plate-routes', methods=['POST'])
+def get_routes_by_license_plate():
+    try:
+        license_plate = request.get_json()
+        requestedLicensePlates = gpxRepository.get_routes_by_license_plate(license_plate['licensePlate'])
         return jsonify(requestedLicensePlates)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
