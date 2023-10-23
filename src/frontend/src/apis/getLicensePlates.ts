@@ -3,7 +3,7 @@ import { getBackendUrl } from "./BaseUrl"
 export async function getLicensePlate() {
 
     try {
-        const response = await fetch(`${getBackendUrl()}/license-plate`, {
+        const response = await fetch(`${getBackendUrl()}/license-plates`, {
             headers: { "content-type": "application/json" },
             method: "GET"
         })

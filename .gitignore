@@ -5,3 +5,7 @@ fahrtenchronik.db
 #Pycache
 __pycache__
 *.pyc
+
+#vsCode shit
+/.vscode
+.DS_Store

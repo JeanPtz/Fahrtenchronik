@@ -51,32 +51,8 @@ class GPXRepository:
             )
         ''')
         self.conn.commit()
-
-    def create_routes(self, name, kfz, date):
-        with self.conn:
-            # Check if the route already exists
-            cursor = self.conn.execute('''
-            SELECT track.track_id
-            FROM person
-            INNER JOIN track ON person.person_id = track.person_id
-            INNER JOIN vehicle ON track.fahrzeug_id = vehicle.vehicle_id
-            INNER JOIN point ON track.track_id = point.track_id
-            WHERE person.name = ? 
-            AND vehicle.license_plate = ?    
-            AND point.date = ?
-            ''', (name, kfz, date,))
-            existing_route = cursor.fetchone()
-
-            if existing_route:
-                raise ValueError("Route already exists")
-
-            # Insert user into 'users' table and initialize score in 'scores' table
-            self.conn.execute('''
-                INSERT INTO users (id, name, kfz, date)
-                VALUES (?, ?, ?)
-            ''', (name, kfz, date))
     
-    def _get_routes(self, name, kfz, start_date, end_date):
+    def __get_routes(self, name, kfz, start_date, end_date):
         # Get id for given username
         with self.conn:
             cursor = self.conn.execute('''
@@ -93,7 +69,32 @@ class GPXRepository:
                 return route_id
             else:
                 raise ValueError("The route you where looking for does not exist")
+            
+    def __get_license_plates(self):
+        with self.conn:
+            cursor = self.conn.execute('''
+                SELECT license_plate FROM vehicle
+            ''')
+            return cursor.fetchall()
+        
+    def __upload_gpx_file(self, file):
+        if file.filename == '':
+            return "No selected file"
+
+        if file and file.filename.endswith('.gpx'):
+            file.save(f"./src/backend/test_files/{file.filename}")
+            return "File uploaded successfully"
+        else:
+            return "Invalid file format. Please upload a GPX file."
 
     def get_routes(self, name, kfz, start_date, end_date):
-        route_id = self._get_routes(name, kfz, start_date, end_date)
+        route_id = self.__get_routes(name, kfz, start_date, end_date)
         return route_id
+    
+    def get_license_plate(self):
+        license_plates = self.__get_license_plates()
+        return license_plates
+    
+    def upload_gpx_file(self, file):
+        message = self.__upload_gpx_file(file)
+        return message

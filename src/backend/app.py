@@ -9,19 +9,34 @@ from GPXProcessor import GPXProcessor
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route('/create-routes', methods=['POST'])
-def create_route():
+@app.route('/get-route', methods=['GET'])
+def get_route():
     try:
-        gpxRepository.create_routes()
-        return (jsonify({'message': 'Routes created successfully'}), 200)
+        route_data = request.get_json()
+        requestedRoutes = gpxRepository.get_routes(route_data['name'], route_data['kfz'], route_data['start_date'], route_data['end_date'], )
+        return jsonify(requestedRoutes)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
 
-@app.route('/get-routes', methods=['GET'])
-def get_route():
-    route_data = request.get_json()
-    requestedRoutes = gpxRepository.get_routes(route_data['name'], route_data['kfz'], route_data['start_date'], route_data['end_date'], )
-    return requestedRoutes
+@app.route('/license-plates', methods=['GET'])
+def get_license_plates():
+    try:
+        requestedLicensePlates = gpxRepository.get_license_plate()
+        return jsonify(requestedLicensePlates)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
+
+@app.route('/upload-gpx-file', methods=['POST'])
+def upload_gpx_file():
+    if 'gpxFile' not in request.files:
+        return "No file part"
+    file = request.files['gpxFile']
+    try:
+        message = gpxRepository.upload_gpx_file(file)
+        gpx_processor.process_gpx_data()
+        return jsonify(message)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
 
 if __name__ == '__main__':
     database = r"./src/backend/database/fahrtenchronik.db"

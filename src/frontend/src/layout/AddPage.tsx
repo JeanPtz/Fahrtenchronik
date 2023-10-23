@@ -1,18 +1,20 @@
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useCallback, useState, useRef } from "react";
+import { uploadGpxFile } from "../apis/uploadGpxFile";
 
-const AboutPage = () => {
+const AddPage = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [message, setMessage] = useState<string | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0] || null;
-        if (selectedFile?.name.toLowerCase().endsWith(".gpx"))
+        if (file?.name.toLowerCase().endsWith(".gpx")) {
             setSelectedFile(file);
-        else
-            setSelectedFile(null)
+        } else {
+            setSelectedFile(null);
+        }
     };
 
     const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
@@ -24,37 +26,32 @@ const AboutPage = () => {
 
         const file = event.dataTransfer.files[0] || null;
         setSelectedFile(file);
-
     }, []);
 
-    const handleChangeFile = () => {
+    const handleDeleteFile = () => {
         setSelectedFile(null);
         setMessage(null);
     };
 
     const handleFileUpload = async () => {
         if (!selectedFile?.name.toLowerCase().endsWith(".gpx")) {
-            setMessage("Nur GPX Dateien sind zum hochladen geeignet");
+            setMessage("Nur GPX Dateien sind zum Hochladen geeignet");
             return;
         }
 
         const formData = new FormData();
-        formData.append("file", selectedFile);
+        formData.append("gpxFile", selectedFile);
 
         try {
-            const response = await fetch("/upload", {
-                method: "POST",
-                body: formData,
-            });
-
-            if (response.ok) {
+            const response = await uploadGpxFile(formData);
+            if (response) {
                 setMessage("Datei erfolgreich hochgeladen");
                 setSelectedFile(null);
             } else {
-                setMessage("Fehler beim hochladen der Datei");
+                setMessage("Fehler beim Hochladen der Datei");
             }
         } catch (error) {
-            setMessage("Fehler beim hochladen der Datei");
+            setMessage("Fehler beim Hochladen der Datei");
         }
     };
 
@@ -87,7 +84,7 @@ const AboutPage = () => {
                     type="file"
                     accept=".gpx"
                     onChange={handleFileChange}
-                    style={{ display: "block", cursor: "pointer", opacity: 0, height: "400px", width: "700px", }}
+                    style={{ display: "block", cursor: "pointer", opacity: 0, height: "400px", width: "700px" }}
                 />
             </Box>
 
@@ -102,7 +99,7 @@ const AboutPage = () => {
                         >
                             Hochladen
                         </Button>
-                        <IconButton title="Datei Ändern" onClick={handleChangeFile}>
+                        <IconButton title="Datei löschen" onClick={handleDeleteFile}>
                             <DeleteIcon />
                         </IconButton>
                     </Box>
@@ -113,4 +110,4 @@ const AboutPage = () => {
     );
 };
 
-export default AboutPage;
+export default AddPage;

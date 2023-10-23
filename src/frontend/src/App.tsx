@@ -15,11 +15,11 @@ function App() {
       <Header />
       <Routes>
         <Route path='*' element={<Navigate to="/search" />} />
-        <Route path='search' element={<SearchPage/>}/>
-        <Route path='select' element={<SelectPage/>}/>
-        <Route path='select/:licenseplate' element={<RoutePage/>}/>
-        <Route path='add' element={<AddPage/>}/>
-        <Route path='about' element={<AboutPage/>}/>
+        <Route path='search' element={<SearchPage />} />
+        <Route path='select' element={<SelectPage />} />
+        <Route path='select/:licenseplate' element={<RoutePage />} />
+        <Route path='add' element={<AddPage />} />
+        <Route path='about' element={<AboutPage />} />
       </Routes>
     </>
   )

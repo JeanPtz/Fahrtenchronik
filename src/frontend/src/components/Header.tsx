@@ -42,26 +42,26 @@ const Header = () => {
                 <h1>Fahrtenchronik</h1>
             </div>
             {windowWidth > 1040 ?
-            <>
-                <nav className="navigation">
-                    <ul className="navLinks">
-                        <li>
-                            <a onClick={handleSearch}> Suche </a>
-                        </li>
-                        <div />
-                        <li>
-                            <a onClick={handleSelect}> Auswahl </a>
-                        </li>
-                        <div />
-                        <li>
-                            <a onClick={handleAdd}> Hinzufügen </a>
-                        </li>
-                    </ul>
-                </nav>
-                <NavigationMenu/>
-            </>
-                : 
-                <NavigationMenu/>
+                <>
+                    <nav className="navigation">
+                        <ul className="navLinks">
+                            <li>
+                                <a onClick={handleSearch}> Suche </a>
+                            </li>
+                            <div />
+                            <li>
+                                <a onClick={handleSelect}> Auswahl </a>
+                            </li>
+                            <div />
+                            <li>
+                                <a onClick={handleAdd}> Hinzufügen </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <NavigationMenu />
+                </>
+                :
+                <NavigationMenu />
             }
         </header>
     )
