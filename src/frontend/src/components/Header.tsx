@@ -8,6 +8,18 @@ const Header = () => {
     const navigate = useNavigate()
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    const currentURL = window.location.pathname;
+
+    // Check if the current URL ends with "Search"
+    const isSearchPage = currentURL.endsWith('/search');
+    const isSelectPage = currentURL.endsWith('/select');
+    const isAddPage = currentURL.endsWith('/add');
+  
+    // Define the style based on the condition
+    const linkStyle: React.CSSProperties = {
+      color: isSearchPage ? 'white' : '#0088a9',
+    };
+
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -46,15 +58,15 @@ const Header = () => {
                     <nav className="navigation">
                         <ul className="navLinks">
                             <li>
-                                <a onClick={handleSearch}> Suche </a>
+                                <a onClick={handleSearch} style={{color: isSearchPage ? '#0088a9' : ''}}> Suche </a>
                             </li>
                             <div />
                             <li>
-                                <a onClick={handleSelect}> Auswahl </a>
+                                <a onClick={handleSelect} style={{color: isSelectPage ? '#0088a9' : ''}}> Auswahl </a>
                             </li>
                             <div />
                             <li>
-                                <a onClick={handleAdd}> Hinzufügen </a>
+                                <a onClick={handleAdd} style={{color: isAddPage ? '#0088a9' : ''}}> Hinzufügen </a>
                             </li>
                         </ul>
                     </nav>

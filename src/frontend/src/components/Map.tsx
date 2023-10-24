@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer} from 'react-leaflet';
-import { Map as MapProp, control, tileLayer } from 'leaflet'
+import { MutableRefObject, useEffect, useState } from 'react';
+import { MapContainer, Polyline, TileLayer} from 'react-leaflet';
+import { LatLngExpression, Map as MapProp, control, tileLayer } from 'leaflet'
 
-const Map = () => {
+interface MapComponentProps {
+  coordinates: LatLngExpression[];
+}
+
+const Map: React.FC<MapComponentProps> = ({ coordinates }) => {
     const [map, setMap] = useState<MapProp | null>(null);
 
     useEffect(() => {
@@ -34,7 +38,6 @@ const Map = () => {
           "GeoApi (toner)": geoapi_toner,
           "Satellite": satellite
       }).addTo(map)
-
        
     }, [map]);
   
@@ -43,6 +46,7 @@ const Map = () => {
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
           />
+        <Polyline positions={coordinates} color="blue" weight={3} />
       </MapContainer>
     );
   };

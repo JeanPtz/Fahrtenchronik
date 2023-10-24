@@ -8,10 +8,12 @@ import { useEffect, useState } from "react";
 import { DateTime } from 'luxon';
 import DataTable from "../components/DataTable";
 import { searchRoute } from "../apis/searchRoute";
+import { LatLngExpression } from "leaflet";
 
 
 const SearchPage = () => {
     const [routeFound, setRouteFound] = useState(false)
+    const [coordinates, setCoordinates] = useState<LatLngExpression[]>([]);
     const [driverName, setdriverName] = useState<string>("")
     const [licensePlate, setlicensePlate] = useState<string>("")
     const [selectedStartDate, setSelectedStartDate] = useState<null | DateTime>(null);
@@ -64,9 +66,8 @@ const SearchPage = () => {
         event.preventDefault();
         //setRouteFound(!routeFound)
         searchRoute(driverName, licensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
-            console.log("Start Date: ", startDate)
-            console.log("End Date: ", endDate)
-            console.log(data);
+            const coordinates: LatLngExpression[] = data.map(point => [point.latitude, point.longitude]);
+            setCoordinates(coordinates)
         });
     }
 
@@ -77,7 +78,7 @@ const SearchPage = () => {
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
             <Box className="searchMapView" style={{ flex: 4, padding: "px" }}>
-                <Map />
+                <Map coordinates={coordinates}/>
             </Box>
             <Box className="searchInputs" sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5", justifyContent: "space-evenly" }}>
                 <Box sx={{ display: "flex", flex: 4, flexDirection: "column", justifyContent: "space-around", alignItems: "center", textAlign: "center", padding: "16px" }}>

@@ -6,12 +6,13 @@ import DataTable from "../components/DataTable";
 import { getTrackIdByLicensePlate } from "../apis/getTrackIdByLicensePlate";
 import { getRouteByTrackId } from "../apis/getRouteByTrackId";
 import { useNavigate, useParams } from "react-router-dom";
+import { LatLngExpression } from "leaflet";
 
 
 const RoutePage = () => {
     const [routeFound, setRouteFound] = useState(false)
     const [routes, setRoutes] = useState<string[]>([]);
-    const [points, setPoints] = useState<number[]>([]);
+    const [coordinates, setCoordinates] = useState<LatLngExpression[]>([]);
     const licensePlate = useParams().licenseplate;
     const selectedRoute = useParams().trackid;
     const navigate = useNavigate();
@@ -19,12 +20,8 @@ const RoutePage = () => {
     const handleRoute = (trackId: string) => {
         navigate(`/select/${licensePlate}/${trackId}`);
         getRouteByTrackId(trackId!!).then((data) => {
-            const points = data.map((data) => (
-                data.latitude,
-                data.longitude
-            ));
-            setPoints(points)
-            console.log(points)
+            const coordinates: LatLngExpression[] = data.map(point => [point.latitude, point.longitude]);
+            setCoordinates(coordinates)
         });
     };
 
@@ -40,12 +37,12 @@ const RoutePage = () => {
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
             <Box className="searchMapView" style={{ flex: 2, padding: "px" }}>
-                <Map />
+                <Map coordinates={coordinates}/>
             </Box>
             <Box sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5" }}>
                 <Box sx={{ display: "flex", flex: 3, flexDirection: "column", flexWrap: "wrap", padding: "16px" }}>
-                    {routes.map((routes, index) => (
-                        <Link key={index} onClick={() => handleRoute(routes)} underline="hover" color={selectedRoute === routes ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", width: "fit-content", padding: "2px" }}>
+                    {routes.map((trackId, index) => (
+                        <Link key={index} onClick={() => handleRoute(trackId)} underline="hover" color={selectedRoute === trackId ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", width: "fit-content", padding: "2px" }}>
                             Route {index + 1}
                         </Link>
                     ))}

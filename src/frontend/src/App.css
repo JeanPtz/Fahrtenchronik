@@ -55,6 +55,7 @@ header {
 
 .navLinks li a:hover{
   color: #0088a9;
+  transition: color 0.3s;
   cursor: pointer;
 }
 
