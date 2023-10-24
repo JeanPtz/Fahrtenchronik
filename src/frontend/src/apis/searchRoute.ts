@@ -1,6 +1,11 @@
 import { getBackendUrl } from "./BaseUrl"
 
-export async function searchRoute(name: string, licensePlate: string, startDate: string, endDate: string) {
+interface Route{
+    latitude: number,
+    longitude: number
+}
+
+export async function searchRoute(name: string, licensePlate: string, startDate: string, endDate: string): Promise<Route[]>{
 
     try {
         const response = await fetch(`${getBackendUrl()}/search`, {

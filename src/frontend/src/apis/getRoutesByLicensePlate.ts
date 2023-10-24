@@ -1,6 +1,10 @@
 import { getBackendUrl } from "./BaseUrl"
 
-export async function getRoutesByLicensePlate(licensePlate: string) {
+interface Routes{
+    id: string
+}
+
+export async function getRoutesByLicensePlate(licensePlate: string): Promise<Routes[]> {
 
     try {
         const response = await fetch(`${getBackendUrl()}/license-plate-routes`, {

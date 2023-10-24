@@ -6,7 +6,7 @@ class VehicleRepository:
     def __init__(self, db_name):
         self.conn = sqlite3.connect(db_name, check_same_thread=False)
 
-    def __get_vehicles(self) -> list[Vehicle]:
+    def __get_all_vehicles(self) -> list[Vehicle]:
         with self.conn:
             cursor = self.conn.execute('''
                 SELECT vehicle_id, license_plate FROM vehicle
@@ -19,6 +19,6 @@ class VehicleRepository:
             return vehicles
             
         
-    def get_license_plates(self) -> list[Vehicle]:
-        vehicles = self.__get_vehicles()
+    def get_all_vehicles(self) -> list[Vehicle]:
+        vehicles = self.__get_all_vehicles()
         return vehicles

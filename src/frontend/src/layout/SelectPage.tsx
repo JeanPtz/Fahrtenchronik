@@ -4,7 +4,7 @@ import { getLicensePlate } from "../apis/getLicensePlates";
 import { useNavigate } from "react-router-dom";
 
 const AboutPage = () => {
-  const [licensePlates, setLicensePlates] = useState<string[]>([]);// Example license plates
+  const [licensePlates, setLicensePlates] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const handleClick = (licensePlate: string) => {
@@ -13,8 +13,8 @@ const AboutPage = () => {
 
   useEffect(() => {
     getLicensePlate().then((data) => {
-      const licensePlates = data.map((vehicle) => (
-        vehicle.license_plate
+      const licensePlates = data.map((licensePlates) => (
+        licensePlates.license_plate
       ))
       setLicensePlates(licensePlates);
     });

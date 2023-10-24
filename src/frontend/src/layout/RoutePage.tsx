@@ -9,18 +9,22 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const RoutePage = () => {
     const [routeFound, setRouteFound] = useState(false)
-    const [routes, setRoutes] = useState([]);
+    const [routes, setRoutes] = useState<string[]>([]);
     const licensePlate = useParams().licenseplate;
     const selectedRoute = useParams().route;
     const navigate = useNavigate();
 
-    const handleRoute = (route: string) => {
-        navigate(`/select/${licensePlate}/${route[0]}`);
+    const handleRoute = (routes: string) => {
+        console.log(routes)
+        navigate(`/select/${licensePlate}/${routes}`);
     }
 
     useEffect(() => {
         getRoutesByLicensePlate(licensePlate!!).then((data) => {
-            setRoutes(data);
+            const routes = data.map((data) => (
+                data.id
+              ))
+            setRoutes(routes);
         });
     }, [])
 
@@ -30,9 +34,9 @@ const RoutePage = () => {
                 <Map />
             </Box>
             <Box sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5" }}>
-                <Box sx={{ display: "flex", flex: 3, flexDirection: "column", padding: "16px" }}>
+                <Box sx={{ display: "flex", flex: 3, flexDirection: "column", flexWrap: "wrap", padding: "16px" }}>
                     {routes.map((routes, index) => (
-                        <Link key={index} onClick={() => handleRoute(routes)} underline="hover" color={selectedRoute == routes ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", padding: "2px" }}>
+                        <Link key={index} onClick={() => handleRoute(routes)} underline="hover" color={selectedRoute === routes ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", width: "fit-content", padding: "2px" }}>
                             Route {index + 1}
                         </Link>
                     ))}

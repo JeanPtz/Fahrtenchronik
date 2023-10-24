@@ -3,28 +3,41 @@ from dataclasses import dataclass
 
 @dataclass
 class Person:
-    person_id : int 
+    id : str 
     full_name : str
     name : str
     sur_name : str
 
 @dataclass
 class Vehicle:
-    vehicle_id : int 
+    id : str 
     license_plate : str 
 
 @dataclass
-class Track:
-    track_id : int
+class TrackEntity:
+    id : str
     file_name : str
-    person_id : int
-    vehicle_id : int
+    person_id : str
+    vehicle_id : str
 
 @dataclass
-class Point:
-    point_id : int
+class PointEntity:
+    id : str
     latitude : float
     longitude : float
     elevation : float
     date : str
-    track_id : int
+    track_id : str
+
+@dataclass
+class TrackIdByLicensePlate:
+    id: str
+
+@dataclass
+class LicensePlates:
+    license_plate: str
+
+@dataclass
+class Route:
+    latitude : float
+    longitude : float
