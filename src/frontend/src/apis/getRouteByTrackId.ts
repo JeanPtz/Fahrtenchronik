@@ -1,16 +1,17 @@
 import { getBackendUrl } from "./BaseUrl"
 
-interface Routes{
-    id: string
+interface Route{
+    latitude: number,
+    longitude: number
 }
 
-export async function getRoutesByLicensePlate(licensePlate: string): Promise<Routes[]> {
+export async function getRouteByTrackId(trackId: string): Promise<Route[]> {
 
     try {
-        const response = await fetch(`${getBackendUrl()}/license-plate-routes`, {
+        const response = await fetch(`${getBackendUrl()}/track-id-routes`, {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
-                licensePlate: licensePlate,
+                track_id: trackId,
             }),
             method: "POST"
         })

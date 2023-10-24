@@ -18,7 +18,7 @@ function App() {
         <Route path='search' element={<SearchPage />} />
         <Route path='select' element={<SelectPage />} />
         <Route path='select/:licenseplate' element={<RoutePage />} />
-        <Route path='select/:licenseplate/:route' element={<RoutePage />} />
+        <Route path='select/:licenseplate/:trackid' element={<RoutePage />} />
         <Route path='add' element={<AddPage />} />
         <Route path='about' element={<AboutPage />} />
       </Routes>

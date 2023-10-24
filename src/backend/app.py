@@ -16,8 +16,8 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def get_route():
     try:
         route_data = request.get_json()
-        requestedRoutes = appInteractor.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
-        return jsonify(requestedRoutes)
+        requestedRoute = appInteractor.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
+        return jsonify(requestedRoute)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
 
@@ -33,10 +33,20 @@ def get_license_plates():
 def get_routes_by_license_plate():
     try:
         license_plate = request.get_json()
-        requestedLicensePlates = appInteractor.get_routes_by_license_plate(license_plate['licensePlate'])
+        requestedLicensePlates = appInteractor.get_track_ids_by_license_plate(license_plate['licensePlate'])
         return jsonify(requestedLicensePlates)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
+    
+@app.route('/track-id-routes', methods=['POST'])
+def get_routes_by_track_id():
+    try:
+        track_id = request.get_json()
+        requestedRoute = appInteractor.get_route_by_track_id(track_id['track_id'])
+        return jsonify(requestedRoute)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
+ 
 
 @app.route('/upload-gpx-file', methods=['POST'])
 def upload_gpx_file():

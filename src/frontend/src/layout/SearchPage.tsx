@@ -63,8 +63,9 @@ const SearchPage = () => {
     const handleRouteSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         //setRouteFound(!routeFound)
-        console.log(driverName, licensePlate)
-        searchRoute(driverName, licensePlate, "2022-07-22 00:00:00+00:00", "2022-07-23 00:00:00+00:00").then((data) => {
+        searchRoute(driverName, licensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
+            console.log("Start Date: ", startDate)
+            console.log("End Date: ", endDate)
             console.log(data);
         });
     }

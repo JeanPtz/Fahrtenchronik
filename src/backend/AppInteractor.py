@@ -15,7 +15,7 @@ class Appinteractor:
         self.trackRepository = TrackRepository(db_name)
         self.pointRepository = PointRepository(db_name)
 
-    def __get_route_by_search(self, name, license_plate, start_date, end_date) -> list[Route]:
+    def __get_route_by_search(self, name: str, license_plate: str, start_date: str, end_date: str) -> list[Route]:
         people = self.personRepository.get_all_people()
         vehicles = self.vehicleRepository.get_all_vehicles()
         tracks = self.trackRepository.get_all_tracks()
@@ -23,8 +23,7 @@ class Appinteractor:
 
         person_id: str = ""
         vehicle_id: str = ""
-        track_id: str = ""
-        num = 0
+        track_ids: list[str] = []
         route: list[Route] = []
 
         for person in people:
@@ -37,20 +36,14 @@ class Appinteractor:
 
         for track in tracks:
             if vehicle_id == track.vehicle_id and person_id == track.person_id:
-                track_id = track.id
-                #print(track_id)
-
-        print(track_id)
-
-        for point in points:
-            if track_id == point.track_id:
-                num+=1
-                #print(f"works: ", num)
-            if track_id == point.track_id and start_date <= point.date <= end_date:
-                print("I'm here")
-                route.append(Route(point.latitude, point.longitude))
-
-        print(route)
+                track_ids.append(track.id) 
+ 
+        for track_id in track_ids:
+            for point in points:
+                if track_id == point.track_id and start_date <= point.date <= end_date:
+                    print("track and date is same: ",track_id == point.track_id and start_date <= point.date <= end_date)
+                    print(f"Current Track: {track_id} = Start date: {start_date} = Current date: {point.date} = End date: {end_date}")
+                    route.append(Route(point.latitude, point.longitude))
         return route
     
 
@@ -65,7 +58,7 @@ class Appinteractor:
         return license_plates
 
 
-    def __get_routes_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
+    def __get_track_ids_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
         vehicles = self.vehicleRepository.get_all_vehicles()
         tracks = self.trackRepository.get_all_tracks()
 
@@ -83,7 +76,22 @@ class Appinteractor:
         return routes
     
     
-    def get_route_by_search(self, name, kfz, start_date, end_date):
+    def __get_route_by_track_id(self, track_id) -> list[Route]:
+        points = self.pointRepository.get_all_points()
+
+        route: list[Route] = []
+ 
+
+        for point in points:
+            if track_id == point.track_id:
+                route.append(Route(point.latitude, point.longitude))
+        
+        print(route)
+
+        return route
+    
+    
+    def get_route_by_search(self, name, kfz, start_date, end_date) -> list[Route]:
         points = self.__get_route_by_search(name, kfz, start_date, end_date)
         return points
     
@@ -93,6 +101,10 @@ class Appinteractor:
         return license_plates
     
     
-    def get_routes_by_license_plate(self, license_plate):
-        routes = self.__get_routes_by_license_plate(license_plate)
-        return routes
+    def get_track_ids_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
+        track_ids = self.__get_track_ids_by_license_plate(license_plate)
+        return track_ids
+    
+    def get_route_by_track_id(self, track_id) -> list[Route]:
+        points = self.__get_route_by_track_id(track_id)
+        return points

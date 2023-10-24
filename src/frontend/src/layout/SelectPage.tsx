@@ -17,6 +17,7 @@ const AboutPage = () => {
         licensePlates.license_plate
       ))
       setLicensePlates(licensePlates);
+      console.log(licensePlates)
     });
   }, []);
 

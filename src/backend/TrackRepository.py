@@ -18,19 +18,8 @@ class TrackRepository:
             for (track_id, file_name, person_id, vehicle_id) in cursor:
                 tracks.append(TrackEntity(track_id, file_name, person_id, vehicle_id))
 
-            return tracks
-            
-    def __get_route_by_id(self, track_id):
-        with self.conn:
-            cursor = self.conn.execute('''
-                SELECT latitude,longitude FROM point p WHERE track_id = ?
-            ''', (track_id,))
-            return cursor.fetchone()
+            return tracks          
         
     def get_all_tracks(self):
         tracks = self.__get_all_tracks()
         return tracks
-    
-    def get_route_by_id(self, track_id):
-        points = self.__get_route_by_id(track_id)
-        return points

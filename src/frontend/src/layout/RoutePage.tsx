@@ -3,27 +3,36 @@ import Map from "../components/Map"
 import { Box, Divider, Link, Typography, colors } from "@mui/material";
 import { useEffect, useState } from "react";
 import DataTable from "../components/DataTable";
-import { getRoutesByLicensePlate } from "../apis/getRoutesByLicensePlate";
+import { getTrackIdByLicensePlate } from "../apis/getTrackIdByLicensePlate";
+import { getRouteByTrackId } from "../apis/getRouteByTrackId";
 import { useNavigate, useParams } from "react-router-dom";
 
 
 const RoutePage = () => {
     const [routeFound, setRouteFound] = useState(false)
     const [routes, setRoutes] = useState<string[]>([]);
+    const [points, setPoints] = useState<number[]>([]);
     const licensePlate = useParams().licenseplate;
-    const selectedRoute = useParams().route;
+    const selectedRoute = useParams().trackid;
     const navigate = useNavigate();
 
-    const handleRoute = (routes: string) => {
-        console.log(routes)
-        navigate(`/select/${licensePlate}/${routes}`);
-    }
+    const handleRoute = (trackId: string) => {
+        navigate(`/select/${licensePlate}/${trackId}`);
+        getRouteByTrackId(trackId!!).then((data) => {
+            const points = data.map((data) => (
+                data.latitude,
+                data.longitude
+            ));
+            setPoints(points)
+            console.log(points)
+        });
+    };
 
     useEffect(() => {
-        getRoutesByLicensePlate(licensePlate!!).then((data) => {
+        getTrackIdByLicensePlate(licensePlate!!).then((data) => {
             const routes = data.map((data) => (
                 data.id
-              ))
+              ));
             setRoutes(routes);
         });
     }, [])
