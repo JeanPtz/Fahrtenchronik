@@ -50,7 +50,7 @@ const Map: React.FC<MapComponentProps> = ({ coordinates }) => {
     
   
     return (
-      <MapContainer center={[51.480842, 7.224831]} zoom={15} ref={setMap} style={{height: "100%", width: "100%"}}>
+      <MapContainer center={[51.480842, 7.224831]} zoom={20} ref={setMap} style={{height: "100%", width: "100%"}}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
           />
