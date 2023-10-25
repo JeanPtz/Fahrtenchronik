@@ -78,8 +78,6 @@ class GPXProcessor:
                                 ''', (waypoint.latitude, waypoint.longitude, waypoint.elevation, waypoint.time, track_id))
                                 self.conn.commit()
                                 cursor.close()
-                    
-                        
 
                     print(f"File {filename} successfully added to database")
                 else:

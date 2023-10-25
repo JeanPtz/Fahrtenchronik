@@ -1,17 +1,20 @@
 import { MutableRefObject, useEffect, useState } from 'react';
 import { MapContainer, Polyline, TileLayer} from 'react-leaflet';
-import { LatLngExpression, Map as MapProp, control, tileLayer } from 'leaflet'
+import { LatLngExpression, LatLngTuple, Map as MapProp, control, tileLayer } from 'leaflet'
 
 interface MapComponentProps {
-  coordinates: LatLngExpression[];
+  coordinates: LatLngTuple[]
+  position: LatLngTuple;
 }
 
-const Map: React.FC<MapComponentProps> = ({ coordinates }) => {
+const Map: React.FC<MapComponentProps> = ({ coordinates, position }) => {
     const [map, setMap] = useState<MapProp | null>(null);
 
     useEffect(() => {
 
       if (!map) return
+
+      map!!.flyTo(position)
 
       const osm = tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -40,9 +43,16 @@ const Map: React.FC<MapComponentProps> = ({ coordinates }) => {
       }).addTo(map)
        
     }, [map]);
+
+    useEffect(() => {
+      if (!map) return
+      map!!.flyTo(position)
+       
+    });
+    
   
     return (
-      <MapContainer center={[51.480842, 7.224831]} zoom={20} ref={setMap} style={{height: "100%", width: "100%"}}>
+      <MapContainer center={position} zoom={15} ref={setMap} style={{height: "100%", width: "100%"}}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
           />

@@ -41,8 +41,6 @@ class Appinteractor:
         for track_id in track_ids:
             for point in points:
                 if track_id == point.track_id and start_date <= point.date <= end_date:
-                    print("track and date is same: ",track_id == point.track_id and start_date <= point.date <= end_date)
-                    print(f"Current Track: {track_id} = Start date: {start_date} = Current date: {point.date} = End date: {end_date}")
                     route.append(Route(point.latitude, point.longitude))
         return route
     
@@ -85,8 +83,6 @@ class Appinteractor:
         for point in points:
             if track_id == point.track_id:
                 route.append(Route(point.latitude, point.longitude))
-        
-        print(route)
 
         return route
     

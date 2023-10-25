@@ -5,8 +5,6 @@ from flask_cors import CORS
 from GPXRepository import GPXRepository
 from GPXProcessor import GPXProcessor
 from AppInteractor import Appinteractor
-from VehicleRepository import VehicleRepository
-from TrackRepository import TrackRepository
 
 
 app = Flask(__name__)

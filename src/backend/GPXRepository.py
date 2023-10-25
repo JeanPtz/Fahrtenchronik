@@ -1,5 +1,4 @@
 import sqlite3
-import haversine
 
 class GPXRepository:
     def __init__(self, db_name):
