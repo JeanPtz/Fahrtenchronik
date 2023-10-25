@@ -4,7 +4,7 @@ from PersonRepository import PersonRepository
 from VehicleRepository import VehicleRepository
 from TrackRepository import TrackRepository
 from PointRepository import PointRepository
-from DataClasses import LicensePlates, Route, TrackIdByLicensePlate
+from DataClasses import FullNames, LicensePlates, Route, TrackIdByLicensePlate
 
 class Appinteractor:
 
@@ -55,6 +55,15 @@ class Appinteractor:
 
         return license_plates
 
+    def __get_all_full_names(self) -> list[FullNames]:
+        people = self.personRepository.get_all_people()
+
+        full_names: list[FullNames] = []
+
+        for person in people:
+                full_names.append(FullNames(person.full_name))
+
+        return full_names
 
     def __get_track_ids_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
         vehicles = self.vehicleRepository.get_all_vehicles()
@@ -94,8 +103,13 @@ class Appinteractor:
     
     def get_all_license_plates(self) -> list[LicensePlates]:
         license_plates = self.__get_all_license_plates()
+        print(license_plates)
         return license_plates
     
+    def get_all_full_names(self) -> list[FullNames]:
+        full_names = self.__get_all_full_names()
+        print(full_names)
+        return full_names
     
     def get_track_ids_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
         track_ids = self.__get_track_ids_by_license_plate(license_plate)

@@ -38,6 +38,10 @@ class LicensePlates:
     license_plate: str
 
 @dataclass
+class FullNames:
+    full_name: str
+
+@dataclass
 class Route:
     latitude : float
     longitude : float

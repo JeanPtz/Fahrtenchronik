@@ -20,10 +20,18 @@ def get_route():
         return (jsonify({'error': str(e)}), 500)
 
 @app.route('/license-plates', methods=['GET'])
-def get_license_plates():
+def get_all_license_plates():
     try:
         requestedLicensePlates = appInteractor.get_all_license_plates()
         return jsonify(requestedLicensePlates)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
+    
+@app.route('/names', methods=['GET'])
+def get_all_full_names():
+    try:
+        requestedFullNames = appInteractor.get_all_full_names()
+        return jsonify(requestedFullNames)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
     
