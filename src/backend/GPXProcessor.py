@@ -70,6 +70,16 @@ class GPXProcessor:
                                     ''', (point.latitude, point.longitude, point.elevation, point.time, track_id))
                                     self.conn.commit()
                                     cursor.close()
+                            for waypoint in gpx.waypoints:
+                                cursor = self.conn.cursor()
+                                cursor.execute('''
+                                    INSERT INTO point (latitude, longitude, elevation, date, track_id)
+                                    VALUES (?, ?, ?, ?, ?)
+                                ''', (waypoint.latitude, waypoint.longitude, waypoint.elevation, waypoint.time, track_id))
+                                self.conn.commit()
+                                cursor.close()
+                    
+                        
 
                     print(f"File {filename} successfully added to database")
                 else:
