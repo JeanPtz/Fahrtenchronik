@@ -68,22 +68,7 @@ const SearchPage = () => {
         //setRouteFound(!routeFound)
         searchRoute(driverName, licensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
             const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
-
-            // Calculate the average latitude and longitude
-            const totalCoordinates = coordinates.length;
-            let totalLatitude = 0;
-            let totalLongitude = 0;
-
-            for (const coordinate of coordinates) {
-                totalLatitude += coordinate[0];
-                totalLongitude += coordinate[1];
-            }
-
-            const middleLatitude = totalLatitude / totalCoordinates;
-            const middleLongitude = totalLongitude / totalCoordinates;
-
             setCoordinates(coordinates)
-            setPosition([middleLatitude, middleLongitude])
         });
     }
 
@@ -94,7 +79,7 @@ const SearchPage = () => {
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
             <Box className="searchMapView" style={{ flex: 4, padding: "px" }}>
-                <Map coordinates={coordinates} position={position}/>
+                <Map coordinates={coordinates}/>
             </Box>
             <Box className="searchInputs" sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5", justifyContent: "space-evenly" }}>
                 <Box sx={{ display: "flex", flex: 4, flexDirection: "column", justifyContent: "space-around", alignItems: "center", textAlign: "center", padding: "16px" }}>
