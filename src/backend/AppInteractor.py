@@ -103,12 +103,10 @@ class Appinteractor:
     
     def get_all_license_plates(self) -> list[LicensePlates]:
         license_plates = self.__get_all_license_plates()
-        print(license_plates)
         return license_plates
     
     def get_all_full_names(self) -> list[FullNames]:
         full_names = self.__get_all_full_names()
-        print(full_names)
         return full_names
     
     def get_track_ids_by_license_plate(self, license_plate) -> list[TrackIdByLicensePlate]:
