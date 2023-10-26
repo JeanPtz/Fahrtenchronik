@@ -1,6 +1,13 @@
 import { getBackendUrl } from "./BaseUrl"
 
-export async function getRouteData(trackId: number) {
+interface TableData{
+    milage: number
+    avg_speed: number
+    duration: number
+    message: number
+}
+
+export async function getRouteData(trackId: string): Promise<TableData> {
 
     try {
         const response = await fetch(`${getBackendUrl()}/route-data`, {
@@ -20,13 +27,13 @@ export async function getRouteData(trackId: number) {
     }
 }
 
-export async function getDriverData() {
+export async function getDriverData(fullName: string): Promise<TableData> {
 
     try {
         const response = await fetch(`${getBackendUrl()}/driver-data`, {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
-                name: name,
+                full_name: fullName,
             }),
             method: "POST"
         })

@@ -45,3 +45,10 @@ class FullNames:
 class Route:
     latitude : float
     longitude : float
+
+@dataclass
+class TableData:
+    milage: int
+    avg_speed: float
+    duration: float
+    message: int

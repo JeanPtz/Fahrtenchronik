@@ -52,7 +52,24 @@ def get_routes_by_track_id():
         return jsonify(requestedRoute)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)
- 
+    
+@app.route('/route-data', methods=['POST'])
+def get_table_data_by_track_id():
+    try:
+        track_id = request.get_json()
+        requestedRoute = appInteractor.get_table_data_by_track_id(track_id['track_id'])
+        return jsonify(requestedRoute)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
+    
+@app.route('/driver-data', methods=['POST'])
+def get_table_data_by_license_plate():
+    try:
+        track_id = request.get_json()
+        requestedRoute = appInteractor.get_table_data_by_track_id(track_id['track_id'])
+        return jsonify(requestedRoute)
+    except Exception as e:
+        return (jsonify({'error': str(e)}), 500)
 
 @app.route('/upload-gpx-file', methods=['POST'])
 def upload_gpx_file():

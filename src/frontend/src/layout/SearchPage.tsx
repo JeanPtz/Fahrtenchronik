@@ -158,7 +158,7 @@ const SearchPage = () => {
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                 <Typography textAlign="left" fontWeight={700} sx={{ margin: "8px 0 0 8px" }}>Fahrtinformationen:</Typography>
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                    <DataTable routeFound={routeFound} isDriverData={false} />
+                    <DataTable routeFound={routeFound} isDriverData={false} trackId="1" />
                 </Box>
             </Box>
         </Box>

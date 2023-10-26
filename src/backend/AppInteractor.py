@@ -1,10 +1,12 @@
+from datetime import datetime
 import sqlite3
 
 from PersonRepository import PersonRepository
 from VehicleRepository import VehicleRepository
 from TrackRepository import TrackRepository
 from PointRepository import PointRepository
-from DataClasses import FullNames, LicensePlates, Route, TrackIdByLicensePlate
+from DataClasses import FullNames, LicensePlates, Route, TrackIdByLicensePlate, TableData
+from haversine import haversine, Unit
 
 class Appinteractor:
 
@@ -95,11 +97,34 @@ class Appinteractor:
 
         return route
     
+    def __get_table_data_by_track_id(self, track_id) -> TableData:
+        route = self.get_route_by_track_id(track_id)
+        points = self.pointRepository.get_all_points()
+
+        milage: int = 0
+        avg_speed = 0
+        duration = 0
+        message = 0
+
+        #get the distance traveled
+        for coordinates in range(1, len(route)):
+            start = (route[coordinates-1].latitude, route[coordinates-1].longitude)
+            end = (route[coordinates].latitude, route[coordinates].longitude)
+            distance = haversine(start, end)
+            milage += distance
+        
+
+
+        print("Milage: ", milage)
+        print("Average Speed: ", avg_speed)
+        print("Duration: ", duration)
+
+        return TableData(int(milage), avg_speed, duration, message)
+    
     
     def get_route_by_search(self, name, kfz, start_date, end_date) -> list[Route]:
         points = self.__get_route_by_search(name, kfz, start_date, end_date)
         return points
-    
     
     def get_all_license_plates(self) -> list[LicensePlates]:
         license_plates = self.__get_all_license_plates()
@@ -116,3 +141,7 @@ class Appinteractor:
     def get_route_by_track_id(self, track_id) -> list[Route]:
         points = self.__get_route_by_track_id(track_id)
         return points
+    
+    def get_table_data_by_track_id(self, track_id) -> TableData:
+        table_data = self.__get_table_data_by_track_id(track_id)
+        return table_data

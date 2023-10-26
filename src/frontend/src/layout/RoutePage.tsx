@@ -13,12 +13,13 @@ const RoutePage = () => {
     const [routeFound, setRouteFound] = useState(false)
     const [routes, setRoutes] = useState<string[]>([]);
     const [coordinates, setCoordinates] = useState<LatLngTuple[]>([]);
+    const [selectedRoute, setSelectedRoute] = useState<string>("")
     const licensePlate = useParams().licenseplate;
-    const selectedRoute = useParams().trackid;
     const navigate = useNavigate();
 
     const handleRoute = (trackId: string) => {
         navigate(`/select/${licensePlate}/${trackId}`);
+        setSelectedRoute(trackId)
         getRouteByTrackId(trackId!!).then((data) => {
             const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
             setCoordinates(coordinates)
@@ -31,6 +32,7 @@ const RoutePage = () => {
                 data.id
               ));
             setRoutes(routes);
+            setRouteFound(true)
         });
     }, [])
 
@@ -52,14 +54,14 @@ const RoutePage = () => {
                     <Box sx={{ display: "flex", flexDirection: "column", }}>
                         <Typography textAlign="left" fontWeight={700} sx={{ margin: "8px 0 0 8px" }}>Fahrerinformationen:</Typography>
                         <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                            <DataTable routeFound={routeFound} isDriverData={true} />
+                            <DataTable routeFound={routeFound} isDriverData={true} trackId={selectedRoute}/>
                         </Box>
                     </Box>
                     <Divider orientation="vertical" sx={{ borderColor: "black", opacity: 0.25 }} />
                     <Box sx={{ display: "flex", flexDirection: "column", }}>
                         <Typography fontWeight={700} sx={{ margin: "8px 0 0 8px" }}>Fahrtinformationen:</Typography>
                         <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                            <DataTable routeFound={routeFound} isDriverData={false} />
+                            <DataTable routeFound={routeFound} isDriverData={false} trackId={selectedRoute}/>
                         </Box>
                     </Box>
                 </Box>
