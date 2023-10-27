@@ -16,8 +16,10 @@ const SearchPage = () => {
     const [routeFound, setRouteFound] = useState(false)
     const [coordinates, setCoordinates] = useState<LatLngTuple[]>([]);
     const [driverNames, setDriverNames] = useState<string[]>([""]);
+    const [filteredDriverNames, setFilteredDriverNames] = useState<string[]>([""]);
     const [selectedDriverName, setSelectedDriverName] = useState<string>("");
     const [licensePlates, setLicensePlates] = useState<string[]>([""]);
+    const [filteredLicensePlates, setFilteredLicensePlates] = useState<string[]>([""]);
     const [selectedLicensePlate, setSelectedLicensePlate] = useState<string>("");
     const [selectedStartDate, setSelectedStartDate] = useState<null | DateTime>(null);
     const [selectedEndDate, setSelectedEndDate] = useState<null | DateTime>(null);
@@ -87,6 +89,7 @@ const SearchPage = () => {
                 licensePlate.license_plate
             ))
             setLicensePlates(licensePlates);
+            
         });
 
         setIsButtonDisabled(selectedDriverName === "" || selectedLicensePlate === "" || startDate === "" || endDate === "" || error === true)
@@ -94,7 +97,22 @@ const SearchPage = () => {
 
     useEffect(() => {
         setIsButtonDisabled(selectedDriverName === "" || selectedLicensePlate === "" || startDate === "" || endDate === "" || error === true)
-    })
+
+        if (selectedDriverName == "") {
+            setFilteredLicensePlates(licensePlates)
+        }
+        else {
+            setFilteredLicensePlates(licensePlates.filter((plate) => plate.includes(selectedDriverName.includes(' ') ? selectedDriverName.split(' ').map((initials) => initials.charAt(0)).join("") : selectedDriverName)))
+        }
+
+        if (selectedLicensePlate == "") {
+            setFilteredDriverNames(driverNames)
+        }
+        /*else {
+            setFilteredDriverNames(driverNames.filter((name) => name.includes()
+        }*/
+
+    }, [selectedDriverName, selectedLicensePlate, startDate, endDate])
 
     return (
         <Box className="searchLayout" style={{ display: "flex", height: "100%" }}>
@@ -119,7 +137,7 @@ const SearchPage = () => {
                     <FormControl sx={{ width: '15.5vw', minWidth: '270px', textAlign: 'left' }}>
                         <InputLabel id="license-plate-label">Kennzeichen</InputLabel>
                         <Select labelId="license-plate-label" input={<OutlinedInput label="Kennzeichen" />} value={selectedLicensePlate} onChange={getSelectedLicensePlate}>
-                            {licensePlates.map((name, index) => (
+                            {filteredLicensePlates.map((name, index) => (
                                 <MenuItem
                                     key={index}
                                     value={name}
