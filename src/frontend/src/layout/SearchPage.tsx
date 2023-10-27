@@ -69,10 +69,10 @@ const SearchPage = () => {
 
     const handleRouteSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
-        //setRouteFound(!routeFound)
         searchRoute(selectedDriverName, selectedLicensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
             const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
             setCoordinates(coordinates)
+            setRouteFound(!routeFound)
         });
     }
 
@@ -82,6 +82,7 @@ const SearchPage = () => {
                 driverName.full_name
             ))
             setDriverNames(driverNames);
+            setFilteredDriverNames(driverNames)
         });
 
         getLicensePlate().then((data) => {
@@ -89,10 +90,10 @@ const SearchPage = () => {
                 licensePlate.license_plate
             ))
             setLicensePlates(licensePlates);
-            
+            setFilteredLicensePlates(licensePlates)
+
         });
 
-        setIsButtonDisabled(selectedDriverName === "" || selectedLicensePlate === "" || startDate === "" || endDate === "" || error === true)
     }, [])
 
     useEffect(() => {
@@ -108,9 +109,11 @@ const SearchPage = () => {
         if (selectedLicensePlate == "") {
             setFilteredDriverNames(driverNames)
         }
-        /*else {
-            setFilteredDriverNames(driverNames.filter((name) => name.includes()
-        }*/
+        else {
+            // Filter driver names based on the selected letters
+            const match = selectedLicensePlate.match(/-(\w{2})/);
+            setFilteredDriverNames(driverNames.filter((name) => match!![1] === name))
+        }
 
     }, [selectedDriverName, selectedLicensePlate, startDate, endDate])
 
@@ -127,7 +130,10 @@ const SearchPage = () => {
                     <FormControl sx={{ width: '15.5vw', minWidth: '270px', textAlign: 'left' }}>
                         <InputLabel id="name-label">Name</InputLabel>
                         <Select labelId="name-label" input={<OutlinedInput label="Name" />} value={selectedDriverName} onChange={getSelectedDriverName}>
-                            {driverNames.map((name, index) => (
+                            <MenuItem value="">
+                                <em> {"‎"} </em>
+                            </MenuItem>
+                            {filteredDriverNames.map((name, index) => (
                                 <MenuItem key={index} value={name}>
                                     {name}
                                 </MenuItem>
@@ -137,6 +143,9 @@ const SearchPage = () => {
                     <FormControl sx={{ width: '15.5vw', minWidth: '270px', textAlign: 'left' }}>
                         <InputLabel id="license-plate-label">Kennzeichen</InputLabel>
                         <Select labelId="license-plate-label" input={<OutlinedInput label="Kennzeichen" />} value={selectedLicensePlate} onChange={getSelectedLicensePlate}>
+                            <MenuItem value="">
+                                <em> {"‎"} </em>
+                            </MenuItem>
                             {filteredLicensePlates.map((name, index) => (
                                 <MenuItem
                                     key={index}
@@ -174,7 +183,6 @@ const SearchPage = () => {
                     </Button>
                 </Box>
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
-                <Typography textAlign="left" fontWeight={700} sx={{ margin: "8px 0 0 8px" }}>Fahrtinformationen:</Typography>
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
                     <DataTable routeFound={routeFound} isDriverData={false} trackId="1" />
                 </Box>
