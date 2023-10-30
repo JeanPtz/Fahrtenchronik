@@ -23,6 +23,7 @@ const RoutePage = () => {
         getRouteByTrackId(trackId!!).then((data) => {
             const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
             setCoordinates(coordinates)
+            setRouteFound(true)
         });
     };
 
@@ -32,7 +33,6 @@ const RoutePage = () => {
                 data.id
             ));
             setRoutes(routes);
-            setRouteFound(true)
         });
     }, [])
 
@@ -52,11 +52,11 @@ const RoutePage = () => {
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column"}}>
                     <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                        <DataTable routeFound={routeFound} isDriverData={true} trackId={selectedRoute} />
+                        <DataTable routeFound={true} isDriverData={true} trackId={selectedRoute} licensePlate={licensePlate!!}/>
                     </Box>
                     <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                     <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                        <DataTable routeFound={routeFound} isDriverData={false} trackId={selectedRoute} />
+                        <DataTable routeFound={routeFound} isDriverData={false} trackId={selectedRoute} licensePlate={licensePlate!!}/>
                     </Box>
                 </Box>
             </Box>

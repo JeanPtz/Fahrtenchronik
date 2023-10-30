@@ -4,7 +4,7 @@ interface TableData{
     milage: number
     avg_speed: number
     duration: number
-    message: number
+    time_error: boolean
 }
 
 export async function getRouteData(trackId: string): Promise<TableData> {
@@ -27,13 +27,13 @@ export async function getRouteData(trackId: string): Promise<TableData> {
     }
 }
 
-export async function getDriverData(fullName: string): Promise<TableData> {
+export async function getDriverData(license_plate: string): Promise<TableData> {
 
     try {
         const response = await fetch(`${getBackendUrl()}/driver-data`, {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
-                full_name: fullName,
+                license_plate: license_plate,
             }),
             method: "POST"
         })

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+from datetime import timedelta
 
 @dataclass
 class Person:
@@ -45,10 +45,11 @@ class FullNames:
 class Route:
     latitude : float
     longitude : float
+    date: str
 
 @dataclass
 class TableData:
     milage: int
-    avg_speed: float
+    avg_speed: int
     duration: float
-    message: int
+    time_error: bool

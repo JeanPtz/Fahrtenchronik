@@ -65,8 +65,8 @@ def get_table_data_by_track_id():
 @app.route('/driver-data', methods=['POST'])
 def get_table_data_by_license_plate():
     try:
-        track_id = request.get_json()
-        requestedRoute = appInteractor.get_table_data_by_track_id(track_id['track_id'])
+        license_plate = request.get_json()
+        requestedRoute = appInteractor.get_table_data_by_license_plate(license_plate['license_plate'])
         return jsonify(requestedRoute)
     except Exception as e:
         return (jsonify({'error': str(e)}), 500)

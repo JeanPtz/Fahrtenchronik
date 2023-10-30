@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import sqlite3
 
 from PersonRepository import PersonRepository
@@ -43,7 +43,7 @@ class Appinteractor:
         for track_id in track_ids:
             for point in points:
                 if track_id == point.track_id and start_date <= point.date <= end_date:
-                    route.append(Route(point.latitude, point.longitude))
+                    route.append(Route(point.latitude, point.longitude, point.date))
         return route
     
 
@@ -84,7 +84,6 @@ class Appinteractor:
 
         return routes
     
-    
     def __get_route_by_track_id(self, track_id) -> list[Route]:
         points = self.pointRepository.get_all_points()
 
@@ -93,33 +92,85 @@ class Appinteractor:
 
         for point in points:
             if track_id == point.track_id:
-                route.append(Route(point.latitude, point.longitude))
+                route.append(Route(point.latitude, point.longitude, point.date))
 
         return route
     
     def __get_table_data_by_track_id(self, track_id) -> TableData:
         route = self.get_route_by_track_id(track_id)
-        points = self.pointRepository.get_all_points()
 
         milage: int = 0
-        avg_speed = 0
-        duration = 0
-        message = 0
+        avg_speed: int = 0
+        duration: float = 0
+        total_time = timedelta(0)
+        error: bool = False
 
-        #get the distance traveled
+
         for coordinates in range(1, len(route)):
             start = (route[coordinates-1].latitude, route[coordinates-1].longitude)
             end = (route[coordinates].latitude, route[coordinates].longitude)
             distance = haversine(start, end)
             milage += distance
-        
 
+            if route[coordinates].date != None:
+                start_time = datetime.fromisoformat(route[coordinates-1].date)
+                end_time = datetime.fromisoformat(route[coordinates].date)
+                time = end_time - start_time
+                total_time += time
+            else:
+                total_time = timedelta(0)
+
+        if int(total_time.total_seconds()) == 0 or None:
+            error = True
+        else:
+            duration = total_time.total_seconds()
+            avg_speed = round(milage / (total_time.total_seconds() / 3600))
 
         print("Milage: ", milage)
         print("Average Speed: ", avg_speed)
         print("Duration: ", duration)
+        print("Error: ", error)
 
-        return TableData(int(milage), avg_speed, duration, message)
+        return TableData(round(milage), avg_speed, duration, error)
+    
+    def __get_table_data_by_license_plate(self, license_plate) -> TableData:
+        track_ids = self.get_track_ids_by_license_plate(license_plate)
+
+        milage: int = 0
+        avg_speed: int = 0
+        duration: float = 0
+        total_time = timedelta(0)
+        error: bool = False
+
+        for track_id in track_ids:
+            route = self.get_route_by_track_id(track_id.id)
+            for coordinates in range(1, len(route)):
+                start = (route[coordinates-1].latitude, route[coordinates-1].longitude)
+                end = (route[coordinates].latitude, route[coordinates].longitude)
+                distance = haversine(start, end)
+                milage += distance
+
+                if route[coordinates].date != None:
+                    start_time = datetime.fromisoformat(route[coordinates-1].date)
+                    end_time = datetime.fromisoformat(route[coordinates].date)
+                    time = end_time - start_time
+                    total_time += time
+                else:
+                    total_time = timedelta(0)
+
+        if int(total_time.total_seconds()) == 0 or None:
+            error = True
+        else:
+            duration = total_time.total_seconds()
+            avg_speed = round(milage / (total_time.total_seconds() / 3600))
+
+        print("Milage: ", milage)
+        print("Average Speed: ", avg_speed)
+        print("Duration: ", duration)
+        print("Error: ", error)
+
+
+        return TableData(round(milage), avg_speed, duration, error)
     
     
     def get_route_by_search(self, name, kfz, start_date, end_date) -> list[Route]:
@@ -144,4 +195,8 @@ class Appinteractor:
     
     def get_table_data_by_track_id(self, track_id) -> TableData:
         table_data = self.__get_table_data_by_track_id(track_id)
+        return table_data
+    
+    def get_table_data_by_license_plate(self, license_plate) -> TableData:
+        table_data = self.__get_table_data_by_license_plate(license_plate)
         return table_data

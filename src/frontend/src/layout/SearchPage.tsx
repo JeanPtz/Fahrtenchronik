@@ -72,7 +72,7 @@ const SearchPage = () => {
         searchRoute(selectedDriverName, selectedLicensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
             const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
             setCoordinates(coordinates)
-            setRouteFound(!routeFound)
+            setRouteFound(true)
         });
     }
 
@@ -184,7 +184,7 @@ const SearchPage = () => {
                 </Box>
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                    <DataTable routeFound={routeFound} isDriverData={false} trackId="1" />
+                    <DataTable routeFound={routeFound} isDriverData={false} trackId="1" licensePlate="0" />
                 </Box>
             </Box>
         </Box>
