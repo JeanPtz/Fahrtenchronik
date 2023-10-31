@@ -8,47 +8,6 @@
     <bounds maxlat="47.296763928607106" maxlon="9.487564796581864" minlat="47.247024960815907" minlon="9.424016978591681" />
   </metadata>
 
-  <wpt lat="47.283770721405745" lon="9.484858196228743">
-    <ele>1780</ele>
-    <time>2010-10-10T16:53:29Z</time>
-    <name>Bergstation</name>
-    <cmt>1780 m</cmt>
-    <desc>1780 m</desc>
-    <sym>Flag, Red</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2010-10-10T16:53:29Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
-  <wpt lat="47.296448852866888" lon="9.456796003505588">
-    <time>2010-10-10T16:51:54Z</time>
-    <name>Talstation</name>
-    <cmt>Station</cmt>
-    <desc>Station</desc>
-    <sym>Flag, Red</sym>
-    <type>user</type>
-    <extensions>
-      <gpxx:WaypointExtension>
-        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-      </gpxx:WaypointExtension>
-      <wptx1:WaypointExtension>
-        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-      </wptx1:WaypointExtension>
-      <ctx:CreationTimeExtension>
-        <ctx:CreationTime>2010-10-10T16:51:54Z</ctx:CreationTime>
-      </ctx:CreationTimeExtension>
-    </extensions>
-  </wpt>
-
   <trk>
     <name>Hoher Kasten</name>
     <extensions>

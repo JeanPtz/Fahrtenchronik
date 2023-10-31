@@ -2,34 +2,6 @@
 <gpx xmlns="http://www.topografix.com/GPX/1/1" creator="byHand" version="1.1" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
-<wpt lat="50.374372" lon="7.65923"> <time>1962-03-21T12:00:00Z</time><name>Immendorf</name><cmt>Immendorf</cmt><desc>Immendorf</desc><src></src><link>href=""><text>Immendorf</text></link></wpt>
-<wpt lat="50.343989" lon="7.591169"><time>1916-12-01T00:00Z</time>
-<name>Coblenz Mainstraße      </name> <src></src> </wpt>                
-<wpt lat="50.341322" lon="7.568597"> <time>1917-03-12T00:00Z</time><name>Karthause               </name> <src></src> </wpt>           
-<wpt lat="50.490747" lon="7.009893"> <time>1917-04-02T00:00Z</time><name>Ahrtal                  </name> <src></src> </wpt>
-<wpt lat="50.361470" lon="7.577805"> <time>1917-04-02T00:00Z</time><name>Steinstraße             </name> <src></src> </wpt>           
-<wpt lat="50.527627" lon="3.217171"> <time>1917-05-01T00:00Z</time><name>Genech                  </name> <src></src> </wpt>           
-<wpt lat="53.132439" lon="25.91960"> <time>1917-06-10T00:00Z</time><name>Muskewtschi                 </name> <src></src> </wpt>
-<wpt lat="49.351328" lon="23.50900"> <time>1917-06-30T0000Z</time><name>Schloß Drohobisch                  </name> <src></src> </wpt>
-<wpt lat="49.432498" lon="24.94573"> <time>1917-07-06T00:00Z</time><name>Dzitie LanyHöhe            </name> <src></src> </wpt>
-<wpt lat="49.095224" lon="26.19585"> <time>1917-08-01T11T00Z</time><name>Olzowze am Neup?        </name> <src></src> </wpt>
-<wpt lat="49.073111" lon="26.18252"> <time>1917-08-27T00:00Z</time><name>Husiatyn.                    </name> <src></src> </wpt>
-<wpt lat="49.373144" lon="4.973541"> <time>1918-01-15T00:00Z</time><name>Schloß Imecourt             </name> <src></src> </wpt>
-<wpt lat="49.234753" lon="5.253040"> <time>1918-02-27T00:00Z</time><name>Mort Homme                              </name> <src></src> </wpt>
-<wpt lat="49.225163" lon="5.207309"> <time>1918-02-27T00:00Z</time><name>Höhe 304                                </name> <src></src> </wpt>
-<wpt lat="49.261139" lon="5.293017"> <time>1918-03-10T00:00Z</time><name>Forges Bach                             </name> <src></src> </wpt>
-<wpt lat="49.229363" lon="5.200200"> <time>1918-03-13T00:00Z</time><name>Pta Lager hinter Höhe 304 / Mort Homme  </name> <src></src> </wpt>
-<wpt lat="50.627477" lon="2.569059"> <time>1918-05-04T00:00Z</time><name>St. Floris                              </name> <src></src> </wpt>
-<wpt lat="49.261139" lon="5.293017"> <time>1918-03-10T00:00Z</time><name>Forges Bach                             </name> <src></src> </wpt>
-<wpt lat="49.229363" lon="5.200200"> <time>1918-03-13T00:00Z</time><name>Pta Lager hinter Höhe 304 / Mort Homme  </name> <src></src> </wpt>
-<wpt lat="49.446045" lon="5.004943"> <time>1918-04-17T00:00Z</time><name>Fossé                                   </name> <src></src> </wpt>
-<wpt lat="50.636114" lon="2.706042"> <time>1918-05-24T00:00Z</time><name>La Gorgue                               </name> <src></src> </wpt>
-<wpt lat="50.636467" lon="2.587895"> <time>1918-05-06T00:00Z</time><name>Ferme La Hennerie                       </name> <src></src> </wpt>
-<wpt lat="51.805056" lon="8.752547"> <time>1918-07-18T01:00Z</time><name>Sennelager                              </name> <src></src> </wpt>
-<wpt lat="48.242731" lon="7.184351"> <time>1918-10-17T00:00Z</time><name>Markirch                                </name> <src></src> </wpt>
-
-
-
 
 <trk>
 <trkseg>

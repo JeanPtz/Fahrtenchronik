@@ -126,11 +126,6 @@ class Appinteractor:
             duration = total_time.total_seconds()
             avg_speed = round(milage / (total_time.total_seconds() / 3600))
 
-        print("Milage: ", milage)
-        print("Average Speed: ", avg_speed)
-        print("Duration: ", duration)
-        print("Error: ", error)
-
         return TableData(round(milage), avg_speed, duration, error)
     
     def __get_table_data_by_license_plate(self, license_plate) -> TableData:
@@ -163,12 +158,6 @@ class Appinteractor:
         else:
             duration = total_time.total_seconds()
             avg_speed = round(milage / (total_time.total_seconds() / 3600))
-
-        print("Milage: ", milage)
-        print("Average Speed: ", avg_speed)
-        print("Duration: ", duration)
-        print("Error: ", error)
-
 
         return TableData(round(milage), avg_speed, duration, error)
     
