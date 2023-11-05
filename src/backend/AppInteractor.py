@@ -163,8 +163,11 @@ class Appinteractor:
     
     
     def get_route_by_search(self, name, kfz, start_date, end_date) -> list[Route]:
-        points = self.__get_route_by_search(name, kfz, start_date, end_date)
-        return points
+        try:
+            points = self.__get_route_by_search(name, kfz, start_date, end_date)
+            return points
+        except:
+            return []
     
     def get_all_license_plates(self) -> list[LicensePlates]:
         license_plates = self.__get_all_license_plates()

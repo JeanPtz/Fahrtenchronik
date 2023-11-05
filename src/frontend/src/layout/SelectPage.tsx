@@ -23,7 +23,7 @@ const AboutPage = () => {
   return (
     <Box style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
       <Typography textAlign="center" fontSize={24} fontWeight={700} sx={{ m: "16px" }}>
-        Wähle zwischen den verschieden Kennzeichen aus und sehe alle gefahrenen Routen des Kennzeichens
+        Wählen Sie zwischen den verschieden Kennzeichen aus um alle gefahrenen Routen des Kennzeichens zu sehen
       </Typography>
       <Box
         sx={{

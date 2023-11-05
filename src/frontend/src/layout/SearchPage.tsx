@@ -11,6 +11,7 @@ import { searchRoute } from "../apis/searchRoute";
 import { LatLngTuple } from "leaflet";
 import { getDriverNames } from "../apis/getDriverNames";
 import { getLicensePlate } from "../apis/getLicensePlates";
+import RoutePage from "./RoutePage";
 
 const SearchPage = () => {
     const [routeFound, setRouteFound] = useState(false)
@@ -27,6 +28,7 @@ const SearchPage = () => {
     const [endDate, setEndDate] = useState<string>("");
     const [fromErrorMessage, setFromErrorMessage] = useState<string | null>(null)
     const [toErrorMessage, setToErrorMessage] = useState<string | null>(null)
+    const [routeError, setRouteError] = useState(false);
     const [error, setError] = useState(true);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -70,9 +72,16 @@ const SearchPage = () => {
     const handleRouteSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         searchRoute(selectedDriverName, selectedLicensePlate, startDate.replace('T', ' '), endDate.replace('T', ' ')).then((data) => {
-            const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
-            setCoordinates(coordinates)
-            setRouteFound(true)
+            if (data && data.length > 0) {
+                const coordinates: LatLngTuple[] = data.map(point => [point.latitude, point.longitude]);
+                setCoordinates(coordinates)
+                setRouteFound(true)
+                setRouteError(false)
+            }
+            else {
+                setRouteFound(false)
+                setRouteError(true)
+            }
         });
     }
 
@@ -98,6 +107,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         setIsButtonDisabled(selectedDriverName === "" || selectedLicensePlate === "" || startDate === "" || endDate === "" || error === true)
+        setRouteError(false)
 
         if (selectedDriverName == "") {
             setFilteredLicensePlates(licensePlates)
@@ -178,13 +188,19 @@ const SearchPage = () => {
                             <FormHelperText sx={{ color: "red", maxWidth: "270px" }}>{toErrorMessage}</FormHelperText>
                         </FormControl>
                     </LocalizationProvider>
-                    <Button variant="contained" disabled={isButtonDisabled} onClick={handleRouteSearch} sx={{ minWidth: "7.8vw" }}>
-                        Suche
-                    </Button>
+                    <FormControl>
+                        <Button variant="contained" disabled={isButtonDisabled} onClick={handleRouteSearch} sx={{ minWidth: "7.8vw" }}>
+                            Suche
+                        </Button>
+                        {routeError ?
+                            <FormHelperText sx={{ color: "red" }}>Keine Route gefunden</FormHelperText> :
+                            <></>
+                        }
+                    </FormControl>
                 </Box>
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                 <Box sx={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                    <DataTable routeFound={routeFound} isDriverData={false} trackId="1" licensePlate="0" />
+                    <DataTable routeFound={routeFound} isVehicleData={true} trackId={null} licensePlate={selectedLicensePlate} />
                 </Box>
             </Box>
         </Box>

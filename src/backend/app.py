@@ -17,7 +17,8 @@ def get_route():
         requestedRoute = appInteractor.get_route_by_search(route_data['name'], route_data['licensePlate'], route_data['startDate'], route_data['endDate'], )
         return jsonify(requestedRoute)
     except Exception as e:
-        return (jsonify({'error': str(e)}), 500)
+        print(str(e))
+        return (jsonify({'Route nicht gefunden'}), 404)
 
 @app.route('/license-plates', methods=['GET'])
 def get_all_license_plates():
@@ -25,6 +26,7 @@ def get_all_license_plates():
         requestedLicensePlates = appInteractor.get_all_license_plates()
         return jsonify(requestedLicensePlates)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
     
 @app.route('/names', methods=['GET'])
@@ -33,6 +35,7 @@ def get_all_full_names():
         requestedFullNames = appInteractor.get_all_full_names()
         return jsonify(requestedFullNames)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
     
 @app.route('/license-plate-routes', methods=['POST'])
@@ -42,6 +45,7 @@ def get_routes_by_license_plate():
         requestedLicensePlates = appInteractor.get_track_ids_by_license_plate(license_plate['licensePlate'])
         return jsonify(requestedLicensePlates)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
     
 @app.route('/track-id-routes', methods=['POST'])
@@ -51,6 +55,7 @@ def get_routes_by_track_id():
         requestedRoute = appInteractor.get_route_by_track_id(track_id['track_id'])
         return jsonify(requestedRoute)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
     
 @app.route('/route-data', methods=['POST'])
@@ -60,6 +65,7 @@ def get_table_data_by_track_id():
         requestedRoute = appInteractor.get_table_data_by_track_id(track_id['track_id'])
         return jsonify(requestedRoute)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
     
 @app.route('/driver-data', methods=['POST'])
@@ -69,6 +75,7 @@ def get_table_data_by_license_plate():
         requestedRoute = appInteractor.get_table_data_by_license_plate(license_plate['license_plate'])
         return jsonify(requestedRoute)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
 
 @app.route('/upload-gpx-file', methods=['POST'])
@@ -81,6 +88,7 @@ def upload_gpx_file():
         gpx_processor.process_gpx_data()
         return jsonify(message)
     except Exception as e:
+        print(str(e))
         return (jsonify({'error': str(e)}), 500)
 
 if __name__ == '__main__':

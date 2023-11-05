@@ -5,8 +5,8 @@ import { Duration } from "luxon"
 
 type DataTabelProps = {
     routeFound: boolean,
-    isDriverData: boolean,
-    trackId: string,
+    isVehicleData: boolean,
+    trackId: string | null,
     licensePlate: string,
 }
 
@@ -18,7 +18,7 @@ const DataTable = (props: DataTabelProps) => {
     const [noTimeData, setNoTimeData] = useState(true)
 
     useEffect(() => {
-        if (props.isDriverData) {
+        if (props.isVehicleData) {
             getDriverData(props.licensePlate).then((data) => {
                 setMileage(data.milage)
                 if (data.time_error) {
@@ -34,8 +34,8 @@ const DataTable = (props: DataTabelProps) => {
     }, [props.licensePlate])
 
     useEffect(() => {
-        if (!props.isDriverData) {
-            getRouteData(props.trackId).then((data) => {
+        if (!props.isVehicleData) {
+            getRouteData(props.trackId!!).then((data) => {
                 setMileage(data.milage)
                 if (data.time_error)  {
                     setNoTimeData(true)
@@ -53,7 +53,7 @@ const DataTable = (props: DataTabelProps) => {
     return props.routeFound ? (
         <Box sx={{ justifyContent: "space-between" }}>
             <Typography fontWeight={700}>
-                {props.isDriverData ?
+                {props.isVehicleData ?
                     "Fahrzeuginformationen:"
                     :
                     "Fahrtinformationen:"
@@ -64,7 +64,7 @@ const DataTable = (props: DataTabelProps) => {
                 <Table sx={{ minWidth: 150, p: "8px", userSelect: "none" }}>
                     <TableBody>
                         <TableRow>
-                            <TableCell sx={{ border: '1px solid #0003', p: "6px" }}>{props.isDriverData ? "Kilometerstand" : "Zurückgelegte Strecke"}</TableCell>
+                            <TableCell sx={{ border: '1px solid #0003', p: "6px" }}>{props.isVehicleData ? "Kilometerstand" : "Zurückgelegte Strecke"}</TableCell>
                             <TableCell align="left" sx={{ border: '1px solid #0003', p: "4px" }}>{milage} km</TableCell>
                         </TableRow>
                         <TableRow>

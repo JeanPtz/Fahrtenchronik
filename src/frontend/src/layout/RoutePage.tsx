@@ -42,6 +42,9 @@ const RoutePage = () => {
                 <Map coordinates={coordinates} />
             </Box>
             <Box sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5" }}>
+                <Typography textAlign="left" fontSize={20} fontWeight={700} sx={{ m: "16px" }}>
+                    Wählen Sie eine Route aus, um diese auf der Karte angezeigt zu bekommen
+                </Typography>
                 <Box sx={{ display: "flex", flex: 1.5, flexDirection: "column", flexWrap: "wrap", padding: "16px" }}>
                     {routes.map((trackId, index) => (
                         <Link key={index} onClick={() => handleRoute(trackId)} underline="hover" color={selectedRoute === trackId ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", width: "fit-content", padding: "2px" }}>
@@ -50,13 +53,13 @@ const RoutePage = () => {
                     ))}
                 </Box>
                 <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
-                <Box sx={{ display: "flex", flex: 1, flexDirection: "column"}}>
+                <Box sx={{ display: "flex", flex: 1, flexDirection: "column" }}>
                     <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                        <DataTable routeFound={true} isDriverData={true} trackId={selectedRoute} licensePlate={licensePlate!!}/>
+                        <DataTable routeFound={true} isVehicleData={true} trackId={selectedRoute} licensePlate={licensePlate!!} />
                     </Box>
                     <Divider sx={{ borderColor: "black", opacity: 0.25 }} />
                     <Box sx={{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", padding: "0 16px" }}>
-                        <DataTable routeFound={routeFound} isDriverData={false} trackId={selectedRoute} licensePlate={licensePlate!!}/>
+                        <DataTable routeFound={routeFound} isVehicleData={false} trackId={selectedRoute} licensePlate={licensePlate!!} />
                     </Box>
                 </Box>
             </Box>
