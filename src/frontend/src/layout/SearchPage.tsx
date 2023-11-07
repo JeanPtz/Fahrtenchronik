@@ -108,20 +108,20 @@ const SearchPage = () => {
         setIsButtonDisabled(selectedDriverName === "" || selectedLicensePlate === "" || startDate === "" || endDate === "" || error === true)
         setRouteError(false)
 
-        if (selectedDriverName == "") {
+        if (selectedDriverName === "") {
             setFilteredLicensePlates(licensePlates)
         }
         else {
             setFilteredLicensePlates(licensePlates.filter((plate) => plate.includes(selectedDriverName.includes(' ') ? selectedDriverName.split(' ').map((initials) => initials.charAt(0)).join("") : selectedDriverName)))
         }
 
-        if (selectedLicensePlate == "") {
+        if (selectedLicensePlate === "") {
             setFilteredDriverNames(driverNames)
         }
         else {
             // Filter driver names based on the selected letters
-            const match = selectedLicensePlate.match(/-(\w{2})/);
-            setFilteredDriverNames(driverNames.filter((name) => match!![1] === name))
+            const initials = selectedLicensePlate.match(/-(\w{2})/);
+            setFilteredDriverNames(driverNames.filter((name) => (initials!![1]) === (name.includes(' ') ? name.split(' ').map((initials) => initials.charAt(0)).join(""): name)))
         }
 
     }, [selectedDriverName, selectedLicensePlate, startDate, endDate])
