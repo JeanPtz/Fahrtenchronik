@@ -1,6 +1,6 @@
 import Map from "../components/Map"
 
-import { Box, Divider, Link, Typography, colors } from "@mui/material";
+import { Box, Divider, Link, Typography} from "@mui/material";
 import { useEffect, useState } from "react";
 import DataTable from "../components/DataTable";
 import { getTrackIdByLicensePlate } from "../apis/getTrackIdByLicensePlate";

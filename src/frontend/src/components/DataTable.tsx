@@ -1,4 +1,4 @@
-import { Box, Card, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
+import { Box, Card, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
 import { getDriverData, getRouteData } from "../apis/getTableData"
 import { Duration } from "luxon"

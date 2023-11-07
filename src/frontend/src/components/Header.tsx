@@ -14,11 +14,6 @@ const Header = () => {
     const isSearchPage = currentURL.endsWith('/search');
     const isSelectPage = currentURL.endsWith('/select');
     const isAddPage = currentURL.endsWith('/add');
-  
-    // Define the style based on the condition
-    const linkStyle: React.CSSProperties = {
-      color: isSearchPage ? 'white' : '#0088a9',
-    };
 
     useEffect(() => {
         const handleResize = () => {

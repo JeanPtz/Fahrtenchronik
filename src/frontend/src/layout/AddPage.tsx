@@ -1,11 +1,14 @@
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
+import LoadingButton from '@mui/lab/LoadingButton';
 import DeleteIcon from "@mui/icons-material/Delete";
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { useCallback, useState, useRef } from "react";
 import { uploadGpxFile } from "../apis/uploadGpxFile";
 
 const AddPage = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [message, setMessage] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,15 +46,18 @@ const AddPage = () => {
         formData.append("gpxFile", selectedFile);
 
         try {
+            setLoading(true)
             const response = await uploadGpxFile(formData);
             if (response) {
-                setMessage("Datei erfolgreich hochgeladen");
                 setSelectedFile(null);
+                setLoading(false)
             } else {
                 setMessage("Fehler beim Hochladen der Datei");
+                setLoading(false)
             }
         } catch (error) {
             setMessage("Fehler beim Hochladen der Datei");
+            setLoading(false)
         }
     };
 
@@ -92,13 +98,15 @@ const AddPage = () => {
                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                     <Typography sx={{ p: "10px" }}>Ausgesuchte Datei: {selectedFile.name}</Typography>
                     <Box sx={{ display: "flex" }}>
-                        <Button
+                        <LoadingButton
                             variant="contained"
                             color="primary"
                             onClick={handleFileUpload}
+                            startIcon={<CloudUploadIcon />}
+                            loading={loading}
                         >
                             Hochladen
-                        </Button>
+                        </LoadingButton>
                         <IconButton title="Datei löschen" onClick={handleDeleteFile}>
                             <DeleteIcon />
                         </IconButton>

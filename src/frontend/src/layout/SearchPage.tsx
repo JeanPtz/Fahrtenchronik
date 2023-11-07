@@ -1,6 +1,6 @@
 import Map from "../components/Map"
 
-import { Box, Button, Divider, FormControl, FormHelperText, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent, TextField, Typography } from "@mui/material";
+import { Box, Button, Divider, FormControl, FormHelperText, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent, Typography } from "@mui/material";
 import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -11,7 +11,6 @@ import { searchRoute } from "../apis/searchRoute";
 import { LatLngTuple } from "leaflet";
 import { getDriverNames } from "../apis/getDriverNames";
 import { getLicensePlate } from "../apis/getLicensePlates";
-import RoutePage from "./RoutePage";
 
 const SearchPage = () => {
     const [routeFound, setRouteFound] = useState(false)
