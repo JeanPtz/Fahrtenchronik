@@ -38,14 +38,14 @@ const RoutePage = () => {
 
     return (
         <Box sx={{ display: "flex", height: "100%" }}>
-            <Box sx={{ flex: 3 }}>
+            <Box sx={{ flex: 4 }}>
                 <Map coordinates={coordinates} />
             </Box>
             <Box sx={{ display: "flex", flex: 1, flexDirection: "column", backgroundColor: "#f2f3f5" }}>
                 <Typography textAlign="left" fontSize={20} fontWeight={700} sx={{ m: "16px" }}>
                     Wählen Sie eine Route aus, um diese auf der Karte angezeigt zu bekommen
                 </Typography>
-                <Box sx={{ display: "flex", flex: 1.5, flexDirection: "column", flexWrap: "wrap", padding: "16px" }}>
+                <Box sx={{ display: "flex", flex: 1.25, flexDirection: "column", flexWrap: "wrap", padding: "16px" }}>
                     {routes.map((trackId, index) => (
                         <Link key={index} onClick={() => handleRoute(trackId)} underline="hover" color={selectedRoute === trackId ? "purple" : "primary"} fontSize={24} sx={{ cursor: "pointer", width: "fit-content", padding: "2px" }}>
                             Route {index + 1}

@@ -60,7 +60,7 @@ const DataTable = (props: DataTabelProps) => {
                 }
 
             </Typography>
-            <TableContainer component={Card} sx={{ width: "16vw", minWidth: "350px" }}>
+            <TableContainer component={Card} sx={{ width: "16vw", minWidth: "275px" }}>
                 <Table sx={{ minWidth: 150, p: "8px", userSelect: "none" }}>
                     <TableBody>
                         <TableRow>

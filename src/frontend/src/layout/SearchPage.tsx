@@ -110,6 +110,7 @@ const SearchPage = () => {
 
         if (selectedDriverName === "") {
             setFilteredLicensePlates(licensePlates)
+            setRouteFound(false)
         }
         else {
             setFilteredLicensePlates(licensePlates.filter((plate) => plate.includes(selectedDriverName.includes(' ') ? selectedDriverName.split(' ').map((initials) => initials.charAt(0)).join("") : selectedDriverName)))
@@ -117,6 +118,7 @@ const SearchPage = () => {
 
         if (selectedLicensePlate === "") {
             setFilteredDriverNames(driverNames)
+            setRouteFound(false)
         }
         else {
             // Filter driver names based on the selected letters
