@@ -25,7 +25,8 @@ class GPXProcessor:
                             firstname = name[0]
                             surname = name[1]
                         else:
-                            firstname, surname = full_name
+                            firstname = full_name[0]
+                            surname = full_name[1]
                             
                         #insert name
                         cursor = self.conn.cursor()
